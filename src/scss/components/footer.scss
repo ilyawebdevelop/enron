@@ -1,0 +1,121 @@
+// Footer
+.footer {
+	&Develop {
+		display: flex;
+		column-gap: 8px;
+		color: #fff;
+		font-size: 14px;
+		line-height: 16px;
+		border-bottom: 1px solid transparent;
+
+		&Text {
+			transition: border-color .2s linear;
+			border-bottom: 1px solid transparent;
+		}
+
+		&:hover {
+			.footerDevelopText {
+				border-color: #fff;
+			}
+		}
+	}
+
+	&B {
+		background-color: var(--black);
+		padding-top: 30px;
+		padding-bottom: 30px;
+		font-family: var(--font-family-second);
+	}
+
+	&T {
+		padding-bottom: 120px;
+		padding-top: 120px;
+	}
+
+	&Politic {
+		color: var(--Yellow, #FFCC01);
+		font-size: 14px;
+		line-height: 20px;
+		text-decoration-line: underline;
+		text-decoration-style: solid;
+		text-decoration-skip-ink: none;
+		text-decoration-thickness: auto;
+		text-underline-offset: 3px;
+
+		text-underline-position: from-font;
+		transition: text-decoration-color .2s linear;
+
+		&:hover {
+			text-decoration: underline;
+			text-decoration-color: transparent;
+		}
+	}
+
+	.copyright {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	&Item {
+		padding: 24px 40px 48px;
+		border-radius: 24px;
+		background: rgba(255, 255, 255, 0.04);
+		font-family: var(--font-family-second);
+		grid-column: 3 span;
+
+		@media(max-width: 1600px) {
+			grid-column: 4 span;
+		}
+	}
+
+	&Logo {
+		margin-bottom: 32px;
+		display: block;
+
+		img {
+			width: 240px;
+		}
+	}
+
+	&Address {
+		letter-spacing: 0.36px;
+
+		@media(max-width: 1600px) {
+			font-size: 16px;
+		}
+	}
+
+	&List {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		column-gap: 20px;
+		row-gap: 20px;
+	}
+}
+
+
+
+.btn-arrow {
+	border-radius: 100px;
+	border: 1px solid var(--White50);
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-right: 16px;
+	padding-left: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+	letter-spacing: 0.32px;
+
+	svg {
+		width: 32px;
+		height: 32px;
+		fill: transparent;
+		stroke: #fff;
+		stroke-width: 2px;
+	}
+}
+.footerContactsMail {
+	font-size: 18px;
+}

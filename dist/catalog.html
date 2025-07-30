@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+
+	<title>Каталог</title>
+</head>
+
+<body>
+	
+	<div class="wrapper">
+		<!-- Header -->
+<header class="header" id="header">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="d-flex align-items-center gap-4">
+					<a href="#" class="headerLogo logo">
+						<img src="img/admin/logo/logo-text.svg" alt="logo">
+					</a>
+					<div class="d-flex gap-2">
+						<a href="#" class="headerCatalogBtn button button--yellow rounded-100">
+							<img src="img/icons/catalog-icon.svg" alt="icon">
+							<span>Каталог продукции</span>
+						</a>
+						<button class="headerSearchBtn button button--round button--dark" type="button">
+							<img src="img/icons/search-gold.svg" alt="search">
+						</button>
+						<button class="headerMenuBtn button button--round button--dark" type="button">
+							<img src="img/icons/menu-gold.svg" alt="menu">
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="d-flex align-items-center gap-4 justify-content-end">
+
+					<div class="d-flex flex-column gap-1">
+						<a class="headerPhone" href="tel:+7 3955 60-85-55">
+							+7 3955 60-85-55
+						</a>
+						<a class="headerMail" href="mailto:office@enron-group.ru">office@enron-group.ru</a>
+					</div>
+
+					<div class="d-flex gap-2">
+						<button class="button button--yellow rounded-100" type="button">
+							Оставить заявку
+							<img src="img/icons/arrow-btn.svg" alt="icon">
+						</button>
+						<button class="button button--dark rounded-100 headerBtnAccount" type="button">
+							<img src="img/icons/person-gold.svg" alt="icon">
+							<span>Личный кабинет</span>
+						</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+		<main class="main">
+			<div class="breadcrumbs">
+	<div class="container">
+		<div class="breadcrumbsWrap">
+			<ul>
+				<li>
+					<a href="#">Главная</a>
+				</li>
+				<li class="sep">
+					/
+				</li>
+				<li>
+					<span>
+						Продукция
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+			<div class="pageHead">
+	<div class="container">
+
+		<div class="d-flex align-items-center gap-2 mb-3">
+			<h1 class="h1 mb-0">
+				Продукция Газпромнефть
+			</h1>
+			<strong class="h5 color-white-50">
+				146 713 товаров
+			</strong>
+		</div>
+		<div class="text--white50 h5 letter-spacing-02">
+			<p>
+				Масла Gazpromneft разработаны на основе детального изучения потребностей владельцев автомобилей и требований
+				автопроизводителей к смазочным материалам.
+
+				Собственные синтетические и минеральные базовые масла, лучшие присадки ведущих зарубежных производителей,
+				современное производство, новые линии фасовки, развитая логистика и защита от подделок позволяют контролировать
+				качество масел Gazpromneft от первого этапа производства до заливки в двигатель автомобиля.
+			</p>
+
+		</div>
+
+	</div>
+</div>
+			<section class="catalog-content pt-0 pb-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<form class="filter" id="filter">
+	<div class="filterBlock">
+		<h4 class="mb-3">
+			Категории
+		</h4>
+		<ul class="filterList">
+			<li class="filterItem">
+				<a href="#">Масла </a>
+			</li>
+			<li class="filterItem">
+				<a href="#">Смазки </a>
+			</li>
+			<li class="filterItem">
+				<a href="#">Охлаждающие жидкости </a>
+			</li>
+			<li class="filterItem">
+				<a href="#">Автохимия </a>
+			</li>
+		</ul>
+	</div>
+	<div class="filterBlock">
+		<h4 class="mb-3">
+			Бренды
+		</h4>
+		<div class="searchItem mb-3">
+			<input class="searchInput border-gray bordered-12 pl-24" type="search" placeholder="Поиск">
+			<button class="searchBtn"><img src="img/icons/search-gray.svg" alt="icon"></button>
+		</div>
+		<h5>Популярные</h5>
+		<ul class="filterList">
+			<li class="filterItem">
+				<input id="check_1" type="checkbox">
+				<label for="check_1">Роснефть</label>
+			</li>
+			<li class="filterItem">
+				<input id="check_2" type="checkbox">
+				<label for="check_2">Taif</label>
+			</li>
+			<li class="filterItem">
+				<input id="check_3" type="checkbox" checked>
+				<label for="check_3">Coolstream</label>
+			</li>
+			<li class="filterItem">
+				<input id="check_4" type="checkbox">
+				<label for="check_4">Argo</label>
+			</li>
+			<li class="filterItem">
+				<input id="check_5" type="checkbox">
+				<label for="check_5">AVIAFLUID</label>
+			</li>
+			<li class="filterItem">
+				<input id="check_6" type="checkbox">
+				<label for="check_6">Роснефть</label>
+			</li>
+			<li class="filterItem">
+				<input id="check_7" type="checkbox">
+				<label for="check_7">Taif</label>
+			</li>
+			<li class="filterItem">
+				<input id="check_8" type="checkbox">
+				<label for="check_8">Coolstream</label>
+			</li>
+			<li class="filterItem">
+				<input id="check_9" type="checkbox">
+				<label for="check_9">Argo</label>
+			</li>
+			<li class="filterItem">
+				<input id="check_10" type="checkbox">
+				<label for="check_10">AVIAFLUID</label>
+			</li>
+
+
+		</ul>
+	</div>
+	<div class="filterBlock">
+		<h4 class="mb-3">
+			Цена, ₽
+		</h4>
+		<div class="d-flex filterPriceW">
+			<div class="inputW">
+				<input type="text" class="formInput border-gray bordered-12 pl-24 pr-24" value="0">
+			</div>
+			<div class="inputW">
+				<input type="text" class="formInput border-gray bordered-12 pl-24 pr-24" value="150 000">
+			</div>
+
+		</div>
+	</div>
+	<div class="filterBlock">
+		<h4 class="mb-3">
+			Наличие
+		</h4>
+
+		<ul class="filterList">
+			<li class="filterItem">
+				<input id="check_11" type="checkbox">
+				<label for="check_11">Много</label>
+			</li>
+			<li class="filterItem">
+				<input id="check_12" type="checkbox">
+				<label for="check_12">Мало</label>
+			</li>
+			<li class="filterItem">
+				<input id="check_13" type="checkbox">
+				<label for="check_13">Нет в наличии</label>
+			</li>
+
+		</ul>
+	</div>
+</form>
+			</div>
+			<div class="col-lg-9">
+				<div class="productsW">
+	<div class="d-flex justify-content-between">
+	<div class="d-flex gap-3">
+		<div class="formSelect">
+			<select class="border-gray bordered-12" name="popular" id="popular">
+				<option value="1">По популярности</option>
+				<option value="1">По Цене</option>
+			</select>
+		</div>
+		<div class="searchItem mb-3">
+			<input class="searchInput border-gray bordered-12 pl-24" type="search" placeholder="Поиск">
+			<button class="searchBtn"><img src="img/icons/search-gray.svg" alt="icon"></button>
+		</div>
+	</div>
+	<div class="productsView">
+		<button type="button" class="active">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#cards">
+				</use>
+			</svg>
+		</button>
+		<button type="button">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#rows">
+				</use>
+			</svg>
+		</button>
+	</div>
+</div>
+	<div class="productGrid">
+		<div class="productCard">
+	<a href="#" class="productCardImg d-block">
+		<img src="img/admin/product/image-1.png" alt="image">
+	</a>
+	<div class="productCardContent">
+		<div class="productCardContentT">
+			<div class="productCardPrice">
+				7 500 ₽
+			</div>
+			<div class="available text--red mb-3 pb-1">
+				Осталось мало
+			</div>
+			<div class="productCardCat mb-2 text-uppercase">
+				моторное масло
+			</div>
+			<h5 class="h5">
+				<a class="text--yellow" href="#">
+					TAIF SOPRANO ISO VG 680
+				</a>
+			</h5>
+		</div>
+		<div class="productCardContentB">
+			<button class="button button--yellow rounded-100 w-100">
+				Добавить в заказ
+			</button>
+		</div>
+	</div>
+</div>
+		<div class="productCard">
+	<a href="#" class="productCardImg d-block">
+		<img src="img/admin/product/image-2.png" alt="image">
+	</a>
+	<div class="productCardContent">
+		<div class="productCardContentT">
+			<div class="productCardPrice">
+				7 500 ₽
+			</div>
+			<div class="available text--green mb-3 pb-1">
+				Много
+			</div>
+			<div class="productCardCat mb-2 text-uppercase">
+				моторное масло
+			</div>
+			<h5 class="h5">
+				<a class="text--yellow" href="#">
+					Присадки к дизельному топливу Coolstream TDA
+				</a>
+			</h5>
+		</div>
+		<div class="productCardContentB">
+			<div class="quantity d-flex">
+				<button class="quantity-minus quantity-icon" onclick="this.nextElementSibling.stepDown();">
+					<img src="img/icons/minus.svg" alt="icon">
+				</button>
+				<input class="quantity-input" type="number" value="1" min="1">
+				<button class="quantity-plus quantity-icon" onclick="this.previousElementSibling.stepUp();">
+					<img src="img/icons/plus.svg" alt="icon">
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+		<div class="productCard">
+	<a href="#" class="productCardImg d-block">
+		<img src="img/admin/product/image-3.png" alt="image">
+	</a>
+	<div class="productCardContent">
+		<div class="productCardContentT">
+			<div class="productCardPrice">
+				2 320 ₽
+			</div>
+			<div class="available text--white50 mb-3 pb-1">
+				Нет в наличии
+			</div>
+			<div class="productCardCat mb-2 text-uppercase">
+				Премиальные охлаждающие жидкости
+			</div>
+			<h5 class="h5">
+				<a class="text--yellow" href="#">
+					TAIF SOPRANO ISO VG 680
+				</a>
+			</h5>
+		</div>
+		<div class="productCardContentB">
+			<button class="button button--yellow rounded-100 w-100">
+				Добавить в заказ
+			</button>
+		</div>
+	</div>
+</div>
+		<div class="productCard">
+	<a href="#" class="productCardImg d-block">
+		<img src="img/admin/product/image-1.png" alt="image">
+	</a>
+	<div class="productCardContent">
+		<div class="productCardContentT">
+			<div class="productCardPrice">
+				7 500 ₽
+			</div>
+			<div class="available text--red mb-3 pb-1">
+				Осталось мало
+			</div>
+			<div class="productCardCat mb-2 text-uppercase">
+				моторное масло
+			</div>
+			<h5 class="h5">
+				<a class="text--yellow" href="#">
+					TAIF SOPRANO ISO VG 680
+				</a>
+			</h5>
+		</div>
+		<div class="productCardContentB">
+			<button class="button button--yellow rounded-100 w-100">
+				Добавить в заказ
+			</button>
+		</div>
+	</div>
+</div>
+		<div class="productCard">
+	<a href="#" class="productCardImg d-block">
+		<img src="img/admin/product/image-3.png" alt="image">
+	</a>
+	<div class="productCardContent">
+		<div class="productCardContentT">
+			<div class="productCardPrice">
+				2 320 ₽
+			</div>
+			<div class="available text--white50 mb-3 pb-1">
+				Нет в наличии
+			</div>
+			<div class="productCardCat mb-2 text-uppercase">
+				Премиальные охлаждающие жидкости
+			</div>
+			<h5 class="h5">
+				<a class="text--yellow" href="#">
+					TAIF SOPRANO ISO VG 680
+				</a>
+			</h5>
+		</div>
+		<div class="productCardContentB">
+			<button class="button button--yellow rounded-100 w-100">
+				Добавить в заказ
+			</button>
+		</div>
+	</div>
+</div>
+		<div class="productCard">
+	<a href="#" class="productCardImg d-block">
+		<img src="img/admin/product/image-2.png" alt="image">
+	</a>
+	<div class="productCardContent">
+		<div class="productCardContentT">
+			<div class="productCardPrice">
+				7 500 ₽
+			</div>
+			<div class="available text--green mb-3 pb-1">
+				Много
+			</div>
+			<div class="productCardCat mb-2 text-uppercase">
+				моторное масло
+			</div>
+			<h5 class="h5">
+				<a class="text--yellow" href="#">
+					Присадки к дизельному топливу Coolstream TDA
+				</a>
+			</h5>
+		</div>
+		<div class="productCardContentB">
+			<div class="quantity d-flex">
+				<button class="quantity-minus quantity-icon" onclick="this.nextElementSibling.stepDown();">
+					<img src="img/icons/minus.svg" alt="icon">
+				</button>
+				<input class="quantity-input" type="number" value="1" min="1">
+				<button class="quantity-plus quantity-icon" onclick="this.previousElementSibling.stepUp();">
+					<img src="img/icons/plus.svg" alt="icon">
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+	<div class="pagination-loadmore">
+  <button class="button button--yellow loadmore rounded-100 mx-auto">
+    Загрузить ещё
+  </button>
+  <div class="pagination justify-content-center">
+
+    <ul class="d-flex align-items-center gap-3 justify-content-center">
+      <li class="pag-arrow pag-arrow-none">
+        <a href="#">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#arrow-prev"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="paginationItem paginationItemActive">
+        <a href="#">
+          1
+        </a>
+      </li>
+      <li class="paginationItem">
+        <a href="#">
+          2
+        </a>
+      </li>
+      <li class="paginationItem">
+        <a href="#">
+          3
+        </a>
+      </li>
+      <li class="paginationItem">
+        <span>...</span>
+      </li>
+      <li class="paginationItem">
+        <a class="paginationItemLink" href="#">
+          32
+        </a>
+      </li>
+      <li class="pag-arrow">
+        <a href="#">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#arrow-next"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</div>
+</div>
+			</div>
+		</div>
+	</div>
+</section>
+		</main>
+		<!-- Footer -->
+<footer class="footer" id="footer">
+	<div class="footerT">
+		<div class="container">
+			<div class="footerList">
+
+				<div class="footerItem">
+					<div class="footerLogo logo">
+						<img src="img/admin/logo/logo-text.svg" alt="logo">
+					</div>
+					<p class="footerAddress">
+						665800<br>
+						Иркутская область, г. Ангарск, квартал 257, дом 10/2, помещение&nbsp;8
+					</p>
+				</div>
+
+				<div class="footerItem">
+
+					<div class="d-flex justify-content-between align-items-center mb-4 pb-2 gap-3">
+						<h4 class="h4">
+							Продукция
+						</h4>
+						<a class="footerItemRoundBtn" href="#">
+							<img src="img/icons/search-gold.svg" alt="icon">
+						</a>
+					</div>
+
+					<div class="d-flex gap-2 flex-wrap">
+						<a class="btn-arrow d-flex gap-3" href="#">
+							Масла
+							<svg>
+								<use xlink:href="img/icons/icons.svg#btn-arrow">
+								</use>
+							</svg>
+						</a>
+						<a class="btn-arrow d-flex gap-3" href="#">
+							Смазки
+							<svg>
+								<use xlink:href="img/icons/icons.svg#btn-arrow">
+								</use>
+							</svg>
+						</a>
+						<a class="btn-arrow d-flex gap-3" href="#">
+							Охлаждающие жидкости
+							<svg>
+								<use xlink:href="img/icons/icons.svg#btn-arrow">
+								</use>
+							</svg>
+						</a>
+						<a class="btn-arrow d-flex gap-3" href="#">
+							Автохимия
+							<svg>
+								<use xlink:href="img/icons/icons.svg#btn-arrow">
+								</use>
+							</svg>
+						</a>
+					</div>
+
+				</div>
+
+				<div class="footerItem">
+
+					<div class="d-flex justify-content-between align-items-center mb-4 pb-2 gap-3">
+						<h4 class="h4">
+							Контакты
+						</h4>
+						<a class="footerItemRoundBtn" href="tel:+63212323123">
+							<img src="img/icons/phone-gold.svg" alt="icon">
+						</a>
+					</div>
+
+					<a href="tel:+36212312313" class="text--lg d-flex fw-light mb-3">
+						+7 3955 60-85-55
+					</a>
+					<a href="mailto:office@enron-group.ru" class="footerContactsMail d-flex text--yellow">
+						office@enron-group.ru
+					</a>
+
+				</div>
+
+					<div class="footerItem">
+
+					<div class="d-flex justify-content-between align-items-center mb-4 pb-2 gap-3">
+						<h4 class="h4">
+							Оставить заявку
+						</h4>
+						<a class="footerItemRoundBtn footerItemRoundBtn--yellow" href="tel:+63212323123">
+							<img src="img/icons/arrow-btn.svg" alt="icon">
+						</a>
+					</div>
+
+				<p>
+					Оставьте заявку, и наши менеджеры свяжутся с вами
+				</p>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="footerB">
+		<div class="container">
+			<div class="d-flex justify-content-between align-items-center">
+				<span class="copyright">© Все права защищены 2006 – 2025</span>
+				<a href="#" class="footerPolitic">Политика конфиденциальности</a>
+				<a href="#" class="footerDevelop">
+					<img src="img/icons/develop.svg" alt="develop">
+					<div class="footerDevelopText">
+						Разработка сайта – Вангер.рф
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
+		<!-- modal -->
+<!-- order -->
+<div class="modal fade modal-order" id="modal-order" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" data-bs-target="#modal-order">
+        <img src="img/icons/close-white.svg" alt="icon">
+      </button>
+    </div>
+  </div>
+</div>
+	</div>
+	
+	<script src="js/app.min.js"></script>
+
+
+	
+</body>
+
+</html>
+
+
+
+

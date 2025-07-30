@@ -1,0 +1,168 @@
+// btn
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	transition: background-color .2s linear, color .2s linear;
+	column-gap: 10px;
+	height: 64px;
+	padding-left: 24px;
+	padding-right: 24px;
+	cursor: pointer;
+	font-family: var(--font-family-second);
+	font-weight: 500;
+	flex-shrink: 0;
+
+	&--lg {
+		height: 65px;
+
+		@media(max-width: 991px) {
+			height: 50px;
+		}
+	}
+
+	&--yellow {
+		background-color: var(--yellow);
+		color: var(--black);
+	}
+
+	&--dark {
+		background-color: var(--dark);
+		color: var(--yellow);
+	}
+
+	&--round {
+		border-radius: 50%;
+		padding-left: 0;
+		padding-right: 0;
+		width: 64px;
+		height: 64px;
+
+		img {
+			width: 32px;
+		}
+	}
+
+	&.rounded-100 {
+		border-radius: 100px;
+	}
+
+	&--white {
+		background-color: #fff;
+	}
+
+	svg {
+		width: 16px;
+		height: 16px;
+		stroke: #000;
+	}
+}
+
+.headerBtnAccount {
+	img {
+		width: 32px;
+	}
+
+	@media(max-width: 1600px) {
+		padding-left: 0;
+		padding-right: 0;
+		width: 64px;
+		height: 64px;
+	}
+
+	span {
+		@media(max-width: 1600px) {
+			display: none;
+		}
+	}
+}
+
+.searchItem {
+	position: relative;
+
+	input {
+		padding-right: 60px;
+	}
+
+	.searchBtn {
+		position: absolute;
+		right: 0;
+		height: 64px;
+		width: 50px;
+	}
+}
+
+.productsView {
+	border-radius: 32px;
+	border: 1.5px solid var(--gray);
+	padding: 8px;
+	height: fit-content;
+
+	button {
+		border-radius: 50%;
+		width: 48px;
+		height: 48px;
+
+		svg {
+			fill: transparent;
+			stroke: var(--gray);
+			width: 20px;
+			height: 20px;
+		}
+
+		&.active {
+			background-color: var(--yellow);
+
+			svg {
+				stroke: var(--dark);
+			}
+		}
+	}
+}
+
+.footerItemRoundBtn {
+	border-radius: 100px;
+	background: var(--dark);
+	width: 64px;
+	height: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&--yellow {
+
+		background-color: var(--yellow);
+	}
+}
+
+.loadmore {
+	min-width: 400px;
+	margin-bottom: 30px;
+}
+
+.productsFilterChangedItem {
+	padding-left: 24px;
+	padding-right: 16px;
+	background-color: var(--yellow);
+	width: fit-content;
+	border-radius: 12px;
+	height: 64px;
+	column-gap: 12px;
+	color: var(--dark);
+	font-weight: 500;
+	line-height: 28px;
+	letter-spacing: 0.36px;
+	font-family: var(--font-family-second);
+	&--bg-gray {
+		background-color: var(--White50);
+	}
+}
+.link-prev {
+	svg {
+		width: 24px;
+		height: 24px;
+		fill: var(--white);
+		stroke: transparent;
+	}
+}

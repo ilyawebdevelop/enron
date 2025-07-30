@@ -1,0 +1,37 @@
+.breadcrumbs {
+	font-size: 14px;
+	color: var(--White50);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	&Wrap {
+		ul {
+			display: flex;
+			-webkit-column-gap: 8px;
+			-moz-column-gap: 8px;
+			column-gap: 8px;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			li {
+				a {
+					&:hover {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+.aioseo-breadcrumbs a {
+	-webkit-transition: color 0.2s linear;
+	-o-transition: color 0.2s linear;
+	transition: color 0.2s linear;
+}
+
+.aioseo-breadcrumbs a:hover {
+	color: #000;
+}
