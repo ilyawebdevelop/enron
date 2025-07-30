@@ -154,15 +154,126 @@
 	line-height: 28px;
 	letter-spacing: 0.36px;
 	font-family: var(--font-family-second);
+
 	&--bg-gray {
 		background-color: var(--White50);
 	}
 }
+
 .link-prev {
 	svg {
 		width: 24px;
 		height: 24px;
 		fill: var(--white);
 		stroke: transparent;
+	}
+}
+
+.cartBtn {
+	border-radius: 100px 0 0 100px;
+	border-top: 1px solid var(--yellow);
+	border-bottom: 1px solid var(--yellow);
+	border-left: 1px solid var(--yellow);
+	padding: 8px 0 8px 8px;
+
+	&Count {
+		width: 24px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--yellow);
+		border-radius: 50%;
+		color: #000;
+		font-size: 14px;
+		line-height: 180%;
+		letter-spacing: 0.7px;
+	}
+
+	&Text {
+		color: var(--yellow);
+		font-weight: 500;
+		font-family: var(--font-family-second);
+		width: 0;
+		opacity: 0;
+		visibility: hidden;
+		display: none;
+		transition: width .2s linear;
+	}
+
+	&W {
+		position: fixed;
+		top: 160px;
+		right: 0;
+		padding: 8px 0 8px 8px;
+		border-radius: 100px 0 0 100px;
+		border-top: 1px solid var(--gray);
+		border-bottom: 1px solid var(--gray);
+		border-left: 1px solid var(--gray);
+		cursor: pointer;
+		transition: all .2s linear;
+		&:hover {
+			.cartBtnText {
+				visibility: visible;
+				opacity: 1;
+				display: block;
+				width: auto;
+			}
+		}
+		&.active {
+			border-color: transparent;
+			padding: 0 24px 0 0;
+			background-color: var(--black);
+			border-radius: 32px 0 0 32px;
+			min-width: 640px;
+
+			.cartBtn {
+				border-color: transparent;
+				padding: 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				
+				&Text {
+					display: block;
+					opacity: 1;
+					visibility: visible;
+					width: auto;
+				}
+			}
+			.cartWidgetClose {
+				display: block;
+			}
+		}
+	}
+
+	&Inner {
+		background-color: #000;
+		border-radius: 100px 0 0 100px;
+		padding-right: 24px;
+		padding-left: 32px;
+		padding-top: 22px;
+		padding-bottom: 22px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: 12px;
+
+		svg {
+			width: 32px;
+			height: 32px;
+			fill: transparent;
+			stroke: var(--yellow);
+			stroke-width: 2px;
+		}
+	}
+}
+.cartWidgetClose {
+	display: none;
+	svg {
+		width: 32px;
+		height: 32px;
+		fill: transparent;
+		stroke: #5C5C5C;
 	}
 }
