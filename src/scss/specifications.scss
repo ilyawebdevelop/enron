@@ -460,3 +460,37 @@ h5,
 	width: 100%;
 	text-align: center;
 }
+	.available {
+			font-size: 14px;
+			line-height: 180%;
+			letter-spacing: 0.7px;
+			display: flex;
+			align-items: center;
+			column-gap: 8px;
+
+			&::before {
+				content: '';
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+
+			}
+
+			&.text--red {
+				&::before {
+					background-color: var(--red);
+				}
+			}
+
+			&.text--green {
+				&::before {
+					background-color: var(--green);
+				}
+			}
+
+			&.text--white50 {
+				&::before {
+					background-color: var(--White50);
+				}
+			}
+		}

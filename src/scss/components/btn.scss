@@ -222,7 +222,7 @@
 		}
 		&.active {
 			border-color: transparent;
-			padding: 0 24px 0 0;
+			padding: 0 24px 0 24px;
 			background-color: var(--black);
 			border-radius: 32px 0 0 32px;
 			min-width: 640px;
@@ -243,6 +243,18 @@
 			}
 			.cartWidgetClose {
 				display: block;
+			}
+			.cartWidgList {
+				display: block;
+			}
+			.cartWidgTotal {
+				display: flex;
+			}
+			.cartWidgBtn {
+				display: flex;
+			}
+			.cartBtnInner {
+				padding-left: 0;
 			}
 		}
 	}
@@ -276,4 +288,17 @@
 		fill: transparent;
 		stroke: #5C5C5C;
 	}
+}
+.btn-icon {
+	svg {
+		width: 32px;
+		height: 32px;
+		fill: transparent;
+		stroke: #000;
+		stroke-width: 2px;
+	}
+}
+.cartWidgBtn {
+	display: none;
+	margin-bottom: 25px;
 }

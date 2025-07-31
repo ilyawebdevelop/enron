@@ -1,0 +1,31 @@
+<section class="productMain">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9">
+
+			</div>
+			<div class="col-lg-3">
+				<div class="productMainAction">
+					<div class="productMainPrice mb-2 h2">
+						237 500 ₽
+					</div>
+					<div class="available text--red mb-4 pb-1">
+						Осталось мало
+					</div>
+					<div class="quantity d-flex mb-4">
+						<button class="quantity-minus quantity-icon" onclick="this.nextElementSibling.stepDown();">
+							<img src="@img/icons/minus.svg" alt="icon">
+						</button>
+						<input class="quantity-input" type="number" value="1" min="1">
+						<button class="quantity-plus quantity-icon" onclick="this.previousElementSibling.stepUp();">
+							<img src="@img/icons/plus.svg" alt="icon">
+						</button>
+					</div>
+					<button class="button button--yellow rounded-100 w-100">
+						Добавить в заказ
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -13390,6 +13390,30 @@ h5,
   text-align: center;
 }
 
+.available {
+  font-size: 14px;
+  line-height: 180%;
+  letter-spacing: 0.7px;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+.available::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.available.text--red::before {
+  background-color: var(--red);
+}
+.available.text--green::before {
+  background-color: var(--green);
+}
+.available.text--white50::before {
+  background-color: var(--White50);
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -13590,7 +13614,7 @@ h5,
 }
 .cartBtnW.active {
   border-color: transparent;
-  padding: 0 24px 0 0;
+  padding: 0 24px 0 24px;
   background-color: var(--black);
   border-radius: 32px 0 0 32px;
   min-width: 640px;
@@ -13610,6 +13634,18 @@ h5,
 }
 .cartBtnW.active .cartWidgetClose {
   display: block;
+}
+.cartBtnW.active .cartWidgList {
+  display: block;
+}
+.cartBtnW.active .cartWidgTotal {
+  display: flex;
+}
+.cartBtnW.active .cartWidgBtn {
+  display: flex;
+}
+.cartBtnW.active .cartBtnInner {
+  padding-left: 0;
 }
 .cartBtnInner {
   background-color: #000;
@@ -13639,6 +13675,19 @@ h5,
   height: 32px;
   fill: transparent;
   stroke: #5C5C5C;
+}
+
+.btn-icon svg {
+  width: 32px;
+  height: 32px;
+  fill: transparent;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.cartWidgBtn {
+  display: none;
+  margin-bottom: 25px;
 }
 
 /* Hamburger Menu */
@@ -13975,29 +14024,6 @@ h5,
 .productCardCat.text--white {
   color: #fff;
 }
-.productCard .available {
-  font-size: 14px;
-  line-height: 180%;
-  letter-spacing: 0.7px;
-  display: flex;
-  align-items: center;
-  column-gap: 8px;
-}
-.productCard .available::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-.productCard .available.text--red::before {
-  background-color: var(--red);
-}
-.productCard .available.text--green::before {
-  background-color: var(--green);
-}
-.productCard .available.text--white50::before {
-  background-color: var(--White50);
-}
 .productCardParams {
   width: 560px;
   flex-shrink: 0;
@@ -14041,6 +14067,17 @@ h5,
   stroke: var(--yellow);
   stroke-width: 2px;
   fill: transparent;
+}
+
+.productMainAction {
+  border-radius: 24px;
+  background: var(--Dark2, #1C1C1C);
+  backdrop-filter: blur(5px);
+  padding: 40px 40px 48px 40px;
+}
+
+.productMainPrice {
+  font-family: var(--font-family);
 }
 
 .pag-arrow.pag-arrow-none {
@@ -14093,6 +14130,67 @@ h5,
 }
 .paginationItemActive {
   color: var(--yellow);
+}
+
+.cartWidgList {
+  display: none;
+}
+.cartWidgTotal {
+  padding-left: 32px;
+  padding-right: 32px;
+  color: var(--White50, rgba(255, 255, 255, 0.5));
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.48px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: none;
+}
+.cartWidgItem {
+  padding: 20px;
+}
+.cartWidgItem:not(:last-child) {
+  margin-bottom: 10px;
+}
+.cartWidgItemImg img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.cartWidgItemCat {
+  margin-bottom: 5px;
+  color: var(--White50);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.65px;
+  text-transform: uppercase;
+}
+.cartWidgItemTitle {
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.48px;
+}
+.cartWidgItemTitleW {
+  max-width: 275px;
+}
+.cartWidgItemPrice {
+  color: var(--Yellow, #FFCC01);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.48px;
+}
+.cartWidgItemPricePerOne {
+  color: #B9B9B9;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 180%;
+  letter-spacing: 0.7px;
 }
 
 .footerDevelop {
