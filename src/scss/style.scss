@@ -4,6 +4,9 @@
 // bootstrap v5.3.2
 @import "./bootstrap.min";
 
+// fancybox
+@import './fancybox';
+
 // Базовые подключения
 @import 'vars';
 @import 'mixins';
@@ -22,6 +25,7 @@
 @import "./components/product";
 @import "./components/pagination";
 @import "./components/cart";
+@import "./components/doc";
 
 
 
