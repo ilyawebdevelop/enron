@@ -1,0 +1,213 @@
+<div class="checkout">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="cartList">
+
+          <div class="cartItem mb-2">
+            <div class="cartItemL d-flex gap-4">
+              <a href="#" class="cartItemImg">
+                <img src="@img/admin/product/image-1.png" alt="image">
+              </a>
+              <div class="cartItemContent">
+
+                <div class="sku mb-3">
+                  <div class="d-flex align-items-center gap-2">
+                    Арт.: 123456789
+                  </div>
+                </div>
+                <div class="cartItemCat mb-2">моторное масло</div>
+                <h4 class="h mb-3">
+                  <a class="text--yellow" href="#">TAIF SOPRANO ISO VG 680</a>
+                </h4>
+                <div class="available text--red mb-4 pb-1">
+                  Осталось мало
+                </div>
+
+              </div>
+            </div>
+            <div class="cartItemR">
+              <div class="d-flex align-items-center gap-4">
+                <div class="d-flex align-items-center gap-4">
+                  <span class="text--lg font-family-second fw-light text--white50">7 500 ₽</span>
+                  <div class="quantity d-flex">
+                    <button class="quantity-minus quantity-icon" onclick="this.nextElementSibling.stepDown();">
+                      <img src="@img/icons/minus.svg" alt="icon">
+                    </button>
+                    <input class="quantity-input" type="number" value="1" min="1">
+                    <button class="quantity-plus quantity-icon" onclick="this.previousElementSibling.stepUp();">
+                      <img src="@img/icons/plus.svg" alt="icon">
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex gap-4 align-items-center">
+                  <span class="cartItemTotal text--yellow fw-medium h4 mb-0">7 500 ₽</span>
+                  <button class="cartItemRemove" type="button">
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#trash"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="cartItem mb-2">
+            <div class="cartItemL d-flex gap-4">
+              <a href="#" class="cartItemImg">
+                <img src="@img/admin/product/image-1.png" alt="image">
+              </a>
+              <div class="cartItemContent">
+
+                <div class="sku mb-3">
+                  <div class="d-flex align-items-center gap-2">
+                    Арт.: 123456789
+                  </div>
+                </div>
+                <div class="cartItemCat mb-2">моторное масло</div>
+                <h4 class="h mb-3">
+                  <a class="text--yellow" href="#">TAIF SOPRANO ISO VG 680 TAIF SOPRANO ISO VG 680</a>
+                </h4>
+                <div class="available text--green mb-4 pb-1">
+                  Много
+                </div>
+
+              </div>
+            </div>
+            <div class="cartItemR">
+              <div class="d-flex align-items-center gap-4">
+                <div class="d-flex align-items-center gap-4">
+                  <span class="text--lg font-family-second fw-light text--white50">37 500 ₽</span>
+                  <div class="quantity d-flex">
+                    <button class="quantity-minus quantity-icon" onclick="this.nextElementSibling.stepDown();">
+                      <img src="@img/icons/minus.svg" alt="icon">
+                    </button>
+                    <input class="quantity-input" type="number" value="1" min="1">
+                    <button class="quantity-plus quantity-icon" onclick="this.previousElementSibling.stepUp();">
+                      <img src="@img/icons/plus.svg" alt="icon">
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex gap-4 align-items-center">
+                  <span class="cartItemTotal text--yellow fw-medium h4 mb-0">117 500 ₽</span>
+                  <button class="cartItemRemove" type="button">
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#trash"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="gap-2 grid mb-2">
+          <div class="grid-col-6 d-flex gap-2 bg--white-04 rounded-24 p-3">
+
+            <div class="radioW w-50">
+              <input type="radio" id="pay-1" name="payment" checked>
+              <label class="h5 rounded-100 mb-0" for="pay-1">Оплата наличными</label>
+            </div>
+            <div class="radioW w-50">
+              <input type="radio" id="pay-2" name="payment">
+              <label class="h5 rounded-100 mb-0" for="pay-2">Безналичная оплата</label>
+            </div>
+
+          </div>
+
+
+          <div class="grid-col-6 d-flex gap-2 bg--white-04 rounded-24 p-3">
+
+            <div class="radioW w-50">
+              <input type="radio" id="del-1" name="del">
+              <label class="h5 rounded-100 mb-0" for="del-1">Самовывоз со склада</label>
+            </div>
+            <div class="radioW w-50">
+              <input type="radio" id="del-2" name="del" checked>
+              <label class="h5 rounded-100 mb-0" for="del-2">Доставка до клиента</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg--white-04 p-40 rounded-24 mb-2">
+          <h4 class="h4 mb-3 pb-3">
+            Плательщик
+          </h4>
+          <div class="mb-2 px-4 mx-1">Название организации</div>
+          <div class="formSelect mb-3 pb-3">
+            <select class="bordered-40 border-gray w-100" name="nazv_org" id="nazv_org">
+              <option value="1">
+                ООО «Рога и копыта»
+              </option>
+              <option value="2">
+                ООО «Рога и копыта» ООО «Рога и копыта»
+              </option>
+              <option value="3">
+                ООО «Рога и копыта»
+              </option>
+            </select>
+          </div>
+          <div class="mb-2 px-4 mx-1">Адрес доставки</div>
+          <div class="formSelect">
+            <select class="bordered-40 border-gray w-100" name="nazv_org" id="nazv_org">
+              <option value="1">
+                123456, г. Москва, ул. Подвойского, д. 14, стр. 7
+              </option>
+              <option value="2">
+                ООО «Рога и копыта» ООО «Рога и копыта»
+              </option>
+              <option value="3">
+                ООО «Рога и копыта»
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="bg--white-04 p-40 rounded-24 mb-2">
+          <h4 class="h4 mb-3 pb-3">
+            Представитель компании
+          </h4>
+          <div class="grid gap-2">
+            <div class="grid-col-6">
+            
+              <div class="mb-2 px-4 mx-1">ФИО представителя</div>
+              <input type="text" class="formInput border-white50 formInput--transparent"
+                placeholder="Иванов Иван Иванович">
+            </div>
+            <div class="grid-col-6">
+              <div class="mb-2 px-4 mx-1">Контактный номер телефона</div>
+              <input type="text" class="formInput border-white50 formInput--transparent"
+                placeholder="+ 7 (123) 456 7890">
+            </div>
+          </div>
+        </div>
+
+        <div class="bg--white-04 p-40 rounded-24">
+          <h4 class="h4 mb-3 pb-3">
+            Оставить комментарий к заказу
+          </h4>
+          <div class="mb-2 px-4 mx-1">Комментарий</div>
+          <textarea name="comment" id="comment" cols="30" rows="10" class="formText border-white50 bordered-40 w-100"></textarea>
+    
+        </div>
+
+      </div>
+      <div class="col-lg-3">
+        <div class="cartTotal">
+          <h4 class="h4 text-center mb-3 pb-2 font-family-second">
+            Общая сумма заказа
+          </h4>
+          <div class="cartTotalSum h2 text--yellow text-center fw-semibold mb-3 pb-2">
+            237 500 ₽
+          </div>
+          <button class="button button--yellow rounded-100 w-100">
+            Оформить заказ
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

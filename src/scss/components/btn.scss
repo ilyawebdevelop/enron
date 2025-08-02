@@ -47,15 +47,32 @@
 	&.rounded-100 {
 		border-radius: 100px;
 	}
+	&.pr-32 {
+		padding-right: 32px;
+	}
 
 	&--white {
 		background-color: #fff;
+	}
+	&.min-w-400 {
+		min-width: 400px;
 	}
 
 	svg {
 		width: 16px;
 		height: 16px;
 		stroke: #000;
+	}
+	&--transparent {
+		border: 1px solid var(--White50, rgba(255, 255, 255, 0.50));
+
+		svg {
+			fill: transparent;
+			stroke: #fff;
+			stroke-width: 2px;
+			width: 32px;
+			height: 32px;
+		}
 	}
 }
 
@@ -212,6 +229,7 @@
 		border-left: 1px solid var(--gray);
 		cursor: pointer;
 		transition: all .2s linear;
+
 		&:hover {
 			.cartBtnText {
 				visibility: visible;
@@ -220,6 +238,7 @@
 				width: auto;
 			}
 		}
+
 		&.active {
 			border-color: transparent;
 			padding: 0 24px 0 24px;
@@ -233,7 +252,7 @@
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				
+
 				&Text {
 					display: block;
 					opacity: 1;
@@ -241,18 +260,23 @@
 					width: auto;
 				}
 			}
+
 			.cartWidgetClose {
 				display: block;
 			}
+
 			.cartWidgList {
 				display: block;
 			}
+
 			.cartWidgTotal {
 				display: flex;
 			}
+
 			.cartWidgBtn {
 				display: flex;
 			}
+
 			.cartBtnInner {
 				padding-left: 0;
 			}
@@ -280,8 +304,10 @@
 		}
 	}
 }
+
 .cartWidgetClose {
 	display: none;
+
 	svg {
 		width: 32px;
 		height: 32px;
@@ -289,6 +315,7 @@
 		stroke: #5C5C5C;
 	}
 }
+
 .btn-icon {
 	svg {
 		width: 32px;
@@ -298,7 +325,22 @@
 		stroke-width: 2px;
 	}
 }
+
 .cartWidgBtn {
 	display: none;
 	margin-bottom: 25px;
+}
+.cartItemRemove {
+	width: 64px;
+	height: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	svg {
+		fill: transparent;
+		stroke: #B9B9B9;
+		stroke-width: 2px;
+		width: 32px;
+		height: 32px;
+	}
 }

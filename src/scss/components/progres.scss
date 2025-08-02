@@ -1,0 +1,71 @@
+.progres {
+  position: relative;
+  min-height: 800px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .h2 {
+    margin-bottom: 60px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(92deg, rgba(0, 0, 0, 0.50) 12.32%, rgba(0, 0, 0, 0.25) 88.51%);
+  }
+
+  .h2 {
+    font-size: 40px;
+    line-height: 120%;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.progres-year-slider {
+  width: 100%;
+
+  .swiper-slide {
+    border-radius: 100px;
+    background: var(--Dark, #363436);
+    width: auto;
+    padding: 16px;
+    font-weight: 500;
+    font-family: var(--font-family-second);
+    color: var(--yellow);
+    cursor: pointer;
+    transition: background-color .2s linear, color .2s linear;
+    &:hover {
+      background-color: var(--yellow);
+      color: var(--black);
+    }
+    &:not(:last-child){
+      &::after {
+        content: '';
+        width: 32px;
+        height: 1px;
+        background-color: var(--dark);
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &.swiper-slide-thumb-active {
+      background-color: var(--yellow);
+      color: var(--black);
+    }
+  }
+}
+
+.progres-slider {
+  margin-top: 80px;
+}
