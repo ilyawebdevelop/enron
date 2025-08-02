@@ -14579,7 +14579,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: 32px;
+  font-size: 40px;
 }
 @media (max-width: 991px) {
   h2,
@@ -14845,6 +14845,43 @@ h5,
   letter-spacing: 0.56px;
 }
 
+.link-back {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileW svg {
+  fill: transparent;
+  stroke: var(--yellow) !important;
+  stroke-width: 2px;
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.agreement .rect {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1.5px solid var(--Gray, #5C5C5C);
+  background-size: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--Dark, #363436);
+}
+.agreement a {
+  display: inline;
+}
+.agreement label {
+  cursor: pointer;
+}
+.agreement input:checked + label .rect {
+  background-image: url("../img/icons/check.svg");
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -14875,6 +14912,9 @@ h5,
 .button--dark {
   background-color: var(--dark);
   color: var(--yellow);
+}
+.button--dark .btn-icon svg {
+  stroke: var(--yellow);
 }
 .button--round {
   border-radius: 50%;
@@ -15771,10 +15811,30 @@ h5,
   width: 100%;
   height: 360px;
   object-fit: cover;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .docCardTitle {
   font-family: var(--font-family-second);
   text-align: center;
+}
+.docSlider .swiper-pagination {
+  position: relative;
+  width: fit-content;
+  top: unset;
+  bottom: unset;
+}
+.docSlider .swiper-pagination-bullet {
+  background-color: var(--gray);
+  margin-left: 12px;
+}
+.docSlider .swiper-pagination-bullet-active {
+  background-color: var(--yellow);
+}
+.docSlider .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .docSlider .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .productDocs .docCard {
@@ -15889,6 +15949,7 @@ h5,
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: rgba(47, 45, 47, 0.8);
 }
 .progres .h2 {
   margin-bottom: 60px;
@@ -15901,6 +15962,9 @@ h5,
   width: 100%;
   height: 100%;
   background: linear-gradient(92deg, rgba(0, 0, 0, 0.5) 12.32%, rgba(0, 0, 0, 0.25) 88.51%);
+}
+.progres--before-none::before {
+  display: none;
 }
 .progres .h2 {
   font-size: 40px;
@@ -15946,6 +16010,51 @@ h5,
 
 .progres-slider {
   margin-top: 80px;
+}
+
+.expContent {
+  padding-right: 80px;
+  padding-top: 40px;
+}
+
+.partnersSlider {
+  overflow: visible;
+}
+.partnersSlider .swiper-slide {
+  width: auto;
+  width: 188px;
+  height: 188px;
+}
+.partnersSlider .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.partners .sectHead {
+  margin-bottom: 60px;
+}
+
+.vacancyPrice {
+  color: var(--yellow);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  padding: 16px 24px;
+  border-radius: 30px;
+  background-color: var(--dark-2);
+  width: fit-content;
+}
+.vacancyForm {
+  padding: 60px;
+  border-radius: 24px;
+  background: var(--White04, rgba(255, 255, 255, 0.04));
+}
+.vacancyForm .formText {
+  height: 220px;
 }
 
 .footerDevelop {

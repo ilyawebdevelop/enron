@@ -77,60 +77,127 @@ document.querySelectorAll('.productCardSlider').forEach(n => {
 
 // Инициализация слайдера adv-about-slider
 document.querySelectorAll('.adv-about-slider').forEach(n => {
-  const mySwiperAdvAbout = new Swiper(n, {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    speed: 600,
-    autoplay: true,
-    navigation: {
-      prevEl: n.closest('.adv-about').querySelector('.navArrowPrev'),
-      nextEl: n.closest('.adv-about').querySelector('.navArrowNext'),
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
-      768: {
-        slidesPerView: 3,
+	const mySwiperAdvAbout = new Swiper(n, {
+		slidesPerView: 4,
+		spaceBetween: 20,
+		speed: 600,
+		autoplay: true,
+		navigation: {
+			prevEl: n.closest('.adv-about').querySelector('.navArrowPrev'),
+			nextEl: n.closest('.adv-about').querySelector('.navArrowNext'),
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 3,
 				spaceBetween: 20,
-      },
-      1200: {
-        slidesPerView: 4,
-      },
-    },
-  });
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+		},
+	});
 });
 
 // Инициализация слайдера progres-slider
 document.querySelectorAll('.progres-slider').forEach(n => {
-  const mySwiperProgres = new Swiper(n, {
-    slidesPerView: 1,
-    spaceBetween: 13,
-    speed: 600,
-    // freeMode: false,
-    watchSlidesProgress: true,
-    mousewheel: false,
-    navigation: {
-      prevEl: n?.closest('.progres').querySelector('.navArrowPrev'),
-      nextEl: n?.closest('.progres').querySelector('.navArrowNext'),
-    },
-    thumbs: { // указываем на превью слайдер
-      swiper: {
-        el: n.closest('.progres').querySelector('.progres-year-slider'),
-        slidesPerView: 'auto',
-        spaceBetween: 14,
-        speed: 600,
-        watchSlidesProgress: true,        
-        breakpoints: {
-          0: {
-            spaceBetween: 5,       
-          }, 
-          1200: {
-            spaceBetween: 32,
-          },
-        },
-      }
-    },
-  });
+	const mySwiperProgres = new Swiper(n, {
+		slidesPerView: 1,
+		spaceBetween: 13,
+		speed: 600,
+		// freeMode: false,
+		watchSlidesProgress: true,
+		mousewheel: false,
+		navigation: {
+			prevEl: n?.closest('.progres').querySelector('.navArrowPrev'),
+			nextEl: n?.closest('.progres').querySelector('.navArrowNext'),
+		},
+		thumbs: { // указываем на превью слайдер
+			swiper: {
+				el: n.closest('.progres').querySelector('.progres-year-slider'),
+				slidesPerView: 'auto',
+				spaceBetween: 14,
+				speed: 600,
+				watchSlidesProgress: true,
+				breakpoints: {
+					0: {
+						spaceBetween: 5,
+					},
+					1200: {
+						spaceBetween: 32,
+					},
+				},
+			}
+		},
+	});
+});
+
+//  Инициализация слайдера partnersSlider
+document.querySelectorAll('.partnersSlider').forEach(n => {
+	const mySwiperPartners = new Swiper(n, {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		speed: 600,
+		loop: true,
+		autoplay: true,
+	});
+});
+
+// Инициализация слайдера docSlider
+document.querySelectorAll('.docSlider').forEach(n => {
+	const mySwiperDoc = new Swiper(n, {
+		slidesPerView: 4,
+		spaceBetween: 20,
+		speed: 600,
+		autoplay: true,
+		navigation: {
+			prevEl: n.closest('.doc').querySelector('.navArrowPrev'),
+			nextEl: n.closest('.doc').querySelector('.navArrowNext'),
+		},
+		pagination: {
+			el: n.closest('.doc').querySelector('.swiper-pagination'),
+			clickable: true,
+			type: 'bullets',
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+		},
+	});
+});
+
+// Инициализация слайдера vac-related-slider
+document.querySelectorAll('.vac-related-slider').forEach(n => {
+	const mySwiperVacRelated = new Swiper(n, {
+		slidesPerView: 3,
+		spaceBetween: 20,
+		speed: 600,
+		loop: false,
+		navigation: {
+			prevEl: n.closest('.sliderW').querySelector('.navArrowPrev'),
+			nextEl: n.closest('.sliderW').querySelector('.navArrowNext'),
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+		},
+	});
 });

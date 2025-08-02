@@ -1,0 +1,21 @@
+.partners {
+	&Slider {
+		overflow: visible;
+		.swiper-slide {
+			
+			width: auto;
+			width: 188px;
+			height: 188px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				border-radius: 50%;
+				background-color: #fff;
+			}
+		}
+	}
+	.sectHead {
+		margin-bottom: 60px;
+	}
+}

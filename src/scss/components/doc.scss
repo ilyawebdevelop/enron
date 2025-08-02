@@ -14,6 +14,9 @@
 			width: 100%;
 			height: 360px;
 			object-fit: cover;
+			max-width: 300px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		&Title {
@@ -21,10 +24,33 @@
 			text-align: center;
 		}
 	}
+
+	&Slider {
+		.swiper-pagination {
+			position: relative;
+			width: fit-content;
+			top: unset;
+			bottom: unset;
+
+			&-bullet {
+				background-color: var(--gray);
+				margin-left: 12px;
+				&-active {
+					background-color: var(--yellow);
+				}
+			}
+		}
+		.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+	}
 }
+
 .productDocs {
 	.docCard {
 		padding: 30px;
+
 		img {
 			height: 300px;
 			margin-bottom: 20px;

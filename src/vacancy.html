@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/head.html',{
-"title":"О компании"
+"title":"Название вакансии"
 })
 
 <body>
@@ -10,15 +10,11 @@
 		@@include('html/header-auth.html',{})
 		<main class="main">
 			@@include('html/breadcrumbs.html',{})
-			@@include('html/page-head-vac.html',{
-				"title":"О компании"
+			@@include('html/page-head-vac-back.html',{
+				"title":"Название вакансии"
 			})
-			@@include('html/about/intro.html',{})
-			@@include('html/about/adv.html',{})
-			@@include('html/about/progress.html',{})
-			@@include('html/about/exp.html',{})
-			@@include('html/about/partners.html',{})
-			@@include('html/about/doc.html',{})
+			@@include('html/vacancy/content.html',{})
+			@@include('html/vacancy/related.html',{})
 		</main>
 		@@include('html/footer.html',{})
 		@@include('html/modal.html',{})

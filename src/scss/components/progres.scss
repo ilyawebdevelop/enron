@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+	background-color: rgba(47, 45, 47, 0.80);
 
   .h2 {
     margin-bottom: 60px;
@@ -18,6 +19,11 @@
     height: 100%;
     background: linear-gradient(92deg, rgba(0, 0, 0, 0.50) 12.32%, rgba(0, 0, 0, 0.25) 88.51%);
   }
+	&--before-none {
+		&::before {
+			display: none;
+		}
+	}
 
   .h2 {
     font-size: 40px;
