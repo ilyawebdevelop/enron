@@ -1,0 +1,89 @@
+.news {
+	&Card {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		margin-bottom: 24px;
+
+		&:hover {
+			&::before {
+				height: 100%;
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 255px;
+			background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+			bottom: 0;
+			left: 0;
+			border-bottom-left-radius: 24px;
+			border-bottom-right-radius: 24px;
+			transition: height .2s linear;
+		}
+
+		&Content {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			z-index: 1;
+			padding: 40px;
+		}
+
+		&Date {
+			margin-bottom: 12px;
+			font-size: 14px;
+		}
+
+		&Title {
+			font-family: var(--font-family);
+			font-size: 21px;
+			font-weight: 600;
+			line-height: 150%;
+			letter-spacing: 0.84px;
+
+			&--lg {
+				font-size: 40px;
+				font-weight: 600;
+				line-height: 120%;
+				letter-spacing: 0.4px;
+			}
+		}
+
+
+
+		img {
+			width: 100%;
+			height: 420px;
+			object-fit: cover;
+			border-radius: 24px;
+		}
+
+		&--lg {
+			img {
+				height: 866px;
+			}
+
+			.newsCardDate {
+				font-size: 16px;
+			}
+
+			.newsCardContent {
+				padding: 60px;
+			}
+		}
+	}
+}
+.article-person {
+	background-color: var(--yellow);
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;	
+	justify-content: center;
+}

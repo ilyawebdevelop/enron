@@ -1,0 +1,71 @@
+<section class="sect pb-0 pt-0">
+	<div class="container container-1530">
+		<div class="d-flex justify-content-between align-items-center gap-4 mb-5">
+
+			<nav class="nav-links">
+				<ul>
+					<li class="active"><a href="#">Все</a></li>
+					<li><a href="#">Новости компании</a></li>
+					<li><a href="#">Новости индустрии</a></li>
+					<li><a href="#">Акции</a></li>
+					<li><a href="#">Полезная информация</a></li>
+				</ul>
+			</nav>
+			<div class="formSelect">
+				<select name="news-sort" id="news-sort">
+					<option value="1">Сначала новые</option>
+					<option value="2">Сначала старые</option>
+				</select>
+			</div>
+		</div>
+
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				@@include('../news/card-lg.html', {})
+			</div>
+			<div class="col-lg-6">
+				<div class="row">
+					<div class="col-lg-6">
+						@@include('../news/card-1.html', {})
+					</div>
+					<div class="col-lg-6">
+						@@include('../news/card-2.html', {})
+					</div>
+					<div class="col-lg-6">
+						@@include('../news/card-1.html', {})
+					</div>
+					<div class="col-lg-6">
+						@@include('../news/card-2.html', {})
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				@@include('../news/card-1.html', {})
+			</div>
+			<div class="col-lg-3">
+				@@include('../news/card-2.html', {})
+			</div>
+			<div class="col-lg-3">
+				@@include('../news/card-1.html', {})
+			</div>
+			<div class="col-lg-3">
+				@@include('../news/card-2.html', {})
+			</div>
+					<div class="col-lg-3">
+				@@include('../news/card-1.html', {})
+			</div>
+			<div class="col-lg-3">
+				@@include('../news/card-2.html', {})
+			</div>
+			<div class="col-lg-3">
+				@@include('../news/card-1.html', {})
+			</div>
+			<div class="col-lg-3">
+				@@include('../news/card-2.html', {})
+			</div>
+		</div>
+		@@include('../catalog/products-pagination.html', {})
+	</div>
+</section>

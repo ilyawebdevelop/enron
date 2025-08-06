@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+"title":"Заказ от 21.05.2025"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header-auth.html',{})
+		<main class="main">
+			@@include('html/breadcrumbs.html',{})
+			@@include('html/page-head-history.html',{
+				"title":"Заказ от 21.05.2025"
+			})
+			@@include('html/history/content.html',{})
+		
+		</main>
+		@@include('html/footer.html',{})
+		@@include('html/modal.html',{})
+
+	</div>
+
+	<script src="js/app.min.js"></script>
+
+
+
+</body>
+
+</html>

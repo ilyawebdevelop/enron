@@ -6,7 +6,7 @@ import "./modules/bootstrap.bundle.min.js";
 import './components.js';
 
 Fancybox.bind("[data-fancybox]", {
-	closeButton: true,
+	closeButton: false,
 	showClass: "f-scaleOut",
 });
 
@@ -201,3 +201,43 @@ document.querySelectorAll('.vac-related-slider').forEach(n => {
 		},
 	});
 });
+
+// Инициализация слайдера newsSlider
+document.querySelectorAll('.newsSlider').forEach(n => {
+	const mySwiperDoc = new Swiper(n, {
+		slidesPerView: 4,
+		spaceBetween: 20,
+		speed: 600,
+		autoplay: true,
+		navigation: {
+			prevEl: n.closest('.sliderW').querySelector('.navArrowPrev'),
+			nextEl: n.closest('.sliderW').querySelector('.navArrowNext'),
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+		},
+	});
+});
+
+const togglePasswordArray = document.querySelectorAll('.show-pass');
+togglePasswordArray.forEach(el => {
+	el.addEventListener('click', () => {
+		let password = el.closest('.inputW').querySelector('.formInput--password');
+		// Toggle the type attribute using
+		// getAttribure() method
+		const type = password.getAttribute('type') === 'password' ?
+			'text' : 'password';
+		password.setAttribute('type', type);
+	});
+});
+

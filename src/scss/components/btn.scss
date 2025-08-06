@@ -25,6 +25,10 @@
 	&--yellow {
 		background-color: var(--yellow);
 		color: var(--black);
+		&:disabled {
+			opacity: .3;
+			pointer-events: none;
+		}
 	}
 
 	&--dark {
@@ -37,6 +41,12 @@
 			}
 		}
 	}
+	&--dark2 {
+		background-color: var(--dark-2);
+		&.text--yellow {
+			color: var(--yellow);
+		}
+	}
 
 	&--round {
 		border-radius: 50%;
@@ -47,6 +57,9 @@
 
 		img {
 			width: 32px;
+			&.w-24 {
+				width: 24px;
+			}
 		}
 	}
 
@@ -57,9 +70,20 @@
 	&.pr-32 {
 		padding-right: 32px;
 	}
+	&.pl-32 {
+		padding-left: 32px;
+	}
 
 	&--white {
 		background-color: #fff;
+	}
+
+	&.min-w-240 {
+		min-width: 240px;
+	}
+
+	&.min-w-320 {
+		min-width: 320px;
 	}
 
 	&.min-w-400 {
@@ -353,5 +377,33 @@
 		stroke-width: 2px;
 		width: 32px;
 		height: 32px;
+	}
+}
+.registerBtn {
+	margin-left: auto;
+}
+.new-password-btn {
+	margin-left: auto;
+}
+.button-more {
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #363436;
+	border-radius: 50%;
+	img {
+		width: 32px;
+	}
+}
+.button-edit {
+	width: 64px;
+	height: 64px;
+	display: flex;
+	align-items: center;	
+	justify-content: center;
+	img {
+		width: 32px;
 	}
 }
