@@ -12,13 +12,35 @@
 					<div class="row mb-4">
 						<div class="col-lg-6">
 							<div class="bg--white-04 rounded-24 profileItem h-100">
-								<div class="d-flex justify-content-between align-items-center mb-4">
+								<div class="d-flex justify-content-between align-items-center mb-4 position-relative context-wrap">
 									<h4 class="h4 mb-0">
 										Данные авторизации
 									</h4>
 									<button class="button-more">
-										<img src="@img/icons/more.svg" alt="more">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#more"></use>
+										</svg>
 									</button>
+									<div class="context-menu">
+										<button class="d-flex align-items-center gap-2 context-item mb-2">
+											<div class="context-icon">
+												<img src="@img/icons/edit.svg" alt="icon">
+											</div>
+											<span class="h5 mb-0 text-start">Редактировать email</span>
+										</button>
+										<button class="d-flex align-items-center gap-2 context-item mb-2">
+											<div class="context-icon">
+												<img src="@img/icons/edit.svg" alt="icon">
+											</div>
+											<span class="h5 mb-0 text-start">Редактировать пароль</span>
+										</button>
+										<button class="d-flex align-items-center gap-2 context-item mb-2">
+											<div class="context-icon">
+												<img src="@img/icons/edit.svg" alt="icon">
+											</div>
+											<span class="h5 mb-0 text-start">Редактировать пароль пароль</span>
+										</button>
+									</div>
 								</div>
 								<div class="mb-4">
 									<div class="mb-2 px-3 mx-2">Email (логин)</div>
@@ -104,7 +126,7 @@
 
 									<div class="d-flex align-items-center justify-content-between mb-2">
 										<h3 class="mb-0">
-										ООО «Шуря»
+											ООО «Шуря»
 										</h3>
 										<button class="button-edit">
 											<img src="@img/icons/edit.svg" alt="edit">
@@ -125,6 +147,42 @@
 												Текущий баланс
 											</div>
 											<div class="h5 mb-0 text-end">
+												3 200 000$
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="border-white50 p-4 rounded-24 mb-4">
+
+									<div class="d-flex align-items-center justify-content-between mb-2">
+										<div class="d-flex align-items-center gap-2">
+											<h3 class="mb-0 text--white50">
+												ООО «Шуря»
+											</h3>
+											<span class="text--red text--16">Организация будет удалена после проверки менеджером</span>
+										</div>
+
+										<button class="button-edit" disabled>
+											<img src="@img/icons/edit.svg" alt="edit">
+										</button>
+									</div>
+
+									<div class="d-flex align-items-center justify-content-between">
+										<div class="d-flex gap-2">
+											<button class="button button--dark2 rounded-100 pl-32 pr-32" disabled>
+												Адреса доставки
+											</button>
+											<button class="button button--yellow rounded-100 pl-32 pr-32" disabled>
+												Акты сверок
+											</button>
+										</div>
+										<div class="d-flex flex-column">
+											<div class="text--16 text--white50">
+												Текущий баланс
+											</div>
+											<div class="h5 mb-0 text-end text--white50">
 												3 200 000$
 											</div>
 										</div>
