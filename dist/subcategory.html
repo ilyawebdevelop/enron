@@ -20,30 +20,100 @@
 		<!-- Header -->
 <header class="header" id="header">
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="d-flex align-items-center gap-4">
+		<div class="headerGrid">
+			<div class="headerLeft">
+				<div
+					class="d-flex flex-row-reverse flex-lg-row justify-content-end justify-content-lg-start align-items-center gap-2 gap-lg-4">
 					<a href="#" class="headerLogo logo">
 						<img src="img/admin/logo/logo-text.svg" alt="logo">
 					</a>
 					<div class="d-flex gap-2">
-						<a href="#" class="headerCatalogBtn button button--yellow rounded-100">
+
+						<a href="#" class="d-none d-lg-flex headerCatalogBtn button button--yellow rounded-100">
 							<img src="img/icons/catalog-icon.svg" alt="icon">
 							<span>Каталог продукции</span>
 						</a>
-						<button class="headerSearchBtn button button--round button--dark" type="button">
-							<img src="img/icons/search-gold.svg" alt="search">
+
+						<button class="d-none d-lg-flex headerSearchBtn button button--round button--dark" type="button">
+							<div class="btn-icon">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#search">
+									</use>
+								</svg>
+							</div>
 						</button>
-						<button class="headerMenuBtn button button--round button--dark" type="button">
-							<img src="img/icons/menu-gold.svg" alt="menu">
-						</button>
+
+						<div class="headerDropWrap">
+							<button class="headerMenuBtn button button--round button--dark" type="button">
+								<div class="btn-icon">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#menu">
+										</use>
+									</svg>
+								</div>
+								<!-- <img class="d-none d-lg-block" src="img/icons/menu-gold.svg" alt="menu">
+								<img class="d-block d-lg-none" src="img/icons/menu-gray.svg" alt="menu"> -->
+							</button>
+							<div class="dropMenu dropMenu--left dropMenu--320">
+								<ul>
+									<li><a href="#">О компании</a></li>
+									<li><a href="#">Новости и публикации</a></li>
+									<li><a href="#">Контакты</a></li>
+								</ul>
+							</div>
+							<div class="menuMobile">
+								<div class="menuMobileHead d-flex align-items-center justify-content-between gap-3 py-3">
+									<button class="button button--round menuMobileBtnClose">
+										<img src="img/icons/close.svg" alt="icon">
+									</button>
+									<a href="#" class="button button--dark rounded-100">
+										<div class="btn-icon">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#person">
+												</use>
+											</svg>
+										</div>
+										<div class="text--yellow">Вход</div>
+									</a>
+								</div>
+								<div class="menuMobileContainer">
+									<nav class="menuMobileNav mb-5">
+										<ul class="menuMobileList">
+											<li><a href="#">О компании</a></li>
+											<li><a href="#">Новости и публикации</a></li>
+											<li><a href="#">Контакты</a></li>
+										</ul>
+									</nav>
+									<a href="tel:+73955608555" class="text--yellow h4 mb-3 d-flex">+7 3955 60-85-55</a>
+									<a href="mailto:office@enron-group.ru" class="text--yellow h4 mb-3 d-flex">office@enron-group.ru</a>
+									<div class="d-flex flex-column gap-2 mt-4 mb-5">
+										<button class="button button--yellow rounded-100 w-100">
+											Оставить заявку
+										</button>
+										<button class="button button--transparent rounded-100 w-100">
+											<img src="img/icons/message.svg" alt="icon">
+											<span>Задать вопрос</span>
+										</button>
+									</div>
+
+									<button class="button rounded-100 w-100">
+										<img src="img/icons/exit.svg" alt="icon">
+										<span class="text--yellow">Выйти</span>
+									</button>
+
+								</div>
+
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-6">
+
+			<div class="headerRight">
 				<div class="d-flex align-items-center gap-4 justify-content-end">
 
-					<div class="d-flex flex-column gap-1">
+					<div class="flex-column gap-1 d-none d-lg-flex">
 						<a class="headerPhone" href="tel:+7 3955 60-85-55">
 							+7 3955 60-85-55
 						</a>
@@ -51,19 +121,58 @@
 					</div>
 
 					<div class="d-flex gap-2">
-						<button class="button button--yellow rounded-100" type="button">
-							Оставить заявку
+						<button class="d-none d-lg-flex button button--yellow rounded-100 headerBtnOrder" type="button">
+							<span>Оставить заявку</span>
 							<img src="img/icons/arrow-btn.svg" alt="icon">
 						</button>
-						<button class="button button--dark rounded-100 headerBtnAccount" type="button">
-							<img src="img/icons/person-gold.svg" alt="icon">
-							<span>Личный кабинет</span>
+						<div class="d-none d-lg-block headerAccountWrap headerDropWrap">
+							<a href="#" class="button button--dark rounded-100 headerBtnAccount">
+								<div class="btn-icon">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#person">
+										</use>
+									</svg>
+								</div>
+								<span>Личный кабинет</span>
+							</a>
+							<div class="dropMenu dropMenu--right dropMenu--320">
+								<ul>
+									<li><a href="#">Профиль</a></li>
+									<li><a href="#">Заказы</a></li>
+									<li class="mb-1 pb-1 border-b-gray"><a href="#">Персональный менеджер</a></li>
+									<li>
+										<a class="d-flex justify-content-between align-items-center" href="#">
+											Выйти
+											<svg>
+												<use xlink:href="img/icons/icons.svg#exit">
+												</use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<a href="#" class="d-flex d-lg-none headerCatalogBtn button button--yellow rounded-100">
+							<img src="img/icons/catalog-icon.svg" alt="icon">
+							<span>Каталог продукции</span>
+						</a>
+
+						<button class="d-flex d-lg-none headerSearchBtn button button--round button--dark" type="button">
+							<div class="btn-icon">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#search">
+									</use>
+								</svg>
+							</div>
 						</button>
+
 					</div>
 
 				</div>
 			</div>
+
 		</div>
+
 	</div>
 </header>
 		<main class="main">
@@ -73,6 +182,18 @@
 			<ul>
 				<li>
 					<a href="#">Главная</a>
+				</li>
+				<li class="sep">
+					/
+				</li>
+				<li>
+					<a href="#">Главная</a>
+				</li>
+				<li class="sep">
+					/
+				</li>
+				<li>
+					<a href="#">Новости и публикации</a>
 				</li>
 				<li class="sep">
 					/
@@ -89,11 +210,11 @@
 			<div class="pageHead">
 	<div class="container">
 
-		<div class="d-flex align-items-center gap-2 mb-3">
+		<div class="d-flex flex-wrap align-items-center gap-2 mb-2 mb-lg-3">
 			<h1 class="h1 mb-0">
 				Продукция
 			</h1>
-			<strong class="h5 color-white-50">
+			<strong class="h5 color-white-50 mb-0">
 				146 713 товаров
 			</strong>
 		</div>
@@ -341,13 +462,13 @@
 			<div class="productCardPrice">
 				7 500 ₽
 			</div>
-			<div class="available text--red mb-3 pb-1">
+			<div class="available text--red mb-2 mb-sm-3 pb-1">
 				Осталось мало
 			</div>
 			<div class="productCardCat mb-2 text-uppercase">
 				моторное масло
 			</div>
-			<h5 class="h5">
+			<h5 class="h5 mb-1 mb-lg-3">
 				<a class="text--yellow" href="#">
 					TAIF SOPRANO ISO VG 680
 				</a>
@@ -355,7 +476,8 @@
 		</div>
 		<div class="productCardContentB">
 			<button class="button button--yellow rounded-100 w-100">
-				Добавить в заказ
+				<span class="d-none d-sm-block">Добавить в заказ</span>
+				<span class="d-block d-sm-none">В заказ</span>
 			</button>
 		</div>
 	</div>
@@ -369,13 +491,13 @@
 			<div class="productCardPrice">
 				7 500 ₽
 			</div>
-			<div class="available text--green mb-3 pb-1">
+			<div class="available text--green mb-2 mb-sm-3 pb-1">
 				Много
 			</div>
 			<div class="productCardCat mb-2 text-uppercase">
 				моторное масло
 			</div>
-			<h5 class="h5">
+			<h5 class="h5 mb-1 mb-lg-3">
 				<a class="text--yellow" href="#">
 					Присадки к дизельному топливу Coolstream TDA
 				</a>
@@ -403,13 +525,13 @@
 			<div class="productCardPrice">
 				2 320 ₽
 			</div>
-			<div class="available text--white50 mb-3 pb-1">
+			<div class="available text--white50 mb-2 mb-sm-3 pb-1">
 				Нет в наличии
 			</div>
 			<div class="productCardCat mb-2 text-uppercase">
 				Премиальные охлаждающие жидкости
 			</div>
-			<h5 class="h5">
+			<h5 class="h5 mb-1 mb-lg-3">
 				<a class="text--yellow" href="#">
 					TAIF SOPRANO ISO VG 680
 				</a>
@@ -417,7 +539,8 @@
 		</div>
 		<div class="productCardContentB">
 			<button class="button button--yellow rounded-100 w-100">
-				Добавить в заказ
+				<span class="d-none d-sm-block">Добавить в заказ</span>
+				<span class="d-block d-sm-none">В заказ</span>
 			</button>
 		</div>
 	</div>
@@ -431,13 +554,13 @@
 			<div class="productCardPrice">
 				7 500 ₽
 			</div>
-			<div class="available text--red mb-3 pb-1">
+			<div class="available text--red mb-2 mb-sm-3 pb-1">
 				Осталось мало
 			</div>
 			<div class="productCardCat mb-2 text-uppercase">
 				моторное масло
 			</div>
-			<h5 class="h5">
+			<h5 class="h5 mb-1 mb-lg-3">
 				<a class="text--yellow" href="#">
 					TAIF SOPRANO ISO VG 680
 				</a>
@@ -445,7 +568,8 @@
 		</div>
 		<div class="productCardContentB">
 			<button class="button button--yellow rounded-100 w-100">
-				Добавить в заказ
+				<span class="d-none d-sm-block">Добавить в заказ</span>
+				<span class="d-block d-sm-none">В заказ</span>
 			</button>
 		</div>
 	</div>
@@ -459,13 +583,13 @@
 			<div class="productCardPrice">
 				2 320 ₽
 			</div>
-			<div class="available text--white50 mb-3 pb-1">
+			<div class="available text--white50 mb-2 mb-sm-3 pb-1">
 				Нет в наличии
 			</div>
 			<div class="productCardCat mb-2 text-uppercase">
 				Премиальные охлаждающие жидкости
 			</div>
-			<h5 class="h5">
+			<h5 class="h5 mb-1 mb-lg-3">
 				<a class="text--yellow" href="#">
 					TAIF SOPRANO ISO VG 680
 				</a>
@@ -473,7 +597,8 @@
 		</div>
 		<div class="productCardContentB">
 			<button class="button button--yellow rounded-100 w-100">
-				Добавить в заказ
+				<span class="d-none d-sm-block">Добавить в заказ</span>
+				<span class="d-block d-sm-none">В заказ</span>
 			</button>
 		</div>
 	</div>
@@ -487,13 +612,13 @@
 			<div class="productCardPrice">
 				7 500 ₽
 			</div>
-			<div class="available text--green mb-3 pb-1">
+			<div class="available text--green mb-2 mb-sm-3 pb-1">
 				Много
 			</div>
 			<div class="productCardCat mb-2 text-uppercase">
 				моторное масло
 			</div>
-			<h5 class="h5">
+			<h5 class="h5 mb-1 mb-lg-3">
 				<a class="text--yellow" href="#">
 					Присадки к дизельному топливу Coolstream TDA
 				</a>
@@ -586,7 +711,7 @@
 				<div class="footerItem">
 
 					<div class="d-flex justify-content-between align-items-center mb-4 pb-2 gap-3">
-						<h4 class="h4">
+						<h4 class="h4 mb-0">
 							Продукция
 						</h4>
 						<a class="footerItemRoundBtn" href="#">
@@ -630,7 +755,7 @@
 				<div class="footerItem">
 
 					<div class="d-flex justify-content-between align-items-center mb-4 pb-2 gap-3">
-						<h4 class="h4">
+						<h4 class="h4 mb-0">
 							Контакты
 						</h4>
 						<a class="footerItemRoundBtn" href="tel:+63212323123">
@@ -650,7 +775,7 @@
 				<div class="footerItem">
 
 					<div class="d-flex justify-content-between align-items-center mb-4 pb-2 gap-3">
-						<h4 class="h4">
+						<h4 class="h4 mb-0">
 							Оставить заявку
 						</h4>
 						<a class="footerItemRoundBtn footerItemRoundBtn--yellow" href="tel:+63212323123">
@@ -669,7 +794,7 @@
 	</div>
 	<div class="footerB">
 		<div class="container">
-			<div class="d-flex justify-content-between align-items-center">
+			<div class="d-flex flex-column flex-lg-row gap-4 gap-lg-2 justify-content-between align-items-center">
 				<span class="copyright">© Все права защищены 2006 – 2025</span>
 				<a href="#" class="footerPolitic">Политика конфиденциальности</a>
 				<a href="#" class="footerDevelop">

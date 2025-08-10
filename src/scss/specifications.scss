@@ -91,6 +91,7 @@ section {
 	&.border-white50 {
 		border: 1px solid var(--White50);
 	}
+
 	&.border-gray {
 		border: 1px solid var(--gray);
 	}
@@ -98,16 +99,20 @@ section {
 	&.bordered-40 {
 		border-radius: 40px;
 	}
+
 	&.bordered-12 {
 		border-radius: 12px;
 	}
+
 	&.bg--dark {
 		background-color: var(--dark);
 	}
+
 	&.text--white {
 		color: #fff;
 	}
 }
+
 .formCalendar {
 	height: 64px;
 	border-radius: 12px;
@@ -131,6 +136,7 @@ section {
 		border-radius: 12px;
 	}
 }
+
 .formInput {
 	height: 64px;
 	border-radius: 40px;
@@ -140,6 +146,10 @@ section {
 	font-weight: 400;
 	color: #fff;
 	background-color: var(--dark);
+
+	@media(max-width: 991px) {
+		height: 48px;
+	}
 
 	&::placeholder {
 		color: var(--White50);
@@ -168,17 +178,24 @@ section {
 	&.pr-24 {
 		padding-right: 24px;
 	}
+
 	&.warning {
 		border-color: var(--yellow);
 		border-width: 2px;
 	}
 }
+
 .border-white50 {
 	border: 1px solid var(--White50);
 }
 
 .pageHead {
 	margin-bottom: 50px;
+
+	@media(max-width: 991px) {
+		padding-top: 20px;
+		margin-bottom: 30px;
+	}
 }
 
 .formSelect {
@@ -199,12 +216,22 @@ section {
 		cursor: pointer;
 		min-width: 300px;
 
+		@media(max-width: 991px) {
+			height: 48px;
+			padding-left: 16px;
+			padding-right: 50px;
+			background-position: right 15px center;
+		}
+		@media(max-width: 575px){
+			min-width: unset;
+		}
+
 		option {
 			color: var(--dark);
 		}
 
 		&.border-gray {
-			border: 1px solid var(--White50);
+			border: 1px solid var(--gray);
 		}
 
 		&.bordered-12 {
@@ -230,6 +257,17 @@ section {
 	padding-right: 60px;
 	min-width: 400px;
 
+	@media(max-width: 1839px) {
+		min-width: unset;
+	}
+
+	@media(max-width: 991px) {
+		font-size: 16px;
+		height: 48px;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
 	&::placeholder {
 		color: var(--White50);
 	}
@@ -237,6 +275,7 @@ section {
 	&.border-gray {
 		border: 1px solid var(--gray);
 	}
+
 	&.border-white50 {
 		border: 1px solid var(--White50);
 	}
@@ -247,10 +286,18 @@ section {
 
 	&.pl-24 {
 		padding-left: 24px;
+
+		@media(max-width: 991px) {
+			padding-left: 16px;
+		}
 	}
 
 	&.pr-24 {
 		padding-right: 24px;
+
+		@media(max-width: 991px) {
+			padding-right: 16px;
+		}
 	}
 }
 
@@ -399,8 +446,13 @@ h1,
 	font-weight: 700;
 	letter-spacing: 0.48px;
 
+	@media(max-width: 1400px) {
+		font-size: 38px;
+	}
+
 	@media(max-width: 991px) {
 		font-size: 32px;
+		letter-spacing: 0.32px;
 	}
 }
 
@@ -440,6 +492,11 @@ h5,
 .h5 {
 	font-size: 20px;
 	line-height: 150%;
+
+	@media(max-width: 991px) {
+		font-size: 14px;
+		letter-spacing: 0.14px;
+	}
 }
 
 .underline {
@@ -458,6 +515,7 @@ h5,
 	/* 24px */
 	letter-spacing: 0.48px;
 }
+
 .text--normal {
 	font-size: 18px;
 }
@@ -496,6 +554,7 @@ h5,
 .text--gray {
 	color: var(--gray);
 }
+
 .text--light-gray {
 	color: var(--light-gray);
 }
@@ -511,28 +570,20 @@ h5,
 @-webkit-keyframes shows {
 	from {
 		opacity: 0;
-		-webkit-transform: translateY(-120px);
-		transform: translateY(-120px);
 	}
 
 	to {
 		opacity: 1;
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
 	}
 }
 
 @keyframes shows {
 	from {
 		opacity: 0;
-		-webkit-transform: translateY(-120px);
-		transform: translateY(-120px);
 	}
 
 	to {
 		opacity: 1;
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
 	}
 }
 
@@ -600,18 +651,27 @@ h5,
 .quantity {
 	border-radius: 32px;
 	border: 1.5px solid var(--gray);
-	padding: 8px;
+	padding: 4px;
+
+	@media(max-width: 991px) {
+		padding: 5px;
+	}
 }
 
 .quantity-icon {
 	flex-shrink: 0;
-	width: 48px;
-	height: 48px;
+	width: 36px;
+	height: 36px;
 	border-radius: 50%;
 	background: rgba(255, 255, 255, 0.04);
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@media(max-width: 991px) {
+		width: 36px;
+		height: 36px;
+	}
 }
 
 .quantity-input {
@@ -626,12 +686,19 @@ h5,
 	display: flex;
 	align-items: center;
 	column-gap: 8px;
+	@media(max-width: 575px){
+		font-size: 11px;
+	}
 
 	&::before {
 		content: '';
 		width: 10px;
 		height: 10px;
 		border-radius: 50%;
+		@media(max-width: 575px){
+			width: 6px;
+			height: 6px;
+		}
 
 	}
 
@@ -652,11 +719,13 @@ h5,
 			background-color: var(--White50);
 		}
 	}
+
 	&.text--light-gray {
 		&::before {
 			background-color: var(--light-gray);
 		}
 	}
+
 	&.text--normal {
 		font-size: 18px;
 		line-height: normal;
@@ -872,14 +941,17 @@ h5,
 		letter-spacing: 0.72px;
 	}
 }
+
 .avatar {
 	flex-shrink: 0;
+
 	img {
-	width: 64px;
-	height: 64px;
-	border-radius: 50%;
+		width: 64px;
+		height: 64px;
+		border-radius: 50%;
 	}
 }
+
 .ml-auto {
 	margin-left: auto;
 }

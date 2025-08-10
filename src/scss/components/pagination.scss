@@ -1,69 +1,82 @@
 .pag-arrow {
-  &.pag-arrow-none {
-    pointer-events: none;
+	&.pag-arrow-none {
+		pointer-events: none;
 
-    svg {
-      fill: #fff;
-    }
-  }
+		svg {
+			fill: #fff;
+		}
+	}
 
+	a {
 
+		width: 64px;
+		height: 64px;
+		border-radius: 50%;
+		border: 1px solid rgba(255, 255, 255, 0.50);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: border-color .2s linear;
 
+		@media(max-width: 991px) {
+			width: 48px;
+			height: 48px;
+		}
 
+		&:hover {
+			border-color: var(--yellow);
+		}
 
-  a {
-    &:hover {
-      border-color: var(--yellow);
-    }
+		&:focus,
+		&:active,
+		&:target {
+			a {
+				border-color: var(--yellow);
+				background-color: var(--yellow);
+			}
+		}
+	}
 
-    &:focus,&:active,&:target {
-      a {
-        border-color: var(--yellow);
-        background-color: var(--yellow);
-      }
-    }
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.50);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: border-color .2s linear;
-  }
-
-  svg {
-    width: 24px;
-    height: 24px;
-    fill: var(--yellow);
-    stroke: transparent;
-  }
+	svg {
+		width: 24px;
+		height: 24px;
+		fill: var(--yellow);
+		stroke: transparent;
+	}
 }
 
 .paginationItem {
-  a {
-    width: 64px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
+	a {
+		width: 64px;
+		height: 64px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 500;
 
-    &:hover {
-      color: var(--yellow);
-    }
-  }
+		@media(max-width: 991px) {
+			width: 48px;
+			height: 48px;
+		}
+		@media(max-width: 380px){
+			width: 40px;
+			height: 40px;
+		}
 
-  span {
-    width: 64px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+		&:hover {
+			color: var(--yellow);
+		}
+	}
 
-  &Active {
-    color: var(--yellow);
-  }
+	span {
+		width: 64px;
+		height: 64px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&Active {
+		color: var(--yellow);
+	}
 }
