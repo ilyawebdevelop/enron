@@ -47,9 +47,11 @@
 
 			.productCard {
 				flex-direction: row;
+
 				.quantity {
 					max-width: 186px;
 				}
+
 				.h4 {
 					max-width: 450px;
 				}
@@ -57,7 +59,8 @@
 
 			.productCardContent {
 				flex-direction: row;
-				@media(max-width: 1400px){
+
+				@media(max-width: 1400px) {
 					flex-direction: column;
 				}
 			}
@@ -81,6 +84,7 @@
 
 		&Img {
 			flex-shrink: 0;
+
 			img {
 				border-radius: 20px;
 				height: 259px;
@@ -118,6 +122,7 @@
 			@media(max-width: 991px) {
 				padding: 10px;
 			}
+
 			.button {
 				font-size: 16px;
 				height: 48px;
@@ -137,9 +142,11 @@
 			-webkit-box-orient: vertical;
 			-webkit-line-clamp: 1;
 			align-self: stretch;
-			@media(max-width: 575px){
+
+			@media(max-width: 575px) {
 				font-size: 11px;
 			}
+
 			&.text--white {
 				color: #fff;
 			}
@@ -150,10 +157,12 @@
 		&Params {
 			width: 560px;
 			flex-shrink: 0;
-			@media(max-width: 1599px){
+
+			@media(max-width: 1599px) {
 				width: 450px;
 			}
-			@media(max-width: 1400px){
+
+			@media(max-width: 1400px) {
 				width: 100%;
 			}
 
@@ -163,10 +172,17 @@
 					display: grid;
 					grid-template-columns: max-content auto max-content;
 					margin-bottom: 10px;
+					align-items: flex-end;
 
 					span {
 						&:nth-child(1) {
 							color: var(--White50);
+
+							@media(max-width: 991px) {
+								max-width: 185px;
+								font-size: 14px;
+								line-height: 150%;
+							}
 						}
 
 						&:nth-child(2) {
@@ -174,6 +190,12 @@
 							margin-left: 2px;
 							margin-right: 2px;
 							display: flex;
+						}
+
+						&:nth-child(3) {
+							@media(max-width: 991px) {
+								font-size: 14px;
+							}
 						}
 					}
 				}
@@ -184,11 +206,15 @@
 
 .pagination-loadmore {
 	margin-top: 30px;
+	@media(max-width: 575px){
+		margin-top: 20px;
+	}
 }
 
 .productsFilterChanged {
 	ul {
 		column-gap: 10px;
+		row-gap: 10px;
 		flex-wrap: wrap;
 		display: flex;
 	}
@@ -209,16 +235,43 @@
 		fill: transparent;
 	}
 }
-
+.productMain {
+	@media(max-width: 575px){
+		padding-bottom: 20px;
+	}
+}
 .productMainAction {
 	border-radius: 24px;
 	background: var(--Dark2, #1C1C1C);
 	backdrop-filter: blur(5px);
 	padding: 40px 40px 48px 40px;
+	position: sticky;
+	top: 20px;
+	@media(max-width: 575px){
+		width: calc(100% + 30px);
+		margin-left: -15px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.quantity {
+		padding: 8px;
+	}
+
+	.quantity-icon {
+		width: 48px;
+		height: 48px;
+	}
 }
 
 .productMainPrice {
 	font-family: var(--font-family);
+
+	@media(max-width: 1599px) {
+		font-size: 32px;
+	}
 }
 
 .sku {
@@ -240,6 +293,24 @@
 	flex-shrink: 0;
 	height: fit-content;
 
+	@media(max-width: 1839px) {
+		width: 500px;
+	}
+
+	@media(max-width: 1599px) {
+		width: 400px;
+	}
+
+	@media(max-width: 1400px) {
+		width: 500px;
+	}
+
+	@media(max-width: 575px) {
+		width: calc(100% + 30px);
+		margin-left: -15px;
+
+	}
+
 	.swiper-slide {
 		img {
 			border-radius: 24px;
@@ -247,6 +318,24 @@
 			height: 600px;
 			object-fit: contain;
 			background-color: #fff;
+
+			@media(max-width: 1839px) {
+				height: 500px;
+			}
+
+			@media(max-width: 1599px) {
+				height: 400px;
+			}
+
+			@media(max-width: 1400px) {
+				height: 500px;
+			}
+
+			@media(max-width: 575px) {
+				height: 100vw;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
 		}
 	}
 
@@ -276,6 +365,10 @@
 		align-items: center;
 		justify-content: center;
 
+		@media(max-width: 991px) {
+			display: none;
+		}
+
 		&Prev {
 			left: 0;
 		}
@@ -290,6 +383,10 @@
 	margin-top: 12px;
 	text-transform: uppercase;
 	margin-bottom: 40px;
+
+	@media(max-width: 991px) {
+		margin-bottom: 20px;
+	}
 }
 
 .productMainDescr {
@@ -313,11 +410,37 @@
 	padding-right: 180px;
 	overflow: visible;
 
+	@media(max-width: 767px) {
+		padding-right: 80px;
+	}
+
+	@media(max-width: 575px) {
+		padding-right: 0;
+	}
+
 	.swiper-slide {
 		height: auto;
 
 		.productCard {
 			height: 100%;
 		}
+	}
+}
+
+.productTabs {
+	overflow: hidden;
+}
+
+.productMobilePriceWrap {
+	border-radius: 0 0 24px 24px;
+	background: var(--dark-2);
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: calc(100% + 30px);
+	margin-left: -15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	@media(max-width: 575px){
+
 	}
 }

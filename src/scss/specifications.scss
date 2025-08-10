@@ -79,6 +79,9 @@ section {
 	padding-right: 24px;
 	padding-bottom: 24px;
 	height: 120px;
+	@media(max-width: 991px){
+		padding-top: 15px;
+	}
 
 	&--h-145 {
 		height: 145px;
@@ -111,6 +114,9 @@ section {
 	&.text--white {
 		color: #fff;
 	}
+	&::placeholder {
+		color: var(--White50);
+	}
 }
 
 .formCalendar {
@@ -142,7 +148,7 @@ section {
 	border-radius: 40px;
 	width: 100%;
 	padding-left: 26px;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 400;
 	color: #fff;
 	background-color: var(--dark);
@@ -199,6 +205,11 @@ section {
 }
 
 .formSelect {
+	&.w-sm-100 {
+		@media(max-width: 575px){
+			width: 100%;
+		}
+	}
 	select {
 		height: 64px;
 		padding-left: 26px;
@@ -240,6 +251,11 @@ section {
 
 		&.bordered-40 {
 			border-radius: 40px;
+		}
+		&.w-sm-100 {
+			@media(max-width: 575px){
+				width: 100%;
+			}
 		}
 	}
 
@@ -461,7 +477,7 @@ h2,
 	font-size: 40px;
 
 	@media(max-width: 991px) {
-		font-size: 20px;
+		font-size: 24px;
 	}
 }
 
@@ -494,7 +510,7 @@ h5,
 	line-height: 150%;
 
 	@media(max-width: 991px) {
-		font-size: 14px;
+		font-size: 18px;
 		letter-spacing: 0.14px;
 	}
 }
@@ -524,6 +540,9 @@ h5,
 	font-size: 20px;
 	line-height: 150%;
 	letter-spacing: 0.8px;
+	@media(max-width: 991px){
+		font-size: 16px;
+	}
 }
 
 .text--lg {
@@ -616,6 +635,18 @@ h5,
 		border-radius: 24px;
 		margin-top: 24px;
 		margin-bottom: 24px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@media(max-width: 1400px){
+			min-height: 650px;
+		}
+		@media(max-width: 767px){
+			min-height: 450px;
+		}
+		@media(max-width: 575px){
+			min-height: 60vw;
+		}
 
 		&:hover {
 			.videoBtn {
@@ -812,10 +843,25 @@ h5,
 
 .p-40 {
 	padding: 40px;
+	&.p-lg-24 {
+		@media(max-width: 991px){
+			padding: 24px;
+		}
+	}
 }
 
 .p-60 {
 	padding: 60px;
+	&.p-sm-0 {
+		@media(max-width: 575px){
+			padding: 0;
+		}
+	}
+	&.p-lg-24 {
+		@media(max-width: 991px){
+			padding: 24px;
+		}
+	}
 }
 
 .ls-09 {
@@ -889,6 +935,12 @@ h5,
 }
 
 .nav-links {
+	@media(max-width: 575px){
+		overflow-x: scroll;
+		margin-left: -15px;
+		min-width: calc(100% + 30px);
+		
+	}
 	ul {
 		display: flex;
 		flex-wrap: wrap;
@@ -896,8 +948,19 @@ h5,
 		border: 1px solid var(--White50, rgba(255, 255, 255, 0.50));
 		padding: 8px;
 		gap: 8px;
+		@media(max-width: 1199px){
+			border: none;
+		}
+		@media(max-width: 575px){
+			flex-wrap: nowrap;
+		}
 
 		li {
+			&:last-child {
+				@media(max-width: 575px){
+					padding-right: 15px;
+				}
+			}
 			&.active {
 				a {
 					background-color: var(--yellow);
@@ -918,6 +981,15 @@ h5,
 				font-weight: 500;
 				font-family: var(--font-family-second);
 				transition: background-color .2s linear, color .2s linear;
+				@media(max-width: 991px){
+					padding-left: 16px;
+					padding-right: 16px;
+					padding-bottom: 8px;
+					padding-top: 8px;
+				}
+				@media(max-width: 575px){
+					white-space: nowrap;
+				}
 
 				&:hover {
 					color: var(--black);
@@ -954,4 +1026,23 @@ h5,
 
 .ml-auto {
 	margin-left: auto;
+}
+.swiper-pagination-bullet {
+	background-color: var(--gray);
+	opacity: 1;
+
+	&-active {
+		background-color: var(--yellow);
+	}
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin-left: 8px;
+	margin-right: 8px;
+}
+a.text--yellow {
+	&:hover {
+		color: #fff;
+	}
 }

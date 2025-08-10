@@ -1,8 +1,8 @@
 <section class="productMain pt-0">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-9">
-				<div class="productLeft d-flex">
+			<div class="col-lg-7 col-xxl-9">
+				<div class="productLeft d-flex flex-column flex-xxl-row gap-0 gap-sm-4 gap-xxl-0">
 					<div class="swiper product-slider">
 						<div class="swiper-wrapper">
 
@@ -27,7 +27,15 @@
 							</button>
 						</div>
 					</div>
-					<div class="productMainContent">
+					<div class="productMobilePriceWrap d-flex align-items-center gap-3 d-sm-none mb-3">
+						<div class="h2 mb-0 fw-bold">
+							237 500 ₽
+						</div>
+						<div class="available text--red">
+							Осталось мало
+						</div>
+					</div>
+					<div class="productMainContent mb-4 mb-sm-5 mb-lg-0">
 						<div class="sku">
 							<div class="d-flex align-items-center gap-2">
 								Артикул: 123456789
@@ -45,7 +53,7 @@
 								экстремальных нагрузках.
 							</p>
 						</div>
-						<h5 class="h5 mb-4">
+						<h5 class="h5 mb-2 mb-lg-4">
 							Характеристики
 						</h5>
 						<div class="productCardParams">
@@ -65,27 +73,29 @@
 									<span></span>
 									<span>-36</span>
 								</li>
-									<li>
+								<li>
 									<span>Плотность при 15 °C, кг/м3</span>
 									<span></span>
 									<span>-1070</span>
 								</li>
 							</ul>
 						</div>
-						<a href="#" class="productMainAllParams text--yellow text-center d-block mt-5 fw-medium font-family-second">Все характеристики</a>
+						<a href="#"
+							class="productMainAllParams text--yellow text-center d-block mt-5 fw-medium font-family-second">Все
+							характеристики</a>
 					</div>
 				</div>
 
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-5 col-xxl-3">
 				<div class="productMainAction">
-					<div class="productMainPrice mb-2 h2 fw-semibold">
+					<div class="productMainPrice mb-2 h2 fw-semibold d-none d-sm-block">
 						237 500 ₽
 					</div>
-					<div class="available text--red mb-4 pb-1">
+					<div class="available text--red mb-4 pb-1 d-none d-sm-block">
 						Осталось мало
 					</div>
-					<div class="quantity d-flex mb-4">
+					<div class="quantity d-none d-sm-flex mb-4">
 						<button class="quantity-minus quantity-icon" onclick="this.nextElementSibling.stepDown();">
 							<img src="@img/icons/minus.svg" alt="icon">
 						</button>
@@ -95,6 +105,7 @@
 						</button>
 					</div>
 					<button class="button button--yellow rounded-100 w-100">
+						<img class="d-block d-sm-none" src="@img/icons/cart.svg" alt="icon">
 						Добавить в заказ
 					</button>
 				</div>

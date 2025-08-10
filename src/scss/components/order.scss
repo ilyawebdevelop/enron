@@ -1,5 +1,9 @@
 .order {
 	&Img {
 		height: 600px;
+		object-fit: contain;
+		@media(max-width: 575px){
+			height: 340px;
+		}
 	}
 }

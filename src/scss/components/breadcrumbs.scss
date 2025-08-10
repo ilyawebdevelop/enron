@@ -5,13 +5,19 @@
 	display: -ms-flexbox;
 	padding-top: 50px;
 	padding-bottom: 50px;
-	@media(max-width: 1400px){
+
+	@media(max-width: 1400px) {
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
-	@media(max-width: 991px){
+
+	@media(max-width: 991px) {
 		padding-top: 20px;
 		padding-bottom: 20px;
+	}
+
+	@media(max-width: 575px) {
+		overflow-x: scroll;
 	}
 
 	&Wrap {
@@ -23,8 +29,21 @@
 			display: flex;
 			-ms-flex-wrap: wrap;
 			flex-wrap: wrap;
+
+			@media(max-width: 575px) {
+				flex-wrap: nowrap;
+				-ms-flex-wrap: nowrap;
+			}
+
 			li {
+				&:last-child{
+					@media(max-width: 575px){
+						padding-right: 10px;
+					}
+				}
 				a {
+					white-space: nowrap;
+
 					&:hover {
 						color: #fff;
 					}

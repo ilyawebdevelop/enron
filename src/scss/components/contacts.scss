@@ -3,11 +3,30 @@
 		width: 100%;
 		border-radius: 24px;
 		height: 720px;
+		@media(max-width: 1599px){
+			height: 600px;
+		}
+		@media(max-width: 767px){
+			height: 480px;
+		}
 	}
 
 	&Item {
 		border-radius: 24px;
 		background: rgba(255, 255, 255, 0.04);
 		padding: 24px 24px 48px 40px;
+		@media(max-width: 991px){
+			padding: 24px;
+		}
+	}
+}
+.contactsPhone {
+	&:hover {
+		color: var(--yellow);
+	}
+	.text--yellow {
+		&:hover {
+			color: #fff;
+		}
 	}
 }

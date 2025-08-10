@@ -144,6 +144,11 @@
 			height: 32px;
 		}
 	}
+	&--sm-w-100 {
+		@media(max-width: 575px){
+			width: 100%;
+		}
+	}
 }
 
 .headerBtnAccount {
@@ -262,6 +267,9 @@
 	line-height: 28px;
 	letter-spacing: 0.36px;
 	font-family: var(--font-family-second);
+	@media(max-width: 991px){
+		height: 48px;
+	}
 
 	&--bg-gray {
 		background-color: var(--White50);
@@ -317,6 +325,7 @@
 
 	&W {
 		position: fixed;
+		z-index: 1;
 		top: 160px;
 		right: 0;
 		padding: 8px 0 8px 8px;

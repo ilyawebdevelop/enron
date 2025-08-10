@@ -10,14 +10,43 @@
 		border-radius: 30px;
 		background-color: var(--dark-2);
 		width: fit-content;
+		@media(max-width: 575px){
+			width: 100%;
+			text-align: center;
+		}
 	}
 
 	&Form {
 		padding: 60px;
 		border-radius: 24px;
 		background: var(--White04, rgba(255, 255, 255, 0.04));
+		@media(max-width: 991px){
+			padding: 24px;
+		}
 		.formText {
-			height: 220px;
+			height: 190px;
+			@media(max-width: 991px){
+				height: 120px;
+			}
+		}
+	}
+}
+.vac-related-slider {
+	@media(max-width: 575px){
+		overflow: visible;
+		padding-right: 60px;
+	}
+	@media(max-width: 389px){
+		padding-right: 40px;
+	}
+}
+.vac-related {
+	.swiper-pagination {
+		position: relative;
+		margin-top: 20px;
+		display: none;
+		@media(max-width: 991px){
+			display: block;
 		}
 	}
 }

@@ -55,20 +55,26 @@ document.querySelectorAll('.productCardSlider').forEach(n => {
 		breakpoints: {
 			0: {
 				slidesPerView: 2,
-				spaceBetween: 20,
+				spaceBetween: 10,
 			},
 			768: {
-				slidesPerView: 3,
-				spaceBetween: 30,
+				slidesPerView: 2,
+				spaceBetween: 10,
 			},
 			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+			1400: {
 				slidesPerView: 4,
 				spaceBetween: 22,
 			},
-			1200: {
+			1600: {
 				slidesPerView: 5,
 			},
-			1400: {
+			1840: {
 				slidesPerView: 6,
 			}
 		},
@@ -185,16 +191,25 @@ document.querySelectorAll('.vac-related-slider').forEach(n => {
 		spaceBetween: 20,
 		speed: 600,
 		loop: false,
+		pagination: {
+			el: n.closest('.sliderW').querySelector('.swiper-pagination'),
+			clickable: true,
+			type: 'bullets',
+		},
 		navigation: {
 			prevEl: n.closest('.sliderW').querySelector('.navArrowPrev'),
 			nextEl: n.closest('.sliderW').querySelector('.navArrowNext'),
 		},
 		breakpoints: {
 			0: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			576: {
 				slidesPerView: 2,
 				spaceBetween: 10,
 			},
-			768: {
+			1400: {
 				slidesPerView: 3,
 				spaceBetween: 20,
 			},
@@ -215,10 +230,14 @@ document.querySelectorAll('.newsSlider').forEach(n => {
 		},
 		breakpoints: {
 			0: {
-				slidesPerView: 2,
+				slidesPerView: 1,
 				spaceBetween: 10,
 			},
 			768: {
+				slidesPerView: 2,
+				spaceBetween: 15,
+			},
+			992: {
 				slidesPerView: 3,
 				spaceBetween: 20,
 			},
