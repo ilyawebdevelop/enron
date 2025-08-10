@@ -241,13 +241,49 @@ togglePasswordArray.forEach(el => {
 	});
 });
 
-let contextBtnArray = document.querySelectorAll('.button-more');
+// Burger
+const btnMenu = document.querySelector('.headerMenuBtn');
+const menu = document.querySelector('.menuMobile');
+const bodyEl = document.querySelector('body');
+const btnClose = document.querySelector('.menuMobileBtnClose');
 
-contextBtnArray.forEach(el => {
-	parent = el.closest('.context-wrap');
-	let contentItem = parent.querySelector('.context-menu');
-	el.addEventListener('click', () => {
-		contentItem.classList.toggle('active');
-		el.classList.toggle('active');
+const toggleMenu = function () {
+	menu.classList.toggle('active');
+}
+const toggleBurger = function () {
+	btnMenu.classList.toggle('active');
+}
+const bodyOverflow = function () {
+	bodyEl.classList.toggle('hidden');
+}
+const menuClose = function () {
+	toggleBurger();
+	bodyOverflow();
+	toggleMenu();
+}
+
+const mediaQueryMax991 = window.matchMedia('(max-width: 991px)');
+if (mediaQueryMax991.matches) {
+	btnMenu?.addEventListener('click', function (e) {
+		e.stopPropagation();
+		toggleMenu();
+		toggleBurger();
+		bodyOverflow();
 	});
+
+	btnClose?.addEventListener('click', function (e) {
+		menuClose();
+	});
+}
+
+let filterMobileClose = document.querySelector('.filterMobileClose');
+let filterBody = document.querySelector('#filter');
+let filterActionBtn = document.querySelector('.filterActionBtn');
+filterActionBtn?.addEventListener('click', () => {
+	filterBody.classList.add('active');
 });
+filterMobileClose?.addEventListener('click', () => {
+	filterBody.classList.remove('active');
+});
+
+

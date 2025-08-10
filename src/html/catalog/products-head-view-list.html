@@ -1,17 +1,28 @@
-<div class="d-flex justify-content-between">
-	<div class="d-flex gap-3">
-		<div class="formSelect">
-			<select class="border-gray bordered-12" name="popular" id="popular">
+<div class="d-flex justify-content-between mb-4">
+	<div class="d-flex gap-2 gap-lg-3 flex-column-reverse flex-lg-row w-100">
+		<div class="formSelect d-flex gap-3">
+			<select class="border-gray bordered-12 w-100" name="popular" id="popular">
 				<option value="1">По популярности</option>
 				<option value="1">По Цене</option>
 			</select>
+			<button class="filterActionBtn button button--dark2 button--round d-flex d-lg-none">
+				<img src="@img/icons/filter.svg" alt="icon">
+				<span class="filterActionBtnCount">3</span>
+			</button>
 		</div>
-		<div class="searchItem mb-3">
+		<div class="formSelect d-block d-lg-none">
+			<select class="border-gray bordered-12 w-100" name="popular" id="popular">
+				<option value="1">Выбрать категорию</option>
+				<option value="2">Охлаждающие жидкости</option>
+				<option value="3">Смазки</option>
+			</select>
+		</div>
+		<div class="searchItem">
 			<input class="searchInput border-gray bordered-12 pl-24" type="search" placeholder="Поиск">
 			<button class="searchBtn"><img src="@img/icons/search-gray.svg" alt="icon"></button>
 		</div>
 	</div>
-	<div class="productsView">
+	<div class="productsView d-none d-xl-flex">
 		<button type="button">
 			<svg>
 				<use xlink:href="@img/icons/icons.svg#cards">
