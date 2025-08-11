@@ -135,6 +135,11 @@ section {
 	background-color: var(--dark);
 	width: 240px;
 	background: url('@img/icons/calendar.svg') no-repeat right 24px center / 24px;
+	@media(max-width: 991px){
+		height: 48px;
+		padding-left: 16px;
+		background: url('@img/icons/calendar.svg') no-repeat right 16px center / 24px;
+	}
 
 	&.border-gray {
 		border: 1px solid var(--gray);
@@ -146,6 +151,11 @@ section {
 
 	&.bordered-12 {
 		border-radius: 12px;
+	}
+	&.w-sm-100 {
+		@media(max-width: 575px){
+			width: 100%;
+		}
 	}
 }
 
@@ -330,6 +340,12 @@ section {
 
 		@media(max-width: 991px) {
 			padding-right: 16px;
+		}
+	}
+	&.min-w-340 {
+		min-width: 340px;
+		@media(max-width: 400px){
+			min-width: unset;
 		}
 	}
 }
@@ -555,6 +571,9 @@ h5,
 	line-height: 150%;
 	/* 24px */
 	letter-spacing: 0.48px;
+	@media(max-width: 991px){
+		font-size: 13px;
+	}
 }
 
 .text--normal {
@@ -1145,5 +1164,10 @@ a.hover--white {
 		.text--yellow {
 			color: #fff;
 		}
+	}
+}
+.w-sm-100 {
+	@media(max-width: 575px){
+		width: 100%;
 	}
 }

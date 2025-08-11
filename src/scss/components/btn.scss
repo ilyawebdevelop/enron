@@ -179,7 +179,11 @@
 
 .searchItem {
 	position: relative;
-
+	&.w-sm-100 {
+		@media(max-width: 575px){
+			width: 100%;
+		}
+	}
 	input {
 		padding-right: 60px;
 

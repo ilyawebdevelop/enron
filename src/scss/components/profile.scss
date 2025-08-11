@@ -71,11 +71,23 @@
 .history-item {
 	padding: 20px 60px;
 	border-radius: 20px;
+	@media(max-width: 1400px){
+		padding: 20px 25px;
+	}
+	@media(max-width: 575px){
+		padding: 20px;
+	}
 	&-total {
 		min-width: 160px;
+		@media(max-width: 440px){
+			min-width: 120px;
+		}
 	}
 	&-num {
 		min-width: 160px;
+		@media(max-width: 440px){
+			min-width: 120px;
+		}
 	}
 	.sku {
 		height: fit-content;

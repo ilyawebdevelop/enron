@@ -14389,6 +14389,13 @@ section {
   width: 240px;
   background: url("../img/icons/calendar.svg") no-repeat right 24px center/24px;
 }
+@media (max-width: 991px) {
+  .formCalendar {
+    height: 48px;
+    padding-left: 16px;
+    background: url("../img/icons/calendar.svg") no-repeat right 16px center/24px;
+  }
+}
 .formCalendar.border-gray {
   border: 1px solid var(--gray);
 }
@@ -14397,6 +14404,11 @@ section {
 }
 .formCalendar.bordered-12 {
   border-radius: 12px;
+}
+@media (max-width: 575px) {
+  .formCalendar.w-sm-100 {
+    width: 100%;
+  }
 }
 
 .formInput {
@@ -14566,6 +14578,14 @@ section {
 @media (max-width: 991px) {
   .searchInput.pr-24 {
     padding-right: 16px;
+  }
+}
+.searchInput.min-w-340 {
+  min-width: 340px;
+}
+@media (max-width: 400px) {
+  .searchInput.min-w-340 {
+    min-width: unset;
   }
 }
 
@@ -14791,6 +14811,11 @@ h5,
   line-height: 150%;
   /* 24px */
   letter-spacing: 0.48px;
+}
+@media (max-width: 991px) {
+  .text--16 {
+    font-size: 13px;
+  }
 }
 
 .text--normal {
@@ -15318,6 +15343,12 @@ a.hover--white:hover .text--yellow {
   color: #fff;
 }
 
+@media (max-width: 575px) {
+  .w-sm-100 {
+    width: 100%;
+  }
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -15469,6 +15500,11 @@ a.hover--white:hover .text--yellow {
 
 .searchItem {
   position: relative;
+}
+@media (max-width: 575px) {
+  .searchItem.w-sm-100 {
+    width: 100%;
+  }
 }
 .searchItem input {
   padding-right: 60px;
@@ -18039,11 +18075,31 @@ a.hover--white:hover .text--yellow {
   padding: 20px 60px;
   border-radius: 20px;
 }
+@media (max-width: 1400px) {
+  .history-item {
+    padding: 20px 25px;
+  }
+}
+@media (max-width: 575px) {
+  .history-item {
+    padding: 20px;
+  }
+}
 .history-item-total {
   min-width: 160px;
 }
+@media (max-width: 440px) {
+  .history-item-total {
+    min-width: 120px;
+  }
+}
 .history-item-num {
   min-width: 160px;
+}
+@media (max-width: 440px) {
+  .history-item-num {
+    min-width: 120px;
+  }
 }
 .history-item .sku {
   height: fit-content;
