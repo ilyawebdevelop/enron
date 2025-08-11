@@ -2,10 +2,13 @@
 	&Slider {
 		overflow: visible;
 		.swiper-slide {
-			
 			width: auto;
 			width: 188px;
 			height: 188px;
+			@media(max-width: 991px){
+				width: 128px;
+				height: 128px;
+			}
 			img {
 				width: 100%;
 				height: 100%;
@@ -17,5 +20,8 @@
 	}
 	.sectHead {
 		margin-bottom: 60px;
+		@media(max-width: 991px){
+			margin-bottom: 30px;
+		}
 	}
 }

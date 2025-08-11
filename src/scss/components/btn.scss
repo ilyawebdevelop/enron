@@ -576,3 +576,13 @@
 		color: var(--black);
 	}
 }
+.expBtn {
+	@media(max-width: 1599px){
+		width: 50%;
+		padding-left: 11px;
+		padding-right: 11px;
+	}
+	@media(max-width: 767px){
+		width: 100%;
+	}
+}

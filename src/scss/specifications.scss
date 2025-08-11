@@ -539,6 +539,9 @@ h5,
 	font-size: 14px;
 	line-height: 180%;
 	letter-spacing: 0.7px;
+	@media(max-width: 575px){
+		font-size: 11px;
+	}
 }
 
 .text--16 {
@@ -910,6 +913,11 @@ h5,
 .text--xxl {
 	font-size: 32px;
 	line-height: normal;
+	@media(max-width: 991px){
+		font-size: 20px;
+		line-height: normal;
+		letter-spacing: 1px;
+	}
 }
 
 .baner-text {
@@ -917,6 +925,9 @@ h5,
 	font-size: 56px;
 	line-height: 120%;
 	letter-spacing: 0.56px;
+	@media(max-width: 991px){
+		font-size: 24px;
+	}
 }
 
 .link-back {
@@ -1087,5 +1098,16 @@ h5,
 a.text--yellow {
 	&:hover {
 		color: #fff;
+	}
+}
+.text-js-hidden {
+	display: none;
+	&.active {
+		display: flex;
+	}
+}
+a.hover--yellow {
+	&:hover {
+		color: var(--yellow);
 	}
 }

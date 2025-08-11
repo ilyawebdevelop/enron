@@ -92,16 +92,25 @@ document.querySelectorAll('.adv-about-slider').forEach(n => {
 			prevEl: n.closest('.adv-about').querySelector('.navArrowPrev'),
 			nextEl: n.closest('.adv-about').querySelector('.navArrowNext'),
 		},
+		pagination: {
+			el: n.closest('.adv-about').querySelector('.swiper-pagination'),
+			clickable: true,
+			type: 'bullets',
+		},
 		breakpoints: {
 			0: {
-				slidesPerView: 2,
+				slidesPerView: 1,
 				spaceBetween: 10,
 			},
 			768: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			1200: {
 				slidesPerView: 3,
 				spaceBetween: 20,
 			},
-			1200: {
+			1600: {
 				slidesPerView: 4,
 			},
 		},
@@ -149,6 +158,14 @@ document.querySelectorAll('.partnersSlider').forEach(n => {
 		speed: 600,
 		loop: true,
 		autoplay: true,
+		breakpoints: {
+			0: {
+				spaceBetween: 10,
+			},
+			992: {
+				spaceBetween: 20,
+			},
+		},
 	});
 });
 
@@ -170,14 +187,18 @@ document.querySelectorAll('.docSlider').forEach(n => {
 		},
 		breakpoints: {
 			0: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			576: {
 				slidesPerView: 2,
 				spaceBetween: 10,
 			},
-			768: {
+			992: {
 				slidesPerView: 3,
 				spaceBetween: 20,
 			},
-			1200: {
+			1400: {
 				slidesPerView: 4,
 			},
 		},
@@ -306,3 +327,12 @@ filterMobileClose?.addEventListener('click', () => {
 });
 
 
+let textJsMoreArray = document.querySelectorAll('.text-js-more');
+textJsMoreArray.forEach(el => {
+	el.addEventListener('click', () => {
+		let parent = el.closest('.text-js-wrap');
+		let text = parent.querySelector('.text-js-hidden');
+		text.classList.add('active');
+		el.style.display = 'none';
+	});
+});

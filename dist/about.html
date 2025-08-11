@@ -230,7 +230,7 @@
         </div>
       </div>
       <div class="text--xxl mt-3">
-        <div class="d-flex flex-column gap-2 font-family-second">
+        <div class="d-flex flex-column gap-1 gap-lg-2 font-family-second">
           <span>на территории</span>
           <span>Сибирского Федерального Округа, </span>
           <span>Якутии и Дальнего Востока</span>
@@ -342,13 +342,14 @@
 
   <div class="container container-1530 mt-5">
     <div class="d-flex justify-content-between">
-      <button class="navArrow sliderArrow navArrowPrev">
+      <button class="d-none d-lg-block navArrow sliderArrow navArrowPrev">
         <svg>
           <use xlink:href="img/icons/icons.svg#arrow-prev">
           </use>
         </svg>
       </button>
-      <button class="navArrow sliderArrow navArrowNext">
+      <div class="swiper-pagination d-flex d-lg-none"></div>
+      <button class="d-none d-lg-block navArrow sliderArrow navArrowNext">
         <svg>
           <use xlink:href="img/icons/icons.svg#arrow-next">
           </use>
@@ -358,13 +359,13 @@
   </div>
 
 </section>
-			<section class="progres" style="background-image: url('img/admin/progres/image-1.jpg');">
+			<section class="progres overflow-hidden" style="background-image: url('img/admin/progres/image-1.jpg');">
   <div class="container container-1530">
     <h2 class="h2">
       Стабильный рост и развитие
     </h2>
     <div class="d-flex align-items-center gap-4">
-      <button class="navArrow sliderArrow navArrowPrev">
+      <button class="navArrow sliderArrow navArrowPrev d-none d-lg-block">
         <svg>
           <use xlink:href="img/icons/icons.svg#arrow-prev">
           </use>
@@ -422,7 +423,7 @@
           </div>
         </div>
       </div>
-      <button class="navArrow sliderArrow navArrowNext">
+      <button class="navArrow sliderArrow navArrowNext d-none d-lg-block">
         <svg>
           <use xlink:href="img/icons/icons.svg#arrow-next">
           </use>
@@ -497,7 +498,7 @@
             Основание ООО «ЭНРОН Групп»
           </h3>
           <p class="text--md" style="max-width: 750px;">
-            Направление деятельности — реализация смазочных материалов «Роснефть»
+            Направление деятельности — реализация смазочных материалов «Роснефть»  Направление деятельности — реализация смазочных материалов «Роснефть»
           </p>
         </div>
         <div class="swiper-slide">
@@ -621,7 +622,7 @@
 			<section class="sect">
 	<div class="container container-1530">
 		<div class="row">
-			<div class="col-lg-6">
+			<div class="col-xxl-6">
 
 				<div class="expContent">
 					<h2 class="h2 mb-4">
@@ -637,9 +638,9 @@
 				</div>
 
 			</div>
-			<div class="col-lg-6">
+			<div class="col-xxl-6 mt-4 mt-xxl-0">
 				
-				<div class="expCard p-40 bg--dark2 rounded-24">
+				<div class="expCard p-40 p-lg-24 bg--dark2 rounded-24">
 					<h3 class="h3 mb-3">
 						Название вакансии
 					</h3>
@@ -652,11 +653,11 @@
 						наценок за счет отсутствия посредников и сокращает время поставки. Это позволяет предлагать продукцию на
 						более выгодных и гибких условиях для клиентов.
 					</div>
-					<div class="d-flex gap-2 mt-4 pt-3">
-						<button class="button button--yellow rounded-100">
+					<div class="d-flex gap-2 mt-4 pt-3 flex-column flex-md-row">
+						<button class="button button--yellow rounded-100 expBtn">
 							Откликнуться на вакансию
 						</button>
-						<button class="button button--dark rounded-100">
+						<button class="button button--dark rounded-100 expBtn">
 							Посмотреть все вакансии
 							<div class="btn-icon">
 								<svg>
@@ -772,14 +773,14 @@
 			</div>
 
 			<div class="d-flex align-items-center gap-3 justify-content-center mt-5">
-				<button class="navArrow sliderArrow navArrowPrev">
+				<button class="d-none d-lg-block navArrow sliderArrow navArrowPrev">
 					<svg>
 						<use xlink:href="img/icons/icons.svg#arrow-prev">
 						</use>
 					</svg>
 				</button>
 				<div class="swiper-pagination"></div>
-				<button class="navArrow sliderArrow navArrowNext">
+				<button class="d-none d-lg-block navArrow sliderArrow navArrowNext">
 					<svg>
 						<use xlink:href="img/icons/icons.svg#arrow-next">
 						</use>
@@ -862,7 +863,7 @@
 						</a>
 					</div>
 
-					<a href="tel:+36212312313" class="text--lg d-flex fw-light mb-3">
+					<a href="tel:+36212312313" class="text--lg d-flex fw-light mb-3 hover--yellow">
 						+7 3955 60-85-55
 					</a>
 					<a href="mailto:office@enron-group.ru" class="footerContactsMail d-flex text--yellow">
@@ -873,14 +874,14 @@
 
 				<div class="footerItem">
 
-					<div class="d-flex justify-content-between align-items-center mb-4 pb-2 gap-3">
+					<a href="tel:+63212323123" class="footerItemCallback d-flex justify-content-between align-items-center mb-4 pb-2 gap-3">
 						<h4 class="h4 mb-0">
 							Оставить заявку
 						</h4>
-						<a class="footerItemRoundBtn footerItemRoundBtn--yellow" href="tel:+63212323123">
+						<div class="footerItemRoundBtn footerItemRoundBtn--yellow">
 							<img src="img/icons/arrow-btn.svg" alt="icon">
-						</a>
-					</div>
+						</div>
+					</a>
 
 					<p>
 						Оставьте заявку, и наши менеджеры свяжутся с вами

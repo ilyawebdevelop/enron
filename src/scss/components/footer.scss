@@ -25,7 +25,8 @@
 		padding-top: 30px;
 		padding-bottom: 30px;
 		font-family: var(--font-family-second);
-		@media(max-width: 991px){
+
+		@media(max-width: 991px) {
 			padding-top: 40px;
 			padding-bottom: 40px;
 		}
@@ -34,7 +35,8 @@
 	&T {
 		padding-bottom: 120px;
 		padding-top: 120px;
-		@media(max-width: 991px){
+
+		@media(max-width: 991px) {
 			padding-top: 80px;
 			padding-bottom: 80px;
 		}
@@ -74,11 +76,13 @@
 		@media(max-width: 1600px) {
 			grid-column: 4 span;
 		}
-		@media(max-width: 1199px){
+
+		@media(max-width: 1199px) {
 			grid-column: 6 span;
 			padding: 24px 24px 32px;
 		}
-		@media(max-width: 767px){
+
+		@media(max-width: 767px) {
 			grid-column: 12 span;
 		}
 	}
@@ -122,6 +126,11 @@
 	justify-content: center;
 	font-weight: 500;
 	letter-spacing: 0.32px;
+	transition: background-color .2s linear;
+
+	&:hover {
+		background-color: var(--White50);
+	}
 
 	svg {
 		width: 32px;
@@ -132,6 +141,26 @@
 		flex-shrink: 0;
 	}
 }
+
 .footerContactsMail {
 	font-size: 18px;
+}
+
+.footerItemCallback {
+	h4 {
+		transition: color .2s linear;
+	}
+	.footerItemRoundBtn--yellow {
+		transition: opacity .2s linear;
+	}
+	&:hover {
+		h4 {
+			color: var(--yellow);
+		}
+
+		.footerItemRoundBtn--yellow {
+			opacity: .8;
+		}
+	}
+
 }

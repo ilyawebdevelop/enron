@@ -14774,6 +14774,11 @@ h5,
   line-height: 180%;
   letter-spacing: 0.7px;
 }
+@media (max-width: 575px) {
+  .text--xs {
+    font-size: 11px;
+  }
+}
 
 .text--16 {
   font-size: 16px;
@@ -15109,12 +15114,24 @@ h5,
   font-size: 32px;
   line-height: normal;
 }
+@media (max-width: 991px) {
+  .text--xxl {
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: 1px;
+  }
+}
 
 .baner-text {
   color: var(--White);
   font-size: 56px;
   line-height: 120%;
   letter-spacing: 0.56px;
+}
+@media (max-width: 991px) {
+  .baner-text {
+    font-size: 24px;
+  }
 }
 
 .link-back {
@@ -15262,6 +15279,17 @@ h5,
 
 a.text--yellow:hover {
   color: #fff;
+}
+
+.text-js-hidden {
+  display: none;
+}
+.text-js-hidden.active {
+  display: flex;
+}
+
+a.hover--yellow:hover {
+  color: var(--yellow);
 }
 
 .button {
@@ -15786,6 +15814,19 @@ a.text--yellow:hover {
   line-height: 180%;
   letter-spacing: 0.7px;
   color: var(--black);
+}
+
+@media (max-width: 1599px) {
+  .expBtn {
+    width: 50%;
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+}
+@media (max-width: 767px) {
+  .expBtn {
+    width: 100%;
+  }
 }
 
 /* Hamburger Menu */
@@ -16951,6 +16992,16 @@ a.text--yellow:hover {
   flex-direction: column;
   margin-bottom: 20px;
 }
+@media (max-width: 1199px) {
+  .docCard {
+    padding: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .docCard {
+    padding: 15px;
+  }
+}
 @media (max-width: 575px) {
   .docCard {
     margin-bottom: 15px;
@@ -16961,11 +17012,16 @@ a.text--yellow:hover {
   border-radius: 16px;
   background: #FFF;
   width: 100%;
-  height: 360px;
+  height: 400px;
   object-fit: cover;
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
+}
+@media (max-width: 767px) {
+  .docCard img {
+    margin-bottom: 15px;
+  }
 }
 @media (max-width: 575px) {
   .docCard img {
@@ -16993,6 +17049,12 @@ a.text--yellow:hover {
   margin-left: 20px;
   margin-right: 20px;
 }
+@media (max-width: 767px) {
+  .docSlider .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .docSlider .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin-left: 13px;
+    margin-right: 13px;
+  }
+}
 
 .productDocs .docCard {
   padding: 30px;
@@ -17003,8 +17065,23 @@ a.text--yellow:hover {
   }
 }
 .productDocs .docCard img {
-  height: 300px;
+  height: 344px;
   margin-bottom: 20px;
+}
+@media (max-width: 1599px) {
+  .productDocs .docCard img {
+    height: 240px;
+  }
+}
+@media (max-width: 1199px) {
+  .productDocs .docCard img {
+    height: 350px;
+  }
+}
+@media (max-width: 767px) {
+  .productDocs .docCard img {
+    height: 300px;
+  }
 }
 @media (max-width: 575px) {
   .productDocs .docCard img {
@@ -17022,6 +17099,8 @@ a.text--yellow:hover {
   background: #1C1C1C;
   backdrop-filter: blur(5px);
   padding: 40px 40px 48px 40px;
+  position: sticky;
+  top: 20px;
 }
 @media (max-width: 1599px) {
   .cartTotal {
@@ -17175,6 +17254,12 @@ a.text--yellow:hover {
   padding-bottom: 80px;
   position: relative;
 }
+@media (max-width: 575px) {
+  .intro-about {
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+}
 .intro-about::before {
   content: "";
   position: absolute;
@@ -17190,6 +17275,17 @@ a.text--yellow:hover {
   position: relative;
   left: -50px;
 }
+@media (max-width: 991px) {
+  .intro-aboutLogo {
+    width: 400px;
+    left: -20px;
+  }
+}
+@media (max-width: 440px) {
+  .intro-aboutLogo {
+    width: 250px;
+  }
+}
 .intro-about .container {
   position: relative;
   z-index: 1;
@@ -17197,6 +17293,16 @@ a.text--yellow:hover {
 
 .intro-about-content {
   padding-left: 156px;
+}
+@media (max-width: 991px) {
+  .intro-about-content {
+    padding-left: 90px;
+  }
+}
+@media (max-width: 440px) {
+  .intro-about-content {
+    padding-left: 50px;
+  }
 }
 
 .article-intro {
@@ -17250,6 +17356,9 @@ a.text--yellow:hover {
   font-weight: 300;
 }
 
+.adv-about {
+  overflow: hidden;
+}
 .adv-about-item {
   border-radius: 24px;
   background: rgba(47, 45, 47, 0.8);
@@ -17257,15 +17366,41 @@ a.text--yellow:hover {
   padding: 40px 40px 48px 40px;
   height: 100%;
 }
+@media (max-width: 575px) {
+  .adv-about-item {
+    padding: 24px;
+  }
+}
 .adv-about-item-icon {
   margin-bottom: 32px;
   width: 100px;
 }
+@media (max-width: 575px) {
+  .adv-about-item-icon {
+    width: 80px;
+  }
+}
 .adv-about-item .h4 {
   margin-bottom: 12px;
 }
+@media (max-width: 767px) {
+  .adv-about-slider {
+    overflow: visible;
+  }
+}
+@media (max-width: 575px) {
+  .adv-about-slider {
+    padding-right: 40px;
+  }
+}
 .adv-about-slider .swiper-slide {
   height: auto;
+}
+.adv-about .swiper-pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .progres {
@@ -17276,8 +17411,20 @@ a.text--yellow:hover {
   background-size: cover;
   background-color: rgba(47, 45, 47, 0.8);
 }
+@media (max-width: 767px) {
+  .progres {
+    min-height: 440px;
+    background-position: right -422px center;
+    padding-top: 70px;
+  }
+}
 .progres .h2 {
   margin-bottom: 60px;
+}
+@media (max-width: 991px) {
+  .progres .h2 {
+    margin-bottom: 40px;
+  }
 }
 .progres::before {
   content: "";
@@ -17295,6 +17442,11 @@ a.text--yellow:hover {
   font-size: 40px;
   line-height: 120%;
 }
+@media (max-width: 991px) {
+  .progres .h2 {
+    font-size: 24px;
+  }
+}
 .progres .container {
   position: relative;
   z-index: 1;
@@ -17302,6 +17454,11 @@ a.text--yellow:hover {
 
 .progres-year-slider {
   width: 100%;
+}
+@media (max-width: 767px) {
+  .progres-year-slider {
+    overflow: visible;
+  }
 }
 .progres-year-slider .swiper-slide {
   border-radius: 100px;
@@ -17313,6 +17470,11 @@ a.text--yellow:hover {
   color: var(--yellow);
   cursor: pointer;
   transition: background-color 0.2s linear, color 0.2s linear;
+}
+@media (max-width: 575px) {
+  .progres-year-slider .swiper-slide {
+    padding: 8px 16px;
+  }
 }
 .progres-year-slider .swiper-slide:hover {
   background-color: var(--yellow);
@@ -17336,10 +17498,26 @@ a.text--yellow:hover {
 .progres-slider {
   margin-top: 80px;
 }
+@media (max-width: 767px) {
+  .progres-slider {
+    margin-top: 60px;
+  }
+}
 
 .expContent {
   padding-right: 80px;
   padding-top: 40px;
+}
+@media (max-width: 1839px) {
+  .expContent {
+    padding-right: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .expContent {
+    padding-top: 20px;
+    padding-right: 0;
+  }
 }
 
 .partnersSlider {
@@ -17350,6 +17528,12 @@ a.text--yellow:hover {
   width: 188px;
   height: 188px;
 }
+@media (max-width: 991px) {
+  .partnersSlider .swiper-slide {
+    width: 128px;
+    height: 128px;
+  }
+}
 .partnersSlider .swiper-slide img {
   width: 100%;
   height: 100%;
@@ -17359,6 +17543,11 @@ a.text--yellow:hover {
 }
 .partners .sectHead {
   margin-bottom: 60px;
+}
+@media (max-width: 991px) {
+  .partners .sectHead {
+    margin-bottom: 30px;
+  }
 }
 
 .vacancyPrice {
@@ -17833,6 +18022,10 @@ a.text--yellow:hover {
   justify-content: center;
   font-weight: 500;
   letter-spacing: 0.32px;
+  transition: background-color 0.2s linear;
+}
+.btn-arrow:hover {
+  background-color: var(--White50);
 }
 .btn-arrow svg {
   width: 32px;
@@ -17845,4 +18038,17 @@ a.text--yellow:hover {
 
 .footerContactsMail {
   font-size: 18px;
+}
+
+.footerItemCallback h4 {
+  transition: color 0.2s linear;
+}
+.footerItemCallback .footerItemRoundBtn--yellow {
+  transition: opacity 0.2s linear;
+}
+.footerItemCallback:hover h4 {
+  color: var(--yellow);
+}
+.footerItemCallback:hover .footerItemRoundBtn--yellow {
+  opacity: 0.8;
 }
