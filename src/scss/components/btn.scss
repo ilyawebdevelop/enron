@@ -138,6 +138,9 @@
 
 	&--transparent {
 		border: 1px solid var(--White50, rgba(255, 255, 255, 0.50));
+		&:hover {
+			background-color: var(--White50);
+		}
 
 		svg {
 			fill: transparent;

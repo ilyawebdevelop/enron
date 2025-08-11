@@ -263,6 +263,7 @@ section {
 
 		&.bordered-40 {
 			border-radius: 40px;
+
 			@media(max-width: 991px) {
 				border-radius: 24px;
 			}
@@ -492,6 +493,10 @@ h2,
 .h2 {
 	font-size: 40px;
 
+	@media(max-width: 1400px) {
+		font-size: 32px;
+	}
+
 	@media(max-width: 991px) {
 		font-size: 24px;
 	}
@@ -539,7 +544,8 @@ h5,
 	font-size: 14px;
 	line-height: 180%;
 	letter-spacing: 0.7px;
-	@media(max-width: 575px){
+
+	@media(max-width: 575px) {
 		font-size: 11px;
 	}
 }
@@ -834,7 +840,8 @@ h5,
 		justify-content: center;
 		cursor: pointer;
 		transition: color .2s linear;
-		@media(max-width: 991px){
+
+		@media(max-width: 991px) {
 			height: 48px;
 			font-size: 16px;
 		}
@@ -913,7 +920,8 @@ h5,
 .text--xxl {
 	font-size: 32px;
 	line-height: normal;
-	@media(max-width: 991px){
+
+	@media(max-width: 991px) {
 		font-size: 20px;
 		line-height: normal;
 		letter-spacing: 1px;
@@ -925,7 +933,8 @@ h5,
 	font-size: 56px;
 	line-height: 120%;
 	letter-spacing: 0.56px;
-	@media(max-width: 991px){
+
+	@media(max-width: 991px) {
 		font-size: 24px;
 	}
 }
@@ -947,10 +956,11 @@ h5,
 		height: 32px !important;
 		transition: stroke .2s linear;
 	}
+
 	.button--dark {
 		&:hover {
 			svg {
-				stroke: var(--dark)!important;
+				stroke: var(--dark) !important;
 			}
 		}
 	}
@@ -1081,6 +1091,10 @@ h5,
 		width: 64px;
 		height: 64px;
 		border-radius: 50%;
+		@media(max-width: 991px){
+			width: 48px;
+			height: 48px;
+		}
 	}
 }
 
@@ -1108,14 +1122,28 @@ a.text--yellow {
 		color: #fff;
 	}
 }
+
 .text-js-hidden {
 	display: none;
+
 	&.active {
 		display: flex;
 	}
 }
+
 a.hover--yellow {
 	&:hover {
 		color: var(--yellow);
+	}
+}
+a.hover--white {
+	.text--yellow {
+		transition: color .2s linear;
+	}
+	&:hover {
+		color: #fff;
+		.text--yellow {
+			color: #fff;
+		}
 	}
 }

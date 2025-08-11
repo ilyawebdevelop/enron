@@ -14720,6 +14720,12 @@ h2,
 .h2 {
   font-size: 40px;
 }
+@media (max-width: 1400px) {
+  h2,
+.h2 {
+    font-size: 32px;
+  }
+}
 @media (max-width: 991px) {
   h2,
 .h2 {
@@ -15262,6 +15268,12 @@ h5,
   height: 64px;
   border-radius: 50%;
 }
+@media (max-width: 991px) {
+  .avatar img {
+    width: 48px;
+    height: 48px;
+  }
+}
 
 .ml-auto {
   margin-left: auto;
@@ -15294,6 +15306,16 @@ a.text--yellow:hover {
 
 a.hover--yellow:hover {
   color: var(--yellow);
+}
+
+a.hover--white .text--yellow {
+  transition: color 0.2s linear;
+}
+a.hover--white:hover {
+  color: #fff;
+}
+a.hover--white:hover .text--yellow {
+  color: #fff;
 }
 
 .button {
@@ -15411,6 +15433,9 @@ a.hover--yellow:hover {
 }
 .button--transparent {
   border: 1px solid var(--White50, rgba(255, 255, 255, 0.5));
+}
+.button--transparent:hover {
+  background-color: var(--White50);
 }
 .button--transparent svg {
   fill: transparent;
@@ -17936,6 +17961,38 @@ a.hover--yellow:hover {
   background: var(--Dark2, #1C1C1C);
   padding: 16px 12px;
 }
+@media (max-width: 991px) {
+  .profileSidebar {
+    width: fit-content;
+  }
+}
+@media (max-width: 575px) {
+  .profileSidebar {
+    background-color: var(--white-04);
+    margin-left: -15px;
+    border-radius: 0;
+    width: calc(100% + 30px);
+    overflow-x: scroll;
+  }
+}
+@media (max-width: 991px) {
+  .profileSidebar ul {
+    display: flex;
+  }
+}
+.profileSidebar ul li:not(:last-child) {
+  margin-bottom: 12px;
+}
+@media (max-width: 991px) {
+  .profileSidebar ul li:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 575px) {
+  .profileSidebar ul li:last-child {
+    padding-right: 20px;
+  }
+}
 .profileSidebar ul li.active a {
   background-color: var(--yellow);
   color: var(--dark);
@@ -17947,10 +18004,30 @@ a.hover--yellow:hover {
   font-weight: 500;
   letter-spacing: 0.36px;
   border-radius: 12px;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+.profileSidebar ul li a:hover {
+  background-color: var(--yellow);
+  color: #1C1C1C;
+}
+@media (max-width: 991px) {
+  .profileSidebar ul li a {
+    padding: 8px 16px;
+  }
+}
+@media (max-width: 575px) {
+  .profileSidebar ul li a {
+    white-space: nowrap;
+  }
 }
 
 .manager-content {
   padding-left: 80px;
+}
+@media (max-width: 1599px) {
+  .manager-content {
+    padding-left: 20px;
+  }
 }
 
 .history-item {
