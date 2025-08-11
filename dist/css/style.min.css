@@ -17222,7 +17222,7 @@ a.hover--white:hover .text--yellow {
     max-width: 410px;
   }
 }
-@media (max-width: 440px) {
+@media (max-width: 575px) {
   .cartItemL {
     flex-direction: column;
     max-width: 100%;
@@ -17234,7 +17234,7 @@ a.hover--white:hover .text--yellow {
     margin-left: 77px;
   }
 }
-@media (max-width: 440px) {
+@media (max-width: 575px) {
   .cartItemR {
     margin-left: 0;
     width: 100%;
@@ -17244,13 +17244,18 @@ a.hover--white:hover .text--yellow {
   max-width: 287px;
   width: 100%;
 }
-@media (max-width: 440px) {
+@media (max-width: 575px) {
   .cartItemContent {
     max-width: 100%;
   }
 }
 .cartItemNum {
   min-width: 160px;
+}
+@media (max-width: 575px) {
+  .cartItemNum {
+    min-width: 130px;
+  }
 }
 .cartItemImg {
   flex-shrink: 0;

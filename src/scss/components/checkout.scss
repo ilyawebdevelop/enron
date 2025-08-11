@@ -35,18 +35,19 @@
 			@media(max-width: 1599px) {
 				max-width: 410px;
 			}
-			@media(max-width: 440px){
+			@media(max-width: 575px){
 				flex-direction: column;
 				max-width: 100%;
 				width: 100%;
 			}
+
 		}
 
 		&R {
 			@media(max-width: 991px) {
 				margin-left: 77px;
 			}
-			@media(max-width: 440px){
+			@media(max-width: 575px){
 				margin-left: 0;
 				width: 100%;
 			}
@@ -55,13 +56,16 @@
 		&Content {
 			max-width: 287px;
 			width: 100%;
-			@media(max-width: 440px){
+			@media(max-width: 575px){
 				max-width: 100%;
 			}
 		}
 
 		&Num {
 			min-width: 160px;
+			@media(max-width: 575px){
+				min-width: 130px;
+			}
 		}
 
 		&Img {
