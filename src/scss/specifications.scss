@@ -79,7 +79,8 @@ section {
 	padding-right: 24px;
 	padding-bottom: 24px;
 	height: 120px;
-	@media(max-width: 991px){
+
+	@media(max-width: 991px) {
 		padding-top: 15px;
 	}
 
@@ -101,6 +102,10 @@ section {
 
 	&.bordered-40 {
 		border-radius: 40px;
+
+		@media(max-width: 991px) {
+			border-radius: 24px;
+		}
 	}
 
 	&.bordered-12 {
@@ -114,6 +119,7 @@ section {
 	&.text--white {
 		color: #fff;
 	}
+
 	&::placeholder {
 		color: var(--White50);
 	}
@@ -206,10 +212,11 @@ section {
 
 .formSelect {
 	&.w-sm-100 {
-		@media(max-width: 575px){
+		@media(max-width: 575px) {
 			width: 100%;
 		}
 	}
+
 	select {
 		height: 64px;
 		padding-left: 26px;
@@ -233,7 +240,8 @@ section {
 			padding-right: 50px;
 			background-position: right 15px center;
 		}
-		@media(max-width: 575px){
+
+		@media(max-width: 575px) {
 			min-width: unset;
 		}
 
@@ -249,11 +257,19 @@ section {
 			border-radius: 12px;
 		}
 
+		&.border-white50 {
+			border: 1px solid var(--White50);
+		}
+
 		&.bordered-40 {
 			border-radius: 40px;
+			@media(max-width: 991px) {
+				border-radius: 24px;
+			}
 		}
+
 		&.w-sm-100 {
-			@media(max-width: 575px){
+			@media(max-width: 575px) {
 				width: 100%;
 			}
 		}
@@ -540,7 +556,8 @@ h5,
 	font-size: 20px;
 	line-height: 150%;
 	letter-spacing: 0.8px;
-	@media(max-width: 991px){
+
+	@media(max-width: 991px) {
 		font-size: 16px;
 	}
 }
@@ -638,13 +655,16 @@ h5,
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		@media(max-width: 1400px){
+
+		@media(max-width: 1400px) {
 			min-height: 650px;
 		}
-		@media(max-width: 767px){
+
+		@media(max-width: 767px) {
 			min-height: 450px;
 		}
-		@media(max-width: 575px){
+
+		@media(max-width: 575px) {
 			min-height: 60vw;
 		}
 
@@ -717,7 +737,8 @@ h5,
 	display: flex;
 	align-items: center;
 	column-gap: 8px;
-	@media(max-width: 575px){
+
+	@media(max-width: 575px) {
 		font-size: 11px;
 	}
 
@@ -726,7 +747,8 @@ h5,
 		width: 10px;
 		height: 10px;
 		border-radius: 50%;
-		@media(max-width: 575px){
+
+		@media(max-width: 575px) {
 			width: 6px;
 			height: 6px;
 		}
@@ -809,6 +831,10 @@ h5,
 		justify-content: center;
 		cursor: pointer;
 		transition: color .2s linear;
+		@media(max-width: 991px){
+			height: 48px;
+			font-size: 16px;
+		}
 
 		&:hover {
 			color: var(--yellow);
@@ -838,13 +864,20 @@ h5,
 
 	.grid-col-6 {
 		grid-column: 6 span;
+
+		&.grid-col-lg-12 {
+			@media(max-width: 991px) {
+				grid-column: 12 span;
+			}
+		}
 	}
 }
 
 .p-40 {
 	padding: 40px;
+
 	&.p-lg-24 {
-		@media(max-width: 991px){
+		@media(max-width: 991px) {
 			padding: 24px;
 		}
 	}
@@ -852,13 +885,15 @@ h5,
 
 .p-60 {
 	padding: 60px;
+
 	&.p-sm-0 {
-		@media(max-width: 575px){
+		@media(max-width: 575px) {
 			padding: 0;
 		}
 	}
+
 	&.p-lg-24 {
-		@media(max-width: 991px){
+		@media(max-width: 991px) {
 			padding: 24px;
 		}
 	}
@@ -935,12 +970,13 @@ h5,
 }
 
 .nav-links {
-	@media(max-width: 575px){
+	@media(max-width: 575px) {
 		overflow-x: scroll;
 		margin-left: -15px;
 		min-width: calc(100% + 30px);
-		
+
 	}
+
 	ul {
 		display: flex;
 		flex-wrap: wrap;
@@ -948,19 +984,22 @@ h5,
 		border: 1px solid var(--White50, rgba(255, 255, 255, 0.50));
 		padding: 8px;
 		gap: 8px;
-		@media(max-width: 1199px){
+
+		@media(max-width: 1199px) {
 			border: none;
 		}
-		@media(max-width: 575px){
+
+		@media(max-width: 575px) {
 			flex-wrap: nowrap;
 		}
 
 		li {
 			&:last-child {
-				@media(max-width: 575px){
+				@media(max-width: 575px) {
 					padding-right: 15px;
 				}
 			}
+
 			&.active {
 				a {
 					background-color: var(--yellow);
@@ -981,13 +1020,15 @@ h5,
 				font-weight: 500;
 				font-family: var(--font-family-second);
 				transition: background-color .2s linear, color .2s linear;
-				@media(max-width: 991px){
+
+				@media(max-width: 991px) {
 					padding-left: 16px;
 					padding-right: 16px;
 					padding-bottom: 8px;
 					padding-top: 8px;
 				}
-				@media(max-width: 575px){
+
+				@media(max-width: 575px) {
 					white-space: nowrap;
 				}
 
@@ -1027,6 +1068,7 @@ h5,
 .ml-auto {
 	margin-left: auto;
 }
+
 .swiper-pagination-bullet {
 	background-color: var(--gray);
 	opacity: 1;
@@ -1041,6 +1083,7 @@ h5,
 	margin-left: 8px;
 	margin-right: 8px;
 }
+
 a.text--yellow {
 	&:hover {
 		color: #fff;

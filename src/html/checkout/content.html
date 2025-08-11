@@ -1,11 +1,11 @@
 <div class="checkout">
   <div class="container">
     <div class="row">
-      <div class="col-lg-9">
+      <div class="col-xl-9">
         <div class="cartList">
 
-          <div class="cartItem mb-2">
-            <div class="cartItemL d-flex gap-4">
+          <div class="cartItem mb-2 flex-column flex-lg-row align-items-start align-items-xxl-center">
+            <div class="cartItemL d-flex gap-3 gap-xxl-4">
               <a href="#" class="cartItemImg">
                 <img src="@img/admin/product/image-1.png" alt="image">
               </a>
@@ -17,19 +17,22 @@
                   </div>
                 </div>
                 <div class="cartItemCat mb-2">моторное масло</div>
-                <h4 class="h mb-3">
+                <h4 class="h4 mb-3">
                   <a class="text--yellow" href="#">TAIF SOPRANO ISO VG 680</a>
                 </h4>
-                <div class="available text--red mb-4 pb-1">
-                  Осталось мало
+                <div class="d-flex gap-2 justify-content-between align-items-center">
+                  <div class="available text--red mb-0 mb-lg-4 pb-0 pb-lg-1">
+                    Осталось мало
+                  </div>
+                  <span class="text--lg font-family-second fw-light text--white50 d-block d-lg-none">7 500 ₽</span>
                 </div>
 
               </div>
             </div>
             <div class="cartItemR">
-              <div class="d-flex align-items-center gap-4">
-                <div class="d-flex align-items-center gap-4">
-                  <span class="text--lg font-family-second fw-light text--white50">7 500 ₽</span>
+              <div class="d-flex align-items-center align-items-lg-end align-items-xxl-center flex-row flex-lg-column flex-xxl-row gap-4 mt-2 mt-lg-0 justify-content-between  justify-content-sm-start">
+                <div class="d-flex align-items-center gap-4 flex-row-reverse flex-lg-row">
+                  <span class="text--lg font-family-second fw-light text--white50 d-none d-lg-block">7 500 ₽</span>
                   <div class="quantity d-flex">
                     <button class="quantity-minus quantity-icon" onclick="this.nextElementSibling.stepDown();">
                       <img src="@img/icons/minus.svg" alt="icon">
@@ -53,8 +56,8 @@
 
           </div>
 
-          <div class="cartItem mb-2">
-            <div class="cartItemL d-flex gap-4">
+          <div class="cartItem mb-2 flex-column flex-lg-row align-items-start align-items-xxl-center">
+            <div class="cartItemL d-flex gap-3 gap-xxl-4">
               <a href="#" class="cartItemImg">
                 <img src="@img/admin/product/image-1.png" alt="image">
               </a>
@@ -66,19 +69,23 @@
                   </div>
                 </div>
                 <div class="cartItemCat mb-2">моторное масло</div>
-                <h4 class="h mb-3">
+                <h4 class="h4 mb-3">
                   <a class="text--yellow" href="#">TAIF SOPRANO ISO VG 680 TAIF SOPRANO ISO VG 680</a>
                 </h4>
-                <div class="available text--green mb-4 pb-1">
-                  Много
+                <div class="d-flex gap-2 justify-content-between align-items-center">
+                  <div class="available text--red mb-0 mb-lg-4 pb-0 pb-lg-1">
+                    Много
+                  </div>
+                  <span class="text--lg font-family-second fw-light text--white50 d-block d-lg-none">37 500 ₽</span>
+
                 </div>
 
               </div>
             </div>
             <div class="cartItemR">
-              <div class="d-flex align-items-center gap-4">
-                <div class="d-flex align-items-center gap-4">
-                  <span class="text--lg font-family-second fw-light text--white50">37 500 ₽</span>
+              <div class="d-flex align-items-center align-items-lg-end align-items-xxl-center flex-row flex-lg-column flex-xxl-row gap-4 mt-2 mt-lg-0 justify-content-between  justify-content-sm-start">
+                <div class="d-flex align-items-center gap-4 flex-row-reverse flex-lg-row">
+                  <span class="text--lg font-family-second fw-light text--white50 d-none d-lg-block">37 500 ₽</span>
                   <div class="quantity d-flex">
                     <button class="quantity-minus quantity-icon" onclick="this.nextElementSibling.stepDown();">
                       <img src="@img/icons/minus.svg" alt="icon">
@@ -104,7 +111,7 @@
 
         </div>
 
-        <div class="gap-2 grid mb-2">
+        <div class="gap-2 grid mb-2 checkoutRadioGrid">
           <div class="grid-col-6 d-flex gap-2 bg--white-04 rounded-24 p-3">
 
             <div class="radioW w-50">
@@ -132,13 +139,13 @@
           </div>
         </div>
 
-        <div class="bg--white-04 p-40 rounded-24 mb-2">
+        <div class="bg--white-04 p-40 p-lg-24 rounded-24 mb-2">
           <h4 class="h4 mb-3 pb-3">
             Плательщик
           </h4>
           <div class="mb-2 px-4 mx-1">Название организации</div>
           <div class="formSelect mb-3 pb-3">
-            <select class="bordered-40 border-gray w-100" name="nazv_org" id="nazv_org">
+            <select class="bordered-40 border-white50 w-100" name="nazv_org" id="nazv_org">
               <option value="1">
                 ООО «Рога и копыта»
               </option>
@@ -152,7 +159,7 @@
           </div>
           <div class="mb-2 px-4 mx-1">Адрес доставки</div>
           <div class="formSelect">
-            <select class="bordered-40 border-gray w-100" name="nazv_org" id="nazv_org">
+            <select class="bordered-40 border-white50 w-100" name="nazv_org" id="nazv_org">
               <option value="1">
                 123456, г. Москва, ул. Подвойского, д. 14, стр. 7
               </option>
@@ -166,18 +173,18 @@
           </div>
         </div>
 
-        <div class="bg--white-04 p-40 rounded-24 mb-2">
+        <div class="bg--white-04 p-40 p-lg-24 rounded-24 mb-2">
           <h4 class="h4 mb-3 pb-3">
             Представитель компании
           </h4>
           <div class="grid gap-2">
-            <div class="grid-col-6">
-            
+            <div class="grid-col-6 grid-col-lg-12">
+
               <div class="mb-2 px-4 mx-1">ФИО представителя</div>
               <input type="text" class="formInput border-white50 formInput--transparent"
                 placeholder="Иванов Иван Иванович">
             </div>
-            <div class="grid-col-6">
+            <div class="grid-col-6 grid-col-lg-12 mt-3 mt-lg-0">
               <div class="mb-2 px-4 mx-1">Контактный номер телефона</div>
               <input type="text" class="formInput border-white50 formInput--transparent"
                 placeholder="+ 7 (123) 456 7890">
@@ -185,17 +192,18 @@
           </div>
         </div>
 
-        <div class="bg--white-04 p-40 rounded-24">
+        <div class="bg--white-04 p-40 p-lg-24 rounded-24">
           <h4 class="h4 mb-3 pb-3">
             Оставить комментарий к заказу
           </h4>
           <div class="mb-2 px-4 mx-1">Комментарий</div>
-          <textarea name="comment" id="comment" cols="30" rows="10" class="formText border-white50 bordered-40 w-100"></textarea>
-    
+          <textarea name="comment" id="comment" cols="30" rows="10"
+            class="formText border-white50 bordered-40 w-100"></textarea>
+
         </div>
 
       </div>
-      <div class="col-lg-3">
+      <div class="col-xl-3 mt-3 mt-xl-0">
         <div class="cartTotal">
           <h4 class="h4 text-center mb-3 pb-2 font-family-second">
             Общая сумма заказа

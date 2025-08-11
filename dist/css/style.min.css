@@ -14360,6 +14360,11 @@ section {
 .formText.bordered-40 {
   border-radius: 40px;
 }
+@media (max-width: 991px) {
+  .formText.bordered-40 {
+    border-radius: 24px;
+  }
+}
 .formText.bordered-12 {
   border-radius: 12px;
 }
@@ -14493,8 +14498,16 @@ section {
 .formSelect select.bordered-12 {
   border-radius: 12px;
 }
+.formSelect select.border-white50 {
+  border: 1px solid var(--White50);
+}
 .formSelect select.bordered-40 {
   border-radius: 40px;
+}
+@media (max-width: 991px) {
+  .formSelect select.bordered-40 {
+    border-radius: 24px;
+  }
 }
 @media (max-width: 575px) {
   .formSelect select.w-sm-100 {
@@ -15023,6 +15036,12 @@ h5,
   cursor: pointer;
   transition: color 0.2s linear;
 }
+@media (max-width: 991px) {
+  .radioW label {
+    height: 48px;
+    font-size: 16px;
+  }
+}
 .radioW label:hover {
   color: var(--yellow);
 }
@@ -15048,6 +15067,11 @@ h5,
 }
 .grid .grid-col-6 {
   grid-column: 6 span;
+}
+@media (max-width: 991px) {
+  .grid .grid-col-6.grid-col-lg-12 {
+    grid-column: 12 span;
+  }
 }
 
 .p-40 {
@@ -15652,6 +15676,16 @@ a.text--yellow:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 991px) {
+  .cartItemRemove {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+.cartItemRemove:hover svg {
+  stroke: var(--yellow);
 }
 .cartItemRemove svg {
   fill: transparent;
@@ -16898,6 +16932,17 @@ a.text--yellow:hover {
   letter-spacing: 0.7px;
 }
 
+@media (max-width: 1400px) {
+  .cartTotalSum {
+    font-size: 32px;
+  }
+}
+@media (max-width: 991px) {
+  .cartTotalSum {
+    font-size: 24px;
+  }
+}
+
 .docCard {
   padding: 48px 40px;
   border-radius: 24px;
@@ -16978,6 +17023,11 @@ a.text--yellow:hover {
   backdrop-filter: blur(5px);
   padding: 40px 40px 48px 40px;
 }
+@media (max-width: 1599px) {
+  .cartTotal {
+    padding: 30px 30px 45px 30px;
+  }
+}
 .cartItem {
   border-radius: 20px;
   background: var(--White04);
@@ -16987,8 +17037,50 @@ a.text--yellow:hover {
   justify-content: space-between;
   column-gap: 40px;
 }
+@media (max-width: 991px) {
+  .cartItem {
+    position: relative;
+  }
+}
 .cartItemL {
   max-width: 615px;
+}
+@media (max-width: 1839px) {
+  .cartItemL {
+    max-width: 470px;
+  }
+}
+@media (max-width: 1599px) {
+  .cartItemL {
+    max-width: 410px;
+  }
+}
+@media (max-width: 440px) {
+  .cartItemL {
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .cartItemR {
+    margin-left: 77px;
+  }
+}
+@media (max-width: 440px) {
+  .cartItemR {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+.cartItemContent {
+  max-width: 287px;
+  width: 100%;
+}
+@media (max-width: 440px) {
+  .cartItemContent {
+    max-width: 100%;
+  }
 }
 .cartItemNum {
   min-width: 160px;
@@ -16996,12 +17088,28 @@ a.text--yellow:hover {
 .cartItemImg {
   flex-shrink: 0;
 }
+.cartItemImg:hover {
+  opacity: 0.8;
+}
 .cartItemImg img {
   width: 160px;
   height: 160px;
   object-fit: contain;
   background-color: #fff;
   border-radius: 20px;
+}
+@media (max-width: 1599px) {
+  .cartItemImg img {
+    width: 130px;
+    height: 130px;
+  }
+}
+@media (max-width: 991px) {
+  .cartItemImg img {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+  }
 }
 .cartItemCat {
   color: var(--White50);
@@ -17015,12 +17123,48 @@ a.text--yellow:hover {
   min-width: 160px;
   text-align: end;
 }
+@media (max-width: 1599px) {
+  .cartItemTotal {
+    min-width: 130px;
+  }
+}
 .cartItem .sku {
   font-size: 12px;
   line-height: 18px;
 }
 .cartItem .quantity {
   max-width: 200px;
+}
+@media (max-width: 1599px) {
+  .cartItem .quantity {
+    max-width: 140px;
+  }
+}
+@media (max-width: 1599px) {
+  .cartItem .text--lg {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1599px) {
+  .cartItem .h4 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1599px) {
+  .checkoutRadioGrid .grid-col-6 {
+    grid-column: 12 span;
+  }
+}
+@media (max-width: 575px) {
+  .checkoutRadioGrid > .grid-col-6 {
+    flex-direction: column;
+  }
+}
+@media (max-width: 575px) {
+  .checkoutRadioGrid > .grid-col-6 .radioW.w-50 {
+    width: 100% !important;
+  }
 }
 
 .intro-about {
