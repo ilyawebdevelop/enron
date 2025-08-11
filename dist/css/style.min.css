@@ -14335,7 +14335,7 @@ section {
 
 .formText {
   padding-top: 24px;
-  padding-left: 32px;
+  padding-left: 27px;
   padding-right: 24px;
   padding-bottom: 24px;
   height: 120px;
@@ -14416,7 +14416,7 @@ section {
   border-radius: 40px;
   width: 100%;
   padding-left: 26px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   color: #fff;
   background-color: var(--dark);
@@ -14424,6 +14424,7 @@ section {
 @media (max-width: 991px) {
   .formInput {
     height: 48px;
+    font-size: 16px;
   }
 }
 .formInput::placeholder {
@@ -15453,6 +15454,11 @@ a.hover--white:hover .text--yellow {
 }
 .button.min-w-320 {
   min-width: 320px;
+}
+@media (max-width: 575px) {
+  .button.min-w-320 {
+    min-width: unset;
+  }
 }
 .button.min-w-400 {
   min-width: 400px;
@@ -17966,6 +17972,21 @@ a.hover--white:hover .text--yellow {
   border-radius: 24px;
   background: var(--White04, rgba(255, 255, 255, 0.04));
   padding: 80px 60px;
+}
+@media (max-width: 1599px) {
+  .registerWrap {
+    padding: 40px;
+  }
+}
+@media (max-width: 1199px) {
+  .registerWrap {
+    padding: 30px;
+  }
+}
+@media (max-width: 991.98px) {
+  .registerWrap {
+    padding: 20px;
+  }
 }
 .registerWater {
   margin-left: auto;

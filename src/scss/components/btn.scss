@@ -124,6 +124,9 @@
 
 	&.min-w-320 {
 		min-width: 320px;
+		@media(max-width: 575px){
+			min-width: unset;
+		}
 	}
 
 	&.min-w-400 {
