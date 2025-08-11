@@ -15148,6 +15148,10 @@ h5,
   stroke-width: 2px;
   width: 32px !important;
   height: 32px !important;
+  transition: stroke 0.2s linear;
+}
+.fileW .button--dark:hover svg {
+  stroke: var(--dark) !important;
 }
 
 .agreement .rect {
@@ -15531,16 +15535,22 @@ a.hover--yellow:hover {
   line-height: 28px;
   letter-spacing: 0.36px;
   font-family: var(--font-family-second);
+  transition: background-color 0.2s linear;
 }
 @media (max-width: 991px) {
   .productsFilterChangedItem {
     height: 48px;
   }
 }
+.productsFilterChangedItem button:hover {
+  opacity: 0.8;
+}
 .productsFilterChangedItem--bg-gray {
   background-color: var(--White50);
 }
-
+.productsFilterChangedItem--bg-gray:hover {
+  background-color: #fff;
+}
 .link-prev svg {
   width: 24px;
   height: 24px;
@@ -16542,6 +16552,7 @@ a.hover--yellow:hover {
 .productCardContent .button {
   font-size: 16px;
   height: 48px;
+  line-height: 1;
 }
 .productCardCat {
   overflow: hidden;

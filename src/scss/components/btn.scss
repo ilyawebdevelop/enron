@@ -13,6 +13,7 @@
 	font-family: var(--font-family-second);
 	font-weight: 500;
 	flex-shrink: 0;
+
 	.text--yellow {
 		transition: color .2s linear;
 	}
@@ -52,9 +53,11 @@
 		&:hover {
 			background-color: var(--yellow);
 			color: var(--dark);
+
 			.text--yellow {
 				color: var(--dark);
 			}
+
 			.btn-icon {
 				svg {
 					stroke: var(--dark);
@@ -144,8 +147,9 @@
 			height: 32px;
 		}
 	}
+
 	&--sm-w-100 {
-		@media(max-width: 575px){
+		@media(max-width: 575px) {
 			width: 100%;
 		}
 	}
@@ -267,13 +271,29 @@
 	line-height: 28px;
 	letter-spacing: 0.36px;
 	font-family: var(--font-family-second);
-	@media(max-width: 991px){
+	transition: background-color .2s linear;
+
+	@media(max-width: 991px) {
 		height: 48px;
 	}
 
+	button {
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+
+
 	&--bg-gray {
 		background-color: var(--White50);
+
+		&:hover {
+			background-color: #fff;
+		}
 	}
+
+	.button {}
 }
 
 .link-prev {
@@ -457,11 +477,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	@media(max-width: 991px){
+
+	@media(max-width: 991px) {
 		position: absolute;
 		right: 0;
 		top: 0;
 	}
+
 	&:hover {
 		svg {
 			stroke: var(--yellow);
@@ -549,9 +571,10 @@
 	@media(max-width: 991px) {
 		background-color: transparent;
 	}
+
 	.btn-icon {
 		svg {
-			@media(max-width: 991px){
+			@media(max-width: 991px) {
 				stroke: var(--light-gray);
 			}
 		}
@@ -576,13 +599,15 @@
 		color: var(--black);
 	}
 }
+
 .expBtn {
-	@media(max-width: 1599px){
+	@media(max-width: 1599px) {
 		width: 50%;
 		padding-left: 11px;
 		padding-right: 11px;
 	}
-	@media(max-width: 767px){
+
+	@media(max-width: 767px) {
 		width: 100%;
 	}
 }

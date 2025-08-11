@@ -945,6 +945,14 @@ h5,
 		stroke-width: 2px;
 		width: 32px !important;
 		height: 32px !important;
+		transition: stroke .2s linear;
+	}
+	.button--dark {
+		&:hover {
+			svg {
+				stroke: var(--dark)!important;
+			}
+		}
 	}
 }
 
