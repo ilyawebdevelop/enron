@@ -454,6 +454,11 @@
 		fill: transparent;
 		stroke: #5C5C5C;
 	}
+	&:hover {
+		svg {
+			stroke: #fff;
+		}
+	}
 }
 
 .btn-icon {

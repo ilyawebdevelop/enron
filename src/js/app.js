@@ -362,3 +362,13 @@ let productParamsTabsBtn = document.querySelector('.tabs__nav-btn--params');
 productMainAllParams?.addEventListener('click', () => {
 	productParamsTabsBtn.click();
 });
+
+let cartWidgetClose = document.querySelector('.cartWidgetClose');
+let cartBtnW = document.querySelector('.cartBtnW');
+let cartBtnInner = document.querySelector('.cartBtnInner');
+cartBtnInner?.addEventListener('click', () => {
+	cartBtnW.classList.add('active');
+});
+cartWidgetClose?.addEventListener('click', () => {
+	cartBtnW.classList.remove('active');
+});

@@ -15694,6 +15694,9 @@ a.hover--yellow:hover {
   fill: transparent;
   stroke: #5C5C5C;
 }
+.cartWidgetClose:hover svg {
+  stroke: #fff;
+}
 
 .btn-icon svg {
   width: 32px;
@@ -17968,6 +17971,9 @@ a.hover--yellow:hover {
   padding: 40px 60px;
 }
 
+.footerLogo:hover {
+  opacity: 0.85;
+}
 .footerDevelop {
   display: flex;
   column-gap: 8px;
