@@ -336,3 +336,29 @@ textJsMoreArray.forEach(el => {
 		el.style.display = 'none';
 	});
 });
+
+
+
+$(document).on("scroll", window, function () {
+	if ($(window).scrollTop() > 200) {
+		$(".productAddToCartWrapper").addClass('active');
+	}
+	else {
+		$(".productAddToCartWrapper").removeClass('active');
+	}
+});
+
+
+let productAddToCart = document.querySelector('.productAddToCart');
+productAddToCart?.addEventListener('click', () => {
+	productAddToCart.querySelector('span').style.display = 'none';
+	productAddToCart.closest('.productAddToCartWrapper').querySelector('.quantity').classList.add('active');
+	productAddToCart.classList.add('button--round');
+});
+
+let productMainAllParams = document.querySelector('.productMainAllParams');
+
+let productParamsTabsBtn = document.querySelector('.tabs__nav-btn--params');
+productMainAllParams?.addEventListener('click', () => {
+	productParamsTabsBtn.click();
+});

@@ -5,29 +5,42 @@
 })
 
 <body>
-	
-	<div class="wrapper">
+
+	<div class="wrapper productPage">
 		@@include('html/header-auth.html',{})
 		<main class="main">
 			@@include('html/breadcrumbs.html',{})
 			@@include('html/product/main.html',{})
 			@@include('html/product/tabs.html',{})
 			@@include('html/product/related.html',{})
-	
+
 		</main>
 		@@include('html/footer.html',{})
+		<div class="productAddToCartWrapper gap-2 flex-wrap align-items-center justify-content-between">
+			<span class="h2 mb-0">237 500 ₽</span>
+			<div class="quantity">
+				<button class="quantity-minus quantity-icon" onclick="this.nextElementSibling.stepDown();">
+					<img src="@img/icons/minus.svg" alt="icon">
+				</button>
+				<input class="quantity-input" type="number" value="1" min="1">
+				<button class="quantity-plus quantity-icon" onclick="this.previousElementSibling.stepUp();">
+					<img src="@img/icons/plus.svg" alt="icon">
+				</button>
+			</div>
+			<button class="button button--yellow rounded-100 productAddToCart">
+				<img src="@img/icons/cart.svg" alt="cart">
+				<span>Добавить в заказ</span>
+			</button>
+		</div>
+
 		@@include('html/modal.html',{})
 
 	</div>
-	
+
 	<script src="js/app.min.js"></script>
 
 
-	
+
 </body>
 
 </html>
-
-
-
-
