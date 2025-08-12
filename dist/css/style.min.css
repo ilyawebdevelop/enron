@@ -17966,6 +17966,51 @@ a.hover--white:hover .text--yellow {
   }
 }
 
+.brandsHeadL {
+  width: 64px;
+  flex-shrink: 0;
+}
+.brandsHeadL a {
+  width: 100%;
+}
+.brandsHeadR {
+  width: 64px;
+  flex-shrink: 0;
+}
+.brandsHeadR a {
+  width: 100%;
+}
+@media (max-width: 1199px) {
+  .brandsItems {
+    flex-wrap: wrap;
+  }
+}
+.brandsItem {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+@media (max-width: 1839px) {
+  .brandsItem {
+    width: 50px;
+  }
+}
+@media (max-width: 1599px) {
+  .brandsItem {
+    width: 42px;
+  }
+}
+@media (max-width: 1400px) {
+  .brandsItem {
+    width: 33px;
+  }
+}
+.brandsItem:hover {
+  color: var(--yellow);
+}
+
 .vacancyPrice {
   color: var(--yellow);
   font-size: 18px;
