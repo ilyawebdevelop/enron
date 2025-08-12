@@ -135,7 +135,8 @@ section {
 	background-color: var(--dark);
 	width: 240px;
 	background: url('@img/icons/calendar.svg') no-repeat right 24px center / 24px;
-	@media(max-width: 991px){
+
+	@media(max-width: 991px) {
 		height: 48px;
 		padding-left: 16px;
 		background: url('@img/icons/calendar.svg') no-repeat right 16px center / 24px;
@@ -152,8 +153,9 @@ section {
 	&.bordered-12 {
 		border-radius: 12px;
 	}
+
 	&.w-sm-100 {
-		@media(max-width: 575px){
+		@media(max-width: 575px) {
 			width: 100%;
 		}
 	}
@@ -343,9 +345,11 @@ section {
 			padding-right: 16px;
 		}
 	}
+
 	&.min-w-340 {
 		min-width: 340px;
-		@media(max-width: 400px){
+
+		@media(max-width: 400px) {
 			min-width: unset;
 		}
 	}
@@ -572,7 +576,8 @@ h5,
 	line-height: 150%;
 	/* 24px */
 	letter-spacing: 0.48px;
-	@media(max-width: 991px){
+
+	@media(max-width: 991px) {
 		font-size: 13px;
 	}
 }
@@ -1111,7 +1116,8 @@ h5,
 		width: 64px;
 		height: 64px;
 		border-radius: 50%;
-		@media(max-width: 991px){
+
+		@media(max-width: 991px) {
 			width: 48px;
 			height: 48px;
 		}
@@ -1120,6 +1126,80 @@ h5,
 
 .ml-auto {
 	margin-left: auto;
+}
+
+.date-min {
+	min-width: 100px;
+}
+
+.date-min-dual {
+	min-width: 195px;
+}
+
+.context-icon {
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+
+	img {
+		width: 32px;
+	}
+}
+
+.context-menu {
+	position: absolute;
+	right: 0;
+	top: calc(100% + 10px);
+	background-color: var(--dark-2);
+	border-radius: 24px;
+	width: 350px;
+	padding: 16px 12px;
+	z-index: 1;
+	display: none;
+	@media(max-width: 575px){
+		width: 300px;
+	}
+
+	&.active {
+		display: block;
+	}
+}
+
+.context-item {
+	padding: 8px 16px;
+	@media(max-width: 575px){
+		padding: 6px 12px;
+	}
+	.h5 {
+		@media(max-width: 575px){
+			font-size: 16px;
+		}
+	}
+
+	span {
+		transition: color .2s linear;
+	}
+
+	.button-edit {
+		width: 48px;
+		height: 48px;
+		flex-shrink: 0;
+	}
+
+	&:hover {
+		span {
+			color: var(--yellow);
+		}
+
+		.button-edit {
+			svg {
+				stroke: #fff;
+			}
+		}
+	}
 }
 
 .swiper-pagination-bullet {
@@ -1156,19 +1236,23 @@ a.hover--yellow {
 		color: var(--yellow);
 	}
 }
+
 a.hover--white {
 	.text--yellow {
 		transition: color .2s linear;
 	}
+
 	&:hover {
 		color: #fff;
+
 		.text--yellow {
 			color: #fff;
 		}
 	}
 }
+
 .w-sm-100 {
-	@media(max-width: 575px){
+	@media(max-width: 575px) {
 		width: 100%;
 	}
 }

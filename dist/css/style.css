@@ -15305,6 +15305,74 @@ h5,
   margin-left: auto;
 }
 
+.date-min {
+  min-width: 100px;
+}
+
+.date-min-dual {
+  min-width: 195px;
+}
+
+.context-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.context-icon img {
+  width: 32px;
+}
+
+.context-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  background-color: var(--dark-2);
+  border-radius: 24px;
+  width: 350px;
+  padding: 16px 12px;
+  z-index: 1;
+  display: none;
+}
+@media (max-width: 575px) {
+  .context-menu {
+    width: 300px;
+  }
+}
+.context-menu.active {
+  display: block;
+}
+
+.context-item {
+  padding: 8px 16px;
+}
+@media (max-width: 575px) {
+  .context-item {
+    padding: 6px 12px;
+  }
+}
+@media (max-width: 575px) {
+  .context-item .h5 {
+    font-size: 16px;
+  }
+}
+.context-item span {
+  transition: color 0.2s linear;
+}
+.context-item .button-edit {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+.context-item:hover span {
+  color: var(--yellow);
+}
+.context-item:hover .button-edit svg {
+  stroke: #fff;
+}
+
 .swiper-pagination-bullet {
   background-color: var(--gray);
   opacity: 1;
@@ -15365,6 +15433,10 @@ a.hover--white:hover .text--yellow {
   font-weight: 500;
   flex-shrink: 0;
 }
+.button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
 .button .text--yellow {
   transition: color 0.2s linear;
 }
@@ -15373,6 +15445,8 @@ a.hover--white:hover .text--yellow {
     height: 48px;
     padding-left: 16px;
     padding-right: 24px;
+    line-height: 1;
+    column-gap: 5px;
   }
 }
 .button--lg {
@@ -15417,6 +15491,13 @@ a.hover--white:hover .text--yellow {
 .button--dark2.text--yellow {
   color: var(--yellow);
 }
+.button--dark2:hover {
+  background-color: var(--yellow);
+  color: var(--dark-2);
+}
+.button--dark2:hover .text--yellow {
+  color: var(--dark-2);
+}
 .button--round {
   border-radius: 50%;
   padding-left: 0;
@@ -15443,8 +15524,20 @@ a.hover--white:hover .text--yellow {
 .button.pr-32 {
   padding-right: 32px;
 }
+@media (max-width: 440px) {
+  .button.pr-32 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 .button.pl-32 {
   padding-left: 32px;
+}
+@media (max-width: 440px) {
+  .button.pl-32 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .button--white {
   background-color: #fff;
@@ -15819,6 +15912,28 @@ a.hover--white:hover .text--yellow {
   justify-content: center;
   background-color: #363436;
   border-radius: 50%;
+  border-radius: 50%;
+  transition: background-color 0.2s linear;
+}
+.button-more svg {
+  fill: transparent;
+  stroke: #fff;
+  fill: #fff;
+  width: 32px;
+  height: 32px;
+  transition: fill 0.2s linear, stroke 0.2s linear;
+}
+.button-more:hover {
+  background-color: #363436;
+}
+.button-more:hover svg {
+  stroke: var(--yellow);
+}
+.button-more.active {
+  background-color: #363436;
+}
+.button-more.active svg {
+  stroke: var(--yellow);
 }
 .button-more img {
   width: 32px;
@@ -15830,9 +15945,29 @@ a.hover--white:hover .text--yellow {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+@media (max-width: 991px) {
+  .button-edit {
+    width: 48px;
+    height: 48px;
+  }
+}
+.button-edit:hover svg {
+  stroke: #fff;
+}
+.button-edit svg {
+  width: 32px;
+  height: 32px;
+  fill: transparent;
+  stroke: var(--light-gray);
 }
 .button-edit img {
   width: 32px;
+}
+.button-edit:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 @media (max-width: 1400px) {
@@ -15953,8 +16088,14 @@ a.hover--white:hover .text--yellow {
   padding: 40px 60px;
   color: #fff;
 }
+.modal--640 {
+  width: 640px;
+}
 .modal--800 {
   width: 800px;
+}
+.modal--960 {
+  width: 960px;
 }
 
 .fancybox__backdrop {
@@ -15969,11 +16110,41 @@ a.hover--white:hover .text--yellow {
 }
 .f-button.is-close-btn svg {
   stroke: #B9B9B9;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
 }
 .f-button.is-close-btn:hover {
   background-color: transparent;
+}
+
+.modalStockImg img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 60px;
+}
+
+.modalActsCalendar {
+  width: 360px;
+  flex-shrink: 0;
+}
+
+.modalActsSearch {
+  width: 100%;
+}
+.modalActsSearch .searchBtn {
+  margin-right: 10px;
+}
+
+.modalActsFooterCalendar {
+  width: 410px;
+}
+
+.actsItem {
+  transition: border-color 0.2s linear;
+}
+.actsItem:hover {
+  border-color: var(--gray);
 }
 
 .breadcrumbs {
@@ -18143,6 +18314,11 @@ a.hover--white:hover .text--yellow {
 
 .profileItem {
   padding: 40px 60px;
+}
+@media (max-width: 991px) {
+  .profileItem {
+    padding: 30px 24px;
+  }
 }
 
 .footerLogo:hover {

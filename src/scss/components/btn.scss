@@ -13,6 +13,10 @@
 	font-family: var(--font-family-second);
 	font-weight: 500;
 	flex-shrink: 0;
+	&:disabled {
+		opacity: .3;
+		pointer-events: none;
+	}
 
 	.text--yellow {
 		transition: color .2s linear;
@@ -22,6 +26,8 @@
 		height: 48px;
 		padding-left: 16px;
 		padding-right: 24px;
+		line-height: 1;
+		column-gap: 5px;
 	}
 
 	&--lg {
@@ -78,6 +84,13 @@
 		&.text--yellow {
 			color: var(--yellow);
 		}
+		&:hover {
+			background-color: var(--yellow);
+			color: var(--dark-2);
+			.text--yellow {
+				color: var(--dark-2);
+			}
+		}
 	}
 
 	&--round {
@@ -108,10 +121,18 @@
 
 	&.pr-32 {
 		padding-right: 32px;
+		@media(max-width: 440px){
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 	}
 
 	&.pl-32 {
 		padding-left: 32px;
+		@media(max-width: 440px){
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 	}
 
 	&--white {
@@ -531,6 +552,30 @@
 	background-color: #363436;
 	border-radius: 50%;
 
+	border-radius: 50%;
+	transition: background-color .2s linear;
+
+	svg {
+		fill: transparent;
+		stroke: #fff;
+		fill: #fff;
+		width: 32px;
+		height: 32px;
+		transition: fill .2s linear, stroke .2s linear;
+	}
+	&:hover {
+		background-color: #363436;
+		svg {
+			stroke: var(--yellow);
+		}
+	}
+	&.active {
+		background-color: #363436;
+		svg {
+			stroke: var(--yellow);
+		}
+	}
+
 	img {
 		width: 32px;
 	}
@@ -542,9 +587,29 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-shrink: 0;
+	@media(max-width: 991px){
+		width: 48px;
+		height: 48px;
+	}
+	&:hover {
+		svg {
+			stroke: #fff;
+		}
+	}
+	svg {
+		width: 32px;
+		height: 32px;
+		fill: transparent;
+		stroke: var(--light-gray);
+	}
 
 	img {
 		width: 32px;
+	}
+	&:disabled {
+		opacity: .3;
+		pointer-events: none;
 	}
 }
 

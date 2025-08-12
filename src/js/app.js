@@ -281,6 +281,17 @@ togglePasswordArray.forEach(el => {
 	});
 });
 
+let contextBtnArray = document.querySelectorAll('.button-more');
+
+contextBtnArray.forEach(el => {
+	parent = el.closest('.context-wrap');
+	let contentItem = parent.querySelector('.context-menu');
+	el.addEventListener('click', () => {
+		contentItem.classList.toggle('active');
+		el.classList.toggle('active');
+	});
+});
+
 // Burger
 const btnMenu = document.querySelector('.headerMenuBtn');
 const menu = document.querySelector('.menuMobile');

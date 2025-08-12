@@ -95,4 +95,7 @@
 }
 .profileItem {
 	padding: 40px 60px;
+	@media(max-width: 991px){
+		padding: 30px 24px;
+	}
 }

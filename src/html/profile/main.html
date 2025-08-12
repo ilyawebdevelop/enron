@@ -1,24 +1,52 @@
 <section class="sect pt-0 pb-0">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3">
+			<div class="col-xl-4 col-xxl-3">
 				@@include('sidebar/sidebar-1.html',{})
 			</div>
-			<div class="col-lg-9">
+			<div class="col-xl-8 col-xxl-9 mt-5 mt-xl-0">
 				<div class="px-3">
-					<h2 class="h2 pt-3 mb-4 px-5">
+					<h2 class="h2 pt-3 mb-4 px-2 px-lg-5">
 						Профиль
 					</h2>
 					<div class="row mb-4">
-						<div class="col-lg-6">
+						<div class="col-xxl-6">
 							<div class="bg--white-04 rounded-24 profileItem h-100">
-								<div class="d-flex justify-content-between align-items-center mb-4">
+								<div class="d-flex justify-content-between align-items-center mb-4 position-relative context-wrap">
 									<h4 class="h4 mb-0">
 										Данные авторизации
 									</h4>
 									<button class="button-more">
-										<img src="@img/icons/more.svg" alt="more">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#more"></use>
+										</svg>
 									</button>
+									<div class="context-menu">
+										<button class="d-flex align-items-center gap-2 context-item mb-2">
+											<div class="button-edit">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#edit"></use>
+												</svg>
+											</div>
+											<span class="h5 mb-0 text-start">Редактировать email</span>
+										</button>
+										<button class="d-flex align-items-center gap-2 context-item mb-2">
+											<div class="button-edit">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#edit"></use>
+												</svg>
+											</div>
+											<span class="h5 mb-0 text-start">Редактировать пароль</span>
+										</button>
+										<button class="d-flex align-items-center gap-2 context-item mb-2">
+											<div class="button-edit">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#edit"></use>
+												</svg>
+											</div>
+											<span class="h5 mb-0 text-start">Редактировать пароль пароль</span>
+										</button>
+									</div>
 								</div>
 								<div class="mb-4">
 									<div class="mb-2 px-3 mx-2">Email (логин)</div>
@@ -36,7 +64,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6">
+						<div class="col-xxl-6 mt-4 mt-xxl-0">
 							<div class="bg--white-04 rounded-24 profileItem h-100">
 								<h4 class="mb-4">
 									Представитель компании
@@ -55,7 +83,7 @@
 											value="+ 7 (123) 456 7890">
 									</div>
 								</div>
-								<button class="button button--yellow rounded-100 min-w-240 ml-auto">
+								<button class="button button--yellow rounded-100 min-w-240 ml-auto button--sm-w-100">
 									Сохранить
 								</button>
 							</div>
@@ -75,16 +103,19 @@
 											ООО «Рога и копыта»
 										</h3>
 										<button class="button-edit">
-											<img src="@img/icons/edit.svg" alt="edit">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#edit"></use>
+											</svg>
 										</button>
 									</div>
 
-									<div class="d-flex align-items-center justify-content-between">
-										<div class="d-flex gap-2">
-											<button class="button button--dark2 rounded-100 pl-32 pr-32">
-												Адреса доставки
+									<div
+										class="d-flex align-items-center justify-content-between flex-column-reverse flex-xxl-row gap-3 gap-xxl-0">
+										<div class="d-flex gap-2 flex-column flex-sm-row flex-wrap w-sm-100">
+											<button class="button button--dark2 rounded-100 pl-32 pr-32 button--sm-w-100">
+												<div class="text--yellow">Адреса доставки</div>
 											</button>
-											<button class="button button--yellow rounded-100 pl-32 pr-32">
+											<button class="button button--yellow rounded-100 pl-32 pr-32 button--sm-w-100">
 												Акты сверок
 											</button>
 										</div>
@@ -104,19 +135,22 @@
 
 									<div class="d-flex align-items-center justify-content-between mb-2">
 										<h3 class="mb-0">
-										ООО «Шуря»
+											ООО «Шуря»
 										</h3>
 										<button class="button-edit">
-											<img src="@img/icons/edit.svg" alt="edit">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#edit"></use>
+											</svg>
 										</button>
 									</div>
 
-									<div class="d-flex align-items-center justify-content-between">
-										<div class="d-flex gap-2">
-											<button class="button button--dark2 rounded-100 pl-32 pr-32">
-												Адреса доставки
+									<div
+										class="d-flex align-items-center justify-content-between flex-column-reverse flex-xxl-row gap-3 gap-xxl-0">
+										<div class="d-flex gap-2 flex-column flex-sm-row flex-wrap w-sm-100">
+											<button class="button button--dark2 rounded-100 pl-32 pr-32 button--sm-w-100">
+												<div class="text--yellow">Адреса доставки</div>
 											</button>
-											<button class="button button--yellow rounded-100 pl-32 pr-32">
+											<button class="button button--yellow rounded-100 pl-32 pr-32 button--sm-w-100">
 												Акты сверок
 											</button>
 										</div>
@@ -132,8 +166,51 @@
 
 								</div>
 
-								<button class="button button--dark rounded-100 pl-32 pr-32">
-									<img src="@img/icons/plus.svg" alt="icon">
+								<div class="border-white50 p-4 rounded-24 mb-4">
+
+									<div class="d-flex align-items-center justify-content-between mb-2">
+										<div class="d-flex align-items-center gap-2 flex-wrap">
+											<h3 class="mb-0 text--white50">
+												ООО «Шуря»
+											</h3>
+											<span class="text--red text--16">Организация будет удалена после проверки менеджером</span>
+										</div>
+
+										<button class="button-edit" disabled>
+											<svg>
+												<use xlink:href="img/icons/icons.svg#edit"></use>
+											</svg>
+										</button>
+									</div>
+
+									<div
+										class="d-flex align-items-center justify-content-between flex-column-reverse flex-xxl-row gap-3 gap-xxl-0">
+										<div class="d-flex gap-2 flex-column flex-sm-row flex-wrap w-sm-100">
+											<button class="button button--dark2 rounded-100 pl-32 pr-32 button--sm-w-100" disabled>
+												<div class="text--yellow">Адреса доставки</div>
+											</button>
+											<button class="button button--yellow rounded-100 pl-32 pr-32 button--sm-w-100" disabled>
+												Акты сверок
+											</button>
+										</div>
+										<div class="d-flex flex-column">
+											<div class="text--16 text--white50">
+												Текущий баланс
+											</div>
+											<div class="h5 mb-0 text-end text--white50">
+												3 200 000$
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<button class="button button--dark rounded-100 pl-32 pr-32 button--sm-w-100">
+									<div class="btn-icon">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plus"></use>
+										</svg>
+									</div>
 									Добавить организацию
 								</button>
 
