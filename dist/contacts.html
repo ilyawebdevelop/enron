@@ -621,25 +621,33 @@
 
 	<div class="modalContent">
 
-		<div class="d-flex align-items-center justify-content-between mb-4">
-			<div class="h3 mb-0">Отменить заказ</div>
-			<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24" tabindex="-1">
-					<path d="M20 20L4 4m16 0L4 20"></path>
-				</svg>
+		<div class="d-flex justify-content-between gap-2 align-items-center mb-3 mb-md-4">
+			<div
+				class="d-flex align-items-center justify-content-end justify-content-md-between flex-row-reverse flex-md-row w-100">
+				<div class="h3 mb-0">Отменить заказ</div>
+				<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24" tabindex="-1">
+						<path d="M20 20L4 4m16 0L4 20"></path>
+					</svg>
+				</button>
+			</div>
+			<button class="button px-2 d-flex d-md-none" data-fancybox-close>
+				<div class="text--yellow">
+					Отменить
+				</div>
 			</button>
 		</div>
 
 		<form class="modalForm">
-			<div class="d-flex align-items-center gap-4 mb-4">
-				<div class="h5 mb-0">Заказ от 21.05.2025</div>
+			<div class="d-flex align-items-center gap-3 gap-lg-4 mb-4 flex-wrap">
+				<div class="h5 h5--mobile-14 mb-0">Заказ от 21.05.2025</div>
 				<div class="available text--normal text--green">
 					В обработке
 				</div>
 				<div class="sku">
-					<div class="d-flex align-items-center gap-2">
+					<div class="d-flex align-items-center gap-2 text-sm-12">
 						№123456789
-						<div class="sku-copy"><img src="img/icons/copy.svg" alt="copy"></div>
+						<button class="sku-copy"><img src="img/icons/copy.svg" alt="copy"></button>
 					</div>
 				</div>
 			</div>
@@ -652,14 +660,14 @@
 				Ваш менеджер свяжется с вами в ближайшее время
 			</div>
 			<div class="d-flex justify-content-end gap-4">
-				<button class="button button--dark2 text--yellow rounded-100">
+				<button class="button button--dark2 text--yellow rounded-100 d-none d-md-flex" type="button"
+					data-fancybox-close>
 					Отменить
 				</button>
-				<button class="button button--yellow rounded-100 min-w-320">
+				<button class="button button--yellow rounded-100 min-w-320 button--sm-w-100">
 					Отправить
 				</button>
 			</div>
-
 
 		</form>
 	</div>
@@ -670,18 +678,25 @@
 
 	<div class="modalContent">
 
-		<div class="d-flex align-items-center justify-content-between mb-4">
-			<div class="h3 mb-0">Акция</div>
-			<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24" tabindex="-1">
-					<path d="M20 20L4 4m16 0L4 20"></path>
-				</svg>
-			</button>
+		<div class="d-flex justify-content-between gap-2 align-items-center mb-3 mb-md-4">
+			<div
+				class="d-flex align-items-center justify-content-end justify-content-md-between flex-row-reverse flex-md-row w-100">
+				<div class="h3 mb-0">Акция</div>
+				<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24" tabindex="-1">
+						<path d="M20 20L4 4m16 0L4 20"></path>
+					</svg>
+				</button>
+			</div>
 		</div>
 
 		<div class="modalStockImg">
 			<img src="img/admin/modal/image-1.png" alt="image">
 		</div>
+
+		<button class="button button--yellow w-100 d-md-none rounded-100 mt-4" data-fancybox-close>
+			Закрыть
+		</button>
 
 	</div>
 </div>
@@ -691,118 +706,225 @@
 
 	<div class="modalContent">
 
-		<div class="d-flex align-items-center justify-content-between mb-4">
-			<div class="d-flex align-items-center gap-3">
-				<div class="h3 mb-0">Акты сверок</div>
-				<div class="h5 mb-0 text--yellow">
-					ООО «Рога и копыта»
+		<div class="d-flex justify-content-between gap-2 align-items-center mb-3 mb-md-4">
+			<div
+				class="d-flex align-items-center justify-content-end justify-content-md-between flex-row-reverse flex-md-row w-100">
+				<div class="d-flex align-items-center gap-3">
+					<div class="h3 mb-0">Акты сверок</div>
+					<div class="h5 mb-0 text--yellow d-none d-md-block">
+						ООО «Рога и копыта»
+					</div>
 				</div>
-			</div>
 
-			<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24" tabindex="-1">
-					<path d="M20 20L4 4m16 0L4 20"></path>
-				</svg>
+				<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24" tabindex="-1">
+						<path d="M20 20L4 4m16 0L4 20"></path>
+					</svg>
+				</button>
+			</div>
+			<button class="button rounded-100 button--dark2 reset-list d-md-none px-2">
+				<div class="btn-icon">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#trash"></use>
+					</svg>
+				</div>
+				<span class="text--gray">Очистить</span>
 			</button>
 		</div>
 
-		<div class="d-flex gap-2 mb-4">
-			<input class="formCalendar border-gray bg--dark modalActsCalendar" type="text"
+		<div class="h5 mb-0 text--yellow d-md-none mb-3">
+			ООО «Рога и копыта»
+		</div>
+
+		<div class="d-flex gap-2 mb-4 flex-column flex-md-row">
+			<input class="formCalendar border-gray bg--dark modalActsCalendar w-md-100" type="text"
 				placeholder="ДД.ММ.ГГГГ – ДД.ММ.ГГГГ">
 			<div class="searchItem modalActsSearch">
 				<input type="search" class="searchInput border-gray bordered-12" placeholder="Поиск по товару в заказе">
-				<button class="searchBtn"><img src="img/icons/search-gray.svg" alt="icon"></button>
+				<button class="searchBtn d-flex align-items-center justify-content-center"><img src="img/icons/search-gray.svg"
+						alt="icon"></button>
 			</div>
 		</div>
 
 		<div class="mb-4">
-			<div
-				class="actsItem d-flex justify-content-between gap-3 mb-2 bg--white-04 border-transparent rounded-20 px-3 py-2">
-				<div class="d-flex align-items-center gap-4">
-					<div class="text--16 text--white50 date-min">
-						21.05.2025
+			<div class="actsItem mb-2 bg--white-04 border-transparent rounded-20 px-3 py-2">
+				<div class="d-flex justify-content-between gap-3 w-100">
+					<div class="d-flex align-items-center gap-4">
+						<div class="text--16 text--white50 date-min">
+							21.05.2025
+						</div>
+						<div class="text--16 date-min d-none d-lg-block">
+							№ 324324
+						</div>
+						<div class="text--16 text--light-gray date-min-dual d-none d-lg-block">
+							01.05.2025 - 21.05.2025
+						</div>
+						<div class="available text--white50">
+							В процессе
+						</div>
 					</div>
-					<div class="text--16 date-min">
-						21.05.2025
-					</div>
-					<div class="text--16 text--light-gray date-min-dual">
-						01.05.2025 - 21.05.2025
-					</div>
-					<div class="available text--gray">
-						Готово
+					<div class="d-flex align-items-center">
+						<button class="button--round button">
+							<div class="btn-icon btn-icon--gray">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#trash"></use>
+								</svg>
+							</div>
+						</button>
 					</div>
 				</div>
-				<div class="d-flex align-items-center">
-					<button class="button--round button">
-						<img src="img/icons/trash.svg" alt="icon">
-					</button>
+				<div class="d-flex justify-content-between mt-2">
+					<div class="text--16 date-min d-block d-lg-none">
+						№ 324324
+					</div>
+					<div class="text--16 text--light-gray date-min-dual d-block d-lg-none text-end">
+						01.05.2025 - 21.05.2025
+					</div>
 				</div>
 			</div>
 
-			<div
-				class="actsItem d-flex justify-content-between gap-3 mb-2 bg--white-04 border-transparent rounded-20 px-3 py-2">
-				<div class="d-flex align-items-center gap-4">
-					<div class="text--16 text--white50 date-min">
-						11.01.2024
+			<div class="actsItem mb-2 bg--white-04 border-transparent rounded-20 px-3 py-2">
+				<div class="d-flex justify-content-between gap-3 w-100">
+					<div class="d-flex align-items-center gap-4">
+						<div class="text--16 text--white50 date-min">
+							11.01.2024
+						</div>
+						<div class="text--16 date-min d-none d-lg-block">
+							№ 324323
+						</div>
+						<div class="text--16 text--light-gray date-min-dual d-none d-lg-block">
+							11.11.2025 - 21.12.2025
+						</div>
+						<div class="available text--green">
+							Готово
+						</div>
 					</div>
-					<div class="text--16 date-min">
-						11.11.2011
-					</div>
-					<div class="text--16 text--light-gray date-min-dual">
-						11.11.2025 - 21.12.2025
-					</div>
-					<div class="available text--green">
-						Готово
+					<div class="d-flex align-items-center">
+						<button class="button--round button d-none d-lg-flex">
+							<div class="btn-icon btn-icon--gray">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#ext"></use>
+								</svg>
+							</div>
+						</button>
+						<button class="button--round button d-none d-lg-flex">
+							<div class="btn-icon btn-icon--gray">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#down"></use>
+								</svg>
+							</div>
+						</button>
+						<button class="button--round button">
+							<div class="btn-icon btn-icon--gray">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#trash"></use>
+								</svg>
+							</div>
+						</button>
 					</div>
 				</div>
-				<div class="d-flex align-items-center">
-					<button class="button--round button">
-						<img src="img/icons/ext-link.svg" alt="icon">
-					</button>
-					<button class="button--round button">
-						<img src="img/icons/download-link.svg" alt="icon">
-					</button>
-					<button class="button--round button">
-						<img src="img/icons/trash.svg" alt="icon">
-					</button>
+				<div class="d-flex justify-content-between mt-2">
+					<div class="text--16 date-min d-block d-lg-none">
+						№ 324324
+					</div>
+					<div class="text--16 text--light-gray date-min-dual d-block d-lg-none text-end">
+						01.05.2025 - 21.05.2025
+					</div>
 				</div>
+				<button class="button button--dark button--md-w-100 d-flex d-md-none rounded-100 mb-1 mt-3">
+					<div class="btn-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#ext"></use>
+						</svg>
+					</div>
+					<span class="text--yellow">Просмотреть</span>
+				</button>
+				<button class="button button--dark button--md-w-100 d-flex d-md-none rounded-100">
+					<div class="btn-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#down"></use>
+						</svg>
+					</div>
+					<span class="text--yellow">Скачать</span>
+				</button>
 			</div>
-			<div
-				class="actsItem d-flex justify-content-between gap-3 mb-2 bg--white-04 border-transparent rounded-20 px-3 py-2">
-				<div class="d-flex align-items-center gap-4">
-					<div class="text--16 text--white50 date-min">
-						11.01.2024
+			<div class="actsItem mb-2 bg--white-04 border-transparent rounded-20 px-3 py-2">
+				<div class="d-flex justify-content-between gap-3 w-100">
+					<div class="d-flex align-items-center gap-4">
+						<div class="text--16 text--white50 date-min">
+							11.01.2024
+						</div>
+						<div class="text--16 date-min d-none d-lg-block">
+							№ 324322
+						</div>
+						<div class="text--16 text--light-gray date-min-dual d-none d-lg-block">
+							11.11.2025 - 21.12.2025
+						</div>
+						<div class="available text--green">
+							Готово
+						</div>
 					</div>
-					<div class="text--16 date-min">
-						11.11.2011
-					</div>
-					<div class="text--16 text--light-gray date-min-dual">
-						11.11.2025 - 21.12.2025
-					</div>
-					<div class="available text--green">
-						Готово
+					<div class="d-flex align-items-center">
+						<button class="button--round button d-none d-lg-flex">
+							<div class="btn-icon btn-icon--gray">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#ext"></use>
+								</svg>
+							</div>
+						</button>
+						<button class="button--round button d-none d-lg-flex">
+							<div class="btn-icon btn-icon--gray">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#down"></use>
+								</svg>
+							</div>
+						</button>
+						<button class="button--round button">
+							<div class="btn-icon btn-icon--gray">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#trash"></use>
+								</svg>
+							</div>
+						</button>
 					</div>
 				</div>
-				<div class="d-flex align-items-center">
-					<button class="button--round button">
-						<img src="img/icons/ext-link.svg" alt="icon">
-					</button>
-					<button class="button--round button">
-						<img src="img/icons/download-link.svg" alt="icon">
-					</button>
-					<button class="button--round button">
-						<img src="img/icons/trash.svg" alt="icon">
-					</button>
+				<div class="d-flex justify-content-between mt-2">
+					<div class="text--16 date-min d-block d-lg-none">
+						№ 324324
+					</div>
+					<div class="text--16 text--light-gray date-min-dual d-block d-lg-none text-end">
+						01.05.2025 - 21.05.2025
+					</div>
 				</div>
+				<button class="button button--dark button--md-w-100 d-flex d-md-none rounded-100 mb-1 mt-3">
+					<div class="btn-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#ext"></use>
+						</svg>
+					</div>
+					<span class="text--yellow">Просмотреть</span>
+				</button>
+				<button class="button button--dark button--md-w-100 d-flex d-md-none rounded-100">
+					<div class="btn-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#down"></use>
+						</svg>
+					</div>
+					<span class="text--yellow">Скачать</span>
+				</button>
 			</div>
 		</div>
 
 		<div class="d-flex justify-content-between align-items-center">
-			<button class="button button--dark2">
-				<img src="img/icons/trash.svg" alt="icon">
+			<button class="button rounded-100 button--dark2 reset-list d-none d-md-flex">
+				<div class="btn-icon">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#trash"></use>
+					</svg>
+				</div>
 				<span class="text--gray">Очистить список</span>
 			</button>
-			<button class="button button--yellow rounded-100 min-w-320">
+			<button class="button button--yellow rounded-100 min-w-320 button--md-w-100">
 				Заказать акт сверки
 			</button>
 		</div>
@@ -810,126 +932,229 @@
 	</div>
 </div>
 
-
 <!-- Акты сверок 2 -->
 <div class="modal modal--960" id="modalActs2">
 
 	<div class="modalContent">
 
-		<div class="d-flex align-items-center justify-content-between mb-4">
-			<div class="d-flex align-items-center gap-3">
-				<div class="h3 mb-0">Акты сверок</div>
-				<div class="h5 mb-0 text--yellow">
-					ООО «Рога и копыта»
+		<div class="d-flex justify-content-between gap-2 align-items-center mb-3 mb-md-4">
+			<div
+				class="d-flex align-items-center justify-content-end justify-content-md-between flex-row-reverse flex-md-row w-100">
+				<div class="d-flex align-items-center gap-3">
+					<div class="h3 mb-0">Акты сверок</div>
+					<div class="h5 mb-0 text--yellow d-none d-md-block">
+						ООО «Рога и копыта»
+					</div>
 				</div>
-			</div>
 
-			<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24" tabindex="-1">
-					<path d="M20 20L4 4m16 0L4 20"></path>
-				</svg>
+				<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24" tabindex="-1">
+						<path d="M20 20L4 4m16 0L4 20"></path>
+					</svg>
+				</button>
+			</div>
+			<button class="button rounded-100 button--dark2 reset-list d-md-none px-2">
+				<div class="btn-icon">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#trash"></use>
+					</svg>
+				</div>
+				<span class="text--gray">Очистить</span>
 			</button>
 		</div>
 
-		<div class="d-flex gap-2 mb-4">
-			<input class="formCalendar border-gray bg--dark modalActsCalendar" type="text"
+		<div class="h5 mb-0 text--yellow d-md-none mb-3">
+			ООО «Рога и копыта»
+		</div>
+
+		<div class="d-flex gap-2 mb-4 flex-column flex-md-row">
+			<input class="formCalendar border-gray bg--dark modalActsCalendar w-md-100" type="text"
 				placeholder="ДД.ММ.ГГГГ – ДД.ММ.ГГГГ">
 			<div class="searchItem modalActsSearch">
 				<input type="search" class="searchInput border-gray bordered-12" placeholder="Поиск по товару в заказе">
-				<button class="searchBtn"><img src="img/icons/search-gray.svg" alt="icon"></button>
+				<button class="searchBtn d-flex align-items-center justify-content-center"><img src="img/icons/search-gray.svg"
+						alt="icon"></button>
 			</div>
 		</div>
 
 		<div class="mb-4">
-			<div
-				class="actsItem d-flex justify-content-between gap-3 mb-2 bg--white-04 border-transparent rounded-20 px-3 py-2">
-				<div class="d-flex align-items-center gap-4">
-					<div class="text--16 text--white50 date-min">
-						21.05.2025
+			<div class="actsItem mb-2 bg--white-04 border-transparent rounded-20 px-3 py-2">
+				<div class="d-flex justify-content-between gap-3 w-100">
+					<div class="d-flex align-items-center gap-4">
+						<div class="text--16 text--white50 date-min">
+							21.05.2025
+						</div>
+						<div class="text--16 date-min d-none d-lg-block">
+							№ 324324
+						</div>
+						<div class="text--16 text--light-gray date-min-dual d-none d-lg-block">
+							01.05.2025 - 21.05.2025
+						</div>
+						<div class="available text--white50">
+							В процессе
+						</div>
 					</div>
-					<div class="text--16 date-min">
-						21.05.2025
-					</div>
-					<div class="text--16 text--light-gray date-min-dual">
-						01.05.2025 - 21.05.2025
-					</div>
-					<div class="available text--gray">
-						Готово
+					<div class="d-flex align-items-center">
+						<button class="button--round button">
+							<div class="btn-icon btn-icon--gray">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#trash"></use>
+								</svg>
+							</div>
+						</button>
 					</div>
 				</div>
-				<div class="d-flex align-items-center">
-					<button class="button--round button">
-						<img src="img/icons/trash.svg" alt="icon">
-					</button>
+				<div class="d-flex justify-content-between mt-2">
+					<div class="text--16 date-min d-block d-lg-none">
+						№ 324324
+					</div>
+					<div class="text--16 text--light-gray date-min-dual d-block d-lg-none text-end">
+						01.05.2025 - 21.05.2025
+					</div>
 				</div>
 			</div>
 
-			<div
-				class="actsItem d-flex justify-content-between gap-3 mb-2 bg--white-04 border-transparent rounded-20 px-3 py-2">
-				<div class="d-flex align-items-center gap-4">
-					<div class="text--16 text--white50 date-min">
-						11.01.2024
+			<div class="actsItem mb-2 bg--white-04 border-transparent rounded-20 px-3 py-2">
+				<div class="d-flex justify-content-between gap-3 w-100">
+					<div class="d-flex align-items-center gap-4">
+						<div class="text--16 text--white50 date-min">
+							11.01.2024
+						</div>
+						<div class="text--16 date-min d-none d-lg-block">
+							№ 324323
+						</div>
+						<div class="text--16 text--light-gray date-min-dual d-none d-lg-block">
+							11.11.2025 - 21.12.2025
+						</div>
+						<div class="available text--green">
+							Готово
+						</div>
 					</div>
-					<div class="text--16 date-min">
-						11.11.2011
-					</div>
-					<div class="text--16 text--light-gray date-min-dual">
-						11.11.2025 - 21.12.2025
-					</div>
-					<div class="available text--green">
-						Готово
+					<div class="d-flex align-items-center">
+						<button class="button--round button d-none d-lg-flex">
+							<div class="btn-icon btn-icon--gray">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#ext"></use>
+								</svg>
+							</div>
+						</button>
+						<button class="button--round button d-none d-lg-flex">
+							<div class="btn-icon btn-icon--gray">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#down"></use>
+								</svg>
+							</div>
+						</button>
+						<button class="button--round button">
+							<div class="btn-icon btn-icon--gray">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#trash"></use>
+								</svg>
+							</div>
+						</button>
 					</div>
 				</div>
-				<div class="d-flex align-items-center">
-					<button class="button--round button">
-						<img src="img/icons/ext-link.svg" alt="icon">
-					</button>
-					<button class="button--round button">
-						<img src="img/icons/download-link.svg" alt="icon">
-					</button>
-					<button class="button--round button">
-						<img src="img/icons/trash.svg" alt="icon">
-					</button>
+				<div class="d-flex justify-content-between mt-2">
+					<div class="text--16 date-min d-block d-lg-none">
+						№ 324324
+					</div>
+					<div class="text--16 text--light-gray date-min-dual d-block d-lg-none text-end">
+						01.05.2025 - 21.05.2025
+					</div>
 				</div>
+				<button class="button button--dark button--md-w-100 d-flex d-md-none rounded-100 mb-1 mt-3">
+					<div class="btn-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#ext"></use>
+						</svg>
+					</div>
+					<span class="text--yellow">Просмотреть</span>
+				</button>
+				<button class="button button--dark button--md-w-100 d-flex d-md-none rounded-100">
+					<div class="btn-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#down"></use>
+						</svg>
+					</div>
+					<span class="text--yellow">Скачать</span>
+				</button>
 			</div>
-			<div
-				class="actsItem d-flex justify-content-between gap-3 mb-2 bg--white-04 border-transparent rounded-20 px-3 py-2">
-				<div class="d-flex align-items-center gap-4">
-					<div class="text--16 text--white50 date-min">
-						11.01.2024
+			<div class="actsItem mb-2 bg--white-04 border-transparent rounded-20 px-3 py-2">
+				<div class="d-flex justify-content-between gap-3 w-100">
+					<div class="d-flex align-items-center gap-4">
+						<div class="text--16 text--white50 date-min">
+							11.01.2024
+						</div>
+						<div class="text--16 date-min d-none d-lg-block">
+							№ 324322
+						</div>
+						<div class="text--16 text--light-gray date-min-dual d-none d-lg-block">
+							11.11.2025 - 21.12.2025
+						</div>
+						<div class="available text--green">
+							Готово
+						</div>
 					</div>
-					<div class="text--16 date-min">
-						11.11.2011
-					</div>
-					<div class="text--16 text--light-gray date-min-dual">
-						11.11.2025 - 21.12.2025
-					</div>
-					<div class="available text--green">
-						Готово
+					<div class="d-flex align-items-center">
+						<button class="button--round button d-none d-lg-flex">
+							<div class="btn-icon btn-icon--gray">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#ext"></use>
+								</svg>
+							</div>
+						</button>
+						<button class="button--round button d-none d-lg-flex">
+							<div class="btn-icon btn-icon--gray">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#down"></use>
+								</svg>
+							</div>
+						</button>
+						<button class="button--round button">
+							<div class="btn-icon btn-icon--gray">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#trash"></use>
+								</svg>
+							</div>
+						</button>
 					</div>
 				</div>
-				<div class="d-flex align-items-center">
-					<button class="button--round button">
-						<img src="img/icons/ext-link.svg" alt="icon">
-					</button>
-					<button class="button--round button">
-						<img src="img/icons/download-link.svg" alt="icon">
-					</button>
-					<button class="button--round button">
-						<img src="img/icons/trash.svg" alt="icon">
-					</button>
+				<div class="d-flex justify-content-between mt-2">
+					<div class="text--16 date-min d-block d-lg-none">
+						№ 324324
+					</div>
+					<div class="text--16 text--light-gray date-min-dual d-block d-lg-none text-end">
+						01.05.2025 - 21.05.2025
+					</div>
 				</div>
+				<button class="button button--dark button--md-w-100 d-flex d-md-none rounded-100 mb-1 mt-3">
+					<div class="btn-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#ext"></use>
+						</svg>
+					</div>
+					<span class="text--yellow">Просмотреть</span>
+				</button>
+				<button class="button button--dark button--md-w-100 d-flex d-md-none rounded-100">
+					<div class="btn-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#down"></use>
+						</svg>
+					</div>
+					<span class="text--yellow">Скачать</span>
+				</button>
 			</div>
 		</div>
 
-		<div class="d-flex justify-content-between align-items-center p-2 bg--white-04 rounded-20">
+		<div
+			class="d-flex justify-content-between align-items-center p-2 bg--white-04 rounded-20 flex-column flex-lg-row gap-2 gap-lg-0">
 
-			<input class="formCalendar border-gray bg--dark modalActsFooterCalendar" type="text"
+			<input class="formCalendar border-gray bg--dark modalActsFooterCalendar w-md-100" type="text"
 				placeholder="ДД.ММ.ГГГГ – ДД.ММ.ГГГГ">
-			<button class="button rounded-100 button--dark min-w-240">
+			<button class="button rounded-100 button--dark min-w-240 button--md-w-100">
 				<div class="text--yellow">Заказать</div>
 			</button>
-			<button class="button rounded-100 button--dark2 pl-32 pr-32">
+			<button class="button rounded-100 button--dark2 pl-32 pr-32 button--md-w-100">
 				<div class="text--yellow">Отменить</div>
 			</button>
 		</div>
@@ -942,18 +1167,25 @@
 
 	<div class="modalContent">
 
-		<div class="d-flex align-items-center justify-content-between mb-4">
-			<div class="h3 mb-0">Реквизиты</div>
-
-			<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24" tabindex="-1">
-					<path d="M20 20L4 4m16 0L4 20"></path>
-				</svg>
+		<div class="d-flex justify-content-between gap-2 align-items-center mb-3 mb-md-4">
+			<div
+				class="d-flex align-items-center justify-content-end justify-content-md-between flex-row-reverse flex-md-row w-100">
+				<div class="h3 mb-0">Реквизиты</div>
+				<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24" tabindex="-1">
+						<path d="M20 20L4 4m16 0L4 20"></path>
+					</svg>
+				</button>
+			</div>
+			<button class="button px-2 d-flex d-md-none" data-fancybox-close>
+				<div class="text--yellow">
+					Отменить
+				</div>
 			</button>
 		</div>
 
-		<div class="row mb-4">
-			<div class="col-12 mb-4">
+		<div class="row mb-0 mb-md-4">
+			<div class="col-12 mb-3 mb-lg-4">
 
 				<div class="mb-2 px-3 mx-2 required-name">Название юрлица</div>
 				<div class="inputW">
@@ -962,7 +1194,7 @@
 
 			</div>
 
-			<div class="col-lg-6 mb-4">
+			<div class="col-lg-6 mb-3 mb-lg-4">
 				<div class="mb-2 px-3 mx-2 required-name">Регион</div>
 				<div class="formSelect">
 					<select class="bordered-40 border-gray w-100" name="region" id="region">
@@ -972,13 +1204,13 @@
 					</select>
 				</div>
 			</div>
-			<div class="col-lg-6 mb-4">
+			<div class="col-lg-6 mb-3 mb-lg-4">
 				<div class="mb-2 px-3 mx-2 required-name">Населённый пункт</div>
 				<div class="inputW">
 					<input type="text" class="formInput formInput--transparent border-white50" value="г. Москва">
 				</div>
 			</div>
-			<div class="col-lg-6 mb-4">
+			<div class="col-lg-6 mb-3 mb-lg-4">
 				<div class="mb-2 px-3 mx-2 required-name">Тип предприятия</div>
 				<div class="formSelect">
 					<select class="bordered-40 border-gray w-100" name="region" id="region">
@@ -988,7 +1220,7 @@
 					</select>
 				</div>
 			</div>
-			<div class="col-lg-6 mb-4">
+			<div class="col-lg-6 mb-3 mb-lg-4">
 				<div class="mb-2 px-3 mx-2 required-name">Форма юрлица</div>
 				<div class="formSelect">
 					<select class="bordered-40 border-gray w-100" name="region" id="region">
@@ -998,19 +1230,19 @@
 					</select>
 				</div>
 			</div>
-			<div class="col-lg-6 mb-4">
+			<div class="col-lg-6 mb-3 mb-lg-4">
 				<div class="mb-2 px-3 mx-2 required-name">КПП</div>
 				<div class="inputW">
 					<input type="text" class="formInput formInput--transparent border-white50" value="770101001">
 				</div>
 			</div>
-			<div class="col-lg-6 mb-4">
+			<div class="col-lg-6 mb-3 mb-lg-4">
 				<div class="mb-2 px-3 mx-2 required-name">ОГРН</div>
 				<div class="inputW">
 					<input type="text" class="formInput formInput--transparent border-white50" value="1027701234567">
 				</div>
 			</div>
-			<div class="col-12 mb-4">
+			<div class="col-12 mb-3 mb-lg-4">
 
 				<div class="mb-2 px-3 mx-2 required-name">Юр.адрес/адрес регистрации</div>
 				<div class="inputW">
@@ -1018,7 +1250,7 @@
 				</div>
 
 			</div>
-			<div class="col-12 mb-4">
+			<div class="col-12 mb-3 mb-lg-4">
 
 				<div class="mb-2 px-3 mx-2 required-name">Фактический адрес</div>
 				<div class="inputW">
@@ -1026,7 +1258,7 @@
 				</div>
 
 			</div>
-			<div class="col-12 mb-4">
+			<div class="col-12 mb-3 mb-lg-4">
 
 				<div class="mb-2 px-3 mx-2 required-name">Наименование банка</div>
 				<div class="inputW">
@@ -1035,7 +1267,7 @@
 				</div>
 
 			</div>
-			<div class="col-12 mb-4">
+			<div class="col-12 mb-3 mb-lg-4">
 
 				<div class="mb-2 px-3 mx-2 required-name">Расчетный счет</div>
 				<div class="inputW">
@@ -1044,7 +1276,7 @@
 				</div>
 
 			</div>
-			<div class="col-12 mb-4">
+			<div class="col-12 mb-3 mb-lg-4">
 
 				<div class="mb-2 px-3 mx-2">Корреспондентский счет</div>
 				<div class="inputW">
@@ -1053,7 +1285,7 @@
 				</div>
 
 			</div>
-			<div class="col-12 mb-4">
+			<div class="col-12 mb-3 mb-lg-4">
 
 				<div class="mb-2 px-3 mx-2 required-name">БИК</div>
 				<div class="inputW">
@@ -1064,16 +1296,20 @@
 
 		</div>
 
-		<div class="d-flex justify-content-between align-items-center">
-			<button class="button button--dark2 rounded-100">
-				<img src="img/icons/trash.svg" alt="trash">
+		<div class="d-flex justify-content-between align-items-center flex-column flex-lg-row gap-4 gap-md-0">
+			<button class="button button--dark2 rounded-100 reset-list">
+				<div class="btn-icon">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#trash"></use>
+					</svg>
+				</div>
 				<span class="text--gray">Удалить организацию</span>
 			</button>
-			<div class="d-flex gap-4">
-				<button class="button button--dark2 rounded-100">
+			<div class="d-flex flex-column flex-lg-row align-items-center align-items-lg-start gap-4 w-100">
+				<button class="button button--dark2 rounded-100 d-none d-md-flex">
 					<span class="text--yellow">Отменить</span>
 				</button>
-				<button class="button button--yellow rounded-100 min-w-320">
+				<button class="button button--yellow rounded-100 min-w-320 button--md-w-100">
 					Сохранить
 				</button>
 			</div>
@@ -1087,13 +1323,20 @@
 
 	<div class="modalContent">
 
-		<div class="d-flex align-items-center justify-content-between mb-4">
-			<div class="h3 mb-0">Реквизиты</div>
-
-			<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24" tabindex="-1">
-					<path d="M20 20L4 4m16 0L4 20"></path>
-				</svg>
+		<div class="d-flex justify-content-between gap-2 align-items-center mb-3 mb-md-4">
+			<div
+				class="d-flex align-items-center justify-content-end justify-content-md-between flex-row-reverse flex-md-row w-100">
+				<div class="h3 mb-0">Реквизиты</div>
+				<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24" tabindex="-1">
+						<path d="M20 20L4 4m16 0L4 20"></path>
+					</svg>
+				</button>
+			</div>
+			<button class="button px-2 d-flex d-md-none" data-fancybox-close disabled>
+				<div class="text--yellow">
+					Отменить
+				</div>
 			</button>
 		</div>
 
@@ -1211,16 +1454,19 @@
 			Вы сможете внести новые изменения только после проверки ранее внесенных изменений
 		</div>
 
-		<div class="d-flex justify-content-between align-items-center">
-			<button class="button button--black rounded-100" disabled>
-				<img src="img/icons/trash.svg" alt="trash">
-				<span class="text--gray">Удалить организацию</span>
+		<div class="d-flex justify-content-between align-items-center flex-column flex-lg-row gap-3 gap-lg-0">
+			<button class="button button--black rounded-100 reset-list button--md-w-100" disabled>
+				<div class="btn-icon">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#trash"></use>
+					</svg>
+					<span class="text--gray">Удалить организацию</span>
 			</button>
-			<div class="d-flex gap-4">
-				<button class="button button--black rounded-100" disabled>
+			<div class="d-flex gap-3 gap-lg-4 flex-column flex-lg-row align-items-center align-items-lg-row w-md-100">
+				<button class="button button--black rounded-100 d-none d-md-block button--md-w-100" disabled>
 					<span class="text--yellow">Отменить</span>
 				</button>
-				<button class="button button--yellow rounded-100 min-w-320" disabled>
+				<button class="button button--yellow rounded-100 min-w-320 button--md-w-100 button--md-w-100" disabled>
 					Сохранить
 				</button>
 			</div>
@@ -1234,20 +1480,23 @@
 
 	<div class="modalContent">
 
-		<div class="d-flex align-items-center justify-content-between mb-4">
-			<div class="h3 mb-0">Готово!</div>
-			<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24" tabindex="-1">
-					<path d="M20 20L4 4m16 0L4 20"></path>
-				</svg>
-			</button>
+		<div class="d-flex justify-content-between gap-2 align-items-center mb-3 mb-md-4">
+			<div
+				class="d-flex align-items-center justify-content-end justify-content-md-between flex-row-reverse flex-md-row w-100">
+				<div class="h3 mb-0">Готово!</div>
+				<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24" tabindex="-1">
+						<path d="M20 20L4 4m16 0L4 20"></path>
+					</svg>
+				</button>
+			</div>
 		</div>
 
 		<div class="mb-4">
 			Реквизиты будут изменены после проверки менеджером.
 		</div>
 
-		<button class="button button--yellow rounded-100 w-100">
+		<button class="button button--yellow rounded-100 w-100" data-fancybox-close>
 			Понятно
 		</button>
 
@@ -1259,24 +1508,27 @@
 
 	<div class="modalContent">
 
-		<div class="d-flex align-items-center justify-content-between mb-4">
-			<div class="h3 mb-0">Удаление организации</div>
-			<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24" tabindex="-1">
-					<path d="M20 20L4 4m16 0L4 20"></path>
-				</svg>
-			</button>
+		<div class="d-flex justify-content-between gap-2 align-items-center mb-3 mb-md-4">
+			<div
+				class="d-flex align-items-center justify-content-end justify-content-md-between flex-row-reverse flex-md-row w-100">
+				<div class="h3 mb-0">Удаление организации</div>
+				<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24" tabindex="-1">
+						<path d="M20 20L4 4m16 0L4 20"></path>
+					</svg>
+				</button>
+			</div>
 		</div>
 
 		<div class="mb-4">
 			Организация будет удалена после проверки менеджером.
 		</div>
 
-		<div class="d-flex">
-			<button class="button button--dark2 w-50">
+		<div class="d-flex flex-column-reverse flex-sm-row gap-2 gap-lg-4">
+			<button class="button button--dark2 w-50 button--sm-w-100 rounded-100">
 				<div class="text--yellow">Отменить удаление</div>
 			</button>
-			<button class="button button--yellow rounded-100 w-50" data-fancybox-close>
+			<button class="button button--yellow rounded-100 w-50 button--sm-w-100" data-fancybox-close>
 				Понятно
 			</button>
 		</div>
@@ -1290,16 +1542,24 @@
 
 	<div class="modalContent">
 
-		<div class="d-flex align-items-center justify-content-between mb-4">
-			<div class="h3 mb-0">Добавить организацию</div>
-			<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24" tabindex="-1">
-					<path d="M20 20L4 4m16 0L4 20"></path>
-				</svg>
+		<div class="d-flex justify-content-between gap-2 align-items-center mb-3 mb-md-4">
+			<div
+				class="d-flex align-items-center justify-content-end justify-content-md-between flex-row-reverse flex-md-row w-100 gap-1">
+				<div class="h3 mb-0">Добавить организацию</div>
+				<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24" tabindex="-1">
+						<path d="M20 20L4 4m16 0L4 20"></path>
+					</svg>
+				</button>
+			</div>
+			<button class="button px-2 d-flex d-md-none" data-fancybox-close>
+				<div class="text--yellow">
+					Отменить
+				</div>
 			</button>
 		</div>
 
-		<div class="row mb-4">
+		<div class="row mb-2 mb-md-4">
 			<div class="col-12 mb-4">
 
 				<div class="mb-2 px-3 mx-2 required-name">Название юрлица</div>
@@ -1312,7 +1572,7 @@
 			<div class="col-lg-6 mb-4">
 				<div class="mb-2 px-3 mx-2 required-name">Регион</div>
 				<div class="formSelect">
-					<select class="bordered-40 border-gray w-100" name="region" id="region">
+					<select class="bordered-40 border-white50 w-100" name="region" id="region">
 						<option value="1" disabled selected>Выбрать</option>
 						<option value="2">1-й регион</option>
 						<option value="3">2-й регион</option>
@@ -1328,7 +1588,7 @@
 			<div class="col-lg-6 mb-4">
 				<div class="mb-2 px-3 mx-2 required-name">Тип предприятия</div>
 				<div class="formSelect">
-					<select class="bordered-40 border-gray w-100" name="region" id="region">
+					<select class="bordered-40 border-white50 w-100" name="region" id="region">
 						<option value="1" selected disabled>Выбрать</option>
 						<option value="2">1-й регион</option>
 						<option value="3">2-й регион</option>
@@ -1338,7 +1598,7 @@
 			<div class="col-lg-6 mb-4">
 				<div class="mb-2 px-3 mx-2 required-name">Форма юрлица</div>
 				<div class="formSelect">
-					<select class="bordered-40 border-gray w-100" name="region" id="region">
+					<select class="bordered-40 border-white50 w-100" name="region" id="region">
 						<option value="1" disabled selected>ООО</option>
 						<option value="2">1-й регион</option>
 						<option value="3">2-й регион</option>
@@ -1383,7 +1643,7 @@
 				<div class="mb-2 px-3 mx-2">Корреспондентский счет</div>
 				<div class="inputW">
 					<textarea name="cor-schet" id="cor-schet" cols="30" rows="10"
-						class="formText formText--h-100 border-gray bordered-40 w-100"></textarea>
+						class="formText formText--h-100 border-white50 bordered-40 w-100"></textarea>
 				</div>
 
 			</div>
@@ -1400,11 +1660,11 @@
 
 		<div class="d-flex justify-content-end align-items-center">
 
-			<div class="d-flex gap-4">
-				<button class="button button--dark2 rounded-100">
+			<div class="d-flex justify-content-end gap-4 w-100">
+				<button class="button button--dark2 rounded-100 d-none d-md-flex">
 					<span class="text--yellow">Отменить</span>
 				</button>
-				<button class="button button--yellow rounded-100 min-w-320">
+				<button class="button button--yellow rounded-100 min-w-320 button--md-w-100">
 					Сохранить
 				</button>
 			</div>
@@ -1418,13 +1678,16 @@
 
 	<div class="modalContent">
 
-		<div class="d-flex align-items-center justify-content-between mb-4">
-			<div class="h3 mb-0">Готово!</div>
-			<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24" tabindex="-1">
-					<path d="M20 20L4 4m16 0L4 20"></path>
-				</svg>
-			</button>
+		<div class="d-flex justify-content-between gap-2 align-items-center mb-3 mb-md-4">
+			<div
+				class="d-flex align-items-center justify-content-end justify-content-md-between flex-row-reverse flex-md-row w-100">
+				<div class="h3 mb-0">Готово!</div>
+				<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24" tabindex="-1">
+						<path d="M20 20L4 4m16 0L4 20"></path>
+					</svg>
+				</button>
+			</div>
 		</div>
 
 		<div class="mb-4">
@@ -1443,30 +1706,52 @@
 
 	<div class="modalContent">
 
-		<div class="d-flex align-items-center justify-content-between mb-4">
-			<div class="d-flex align-items-center gap-3">
-				<div class="h3 mb-0">Адреса доставки</div>
-				<div class="h5 mb-0 text--yellow">
-					ООО «Рога и копыта»
+		<div class="d-flex justify-content-between gap-2 align-items-center mb-3 mb-md-4">
+			<div
+				class="d-flex align-items-center justify-content-end justify-content-md-between flex-row-reverse flex-md-row w-100">
+				<div class="d-flex align-items-center gap-3">
+					<div class="h3 mb-0">Адреса доставки</div>
+					<div class="h5 mb-0 text--yellow d-none d-md-block">
+						ООО «Рога и копыта»
+					</div>
 				</div>
-			</div>
 
-			<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24" tabindex="-1">
-					<path d="M20 20L4 4m16 0L4 20"></path>
-				</svg>
+				<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24" tabindex="-1">
+						<path d="M20 20L4 4m16 0L4 20"></path>
+					</svg>
+				</button>
+			</div>
+			<button class="button rounded-100 d-md-none px-2">
+				<span class="text--yellow">Отменить</span>
 			</button>
 		</div>
 
+		<div class="h5 mb-0 text--yellow d-md-none mb-3">
+			ООО «Рога и копыта»
+		</div>
+
 		<div class="mb-4">
 			<div class="mb-2 mx-4">
 				Адрес доставки
 			</div>
-			<div class="d-flex gap-2">
+			<div class="d-flex gap-2 flex-column flex-sm-row">
 				<textarea name="address_del" id="address_del" cols="30" rows="10"
 					class="formText border-gray bordered-40 w-100 formText--h-160">123456, г. Москва, ул. Подвойского, д. 14, стр. 7</textarea>
-				<button class="button button--round">
-					<img src="img/icons/trash-lgray.svg" alt="icon">
+				<button class="button button--round d-none d-sm-flex">
+					<div class="btn-icon btn-icon--light-gray">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#trash"></use>
+						</svg>
+					</div>
+				</button>
+				<button class="button button--dark rounded-100 button--sm-w-100 d-flex d-sm-none mt-2">
+					<div class="btn-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#trash"></use>
+						</svg>
+					</div>
+					<span class="text--yellow">Удалить адрес</span>
 				</button>
 			</div>
 
@@ -1476,28 +1761,40 @@
 			<div class="mb-2 mx-4">
 				Адрес доставки
 			</div>
-			<div class="d-flex gap-2">
+			<div class="d-flex gap-2 flex-column flex-sm-row">
 				<textarea name="address_del" id="address_del" cols="30" rows="10"
 					class="formText border-gray bordered-40 w-100 formText--h-160">123456, г. Москва, ул. Подвойского, д. 14, стр. 7</textarea>
-				<button class="button button--round">
-					<img src="img/icons/trash-lgray.svg" alt="icon">
+				<button class="button button--round d-none d-sm-flex">
+					<div class="btn-icon btn-icon--light-gray">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#trash"></use>
+						</svg>
+					</div>
+				</button>
+				<button class="button button--dark rounded-100 button--sm-w-100 d-flex d-sm-none mt-2">
+					<div class="btn-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#trash"></use>
+						</svg>
+					</div>
+					<span class="text--yellow">Удалить адрес</span>
 				</button>
 			</div>
 
 		</div>
 
-		<button class="button button--dark rounded-100 mb-4">
+		<button class="button button--dark button--dark-sm-transparent rounded-100 mb-4 button--md-w-100">
 			<img src="img/icons/plus.svg" alt="plus">
 			<span class="text--yellow">Добавить адрес доставки</span>
 		</button>
 
-		<div class="d-flex justify-content-end align-items-center">
+		<div class="d-flex justify-content-end align-items-center w-md-100">
 
-			<div class="d-flex gap-4">
-				<button class="button button--dark2 rounded-100" data-fancybox-close>
+			<div class="d-flex gap-4 w-100 justify-content-end">
+				<button class="button button--dark2 rounded-100 d-none d-md-flex" data-fancybox-close>
 					<span class="text--yellow">Отменить</span>
 				</button>
-				<button class="button button--yellow rounded-100 min-w-320">
+				<button class="button button--yellow rounded-100 min-w-320 button--md-w-100">
 					Сохранить
 				</button>
 			</div>
@@ -1511,14 +1808,21 @@
 
 	<div class="modalContent">
 
-		<div class="d-flex align-items-center justify-content-between mb-4">
+		<div class="d-flex justify-content-between gap-2 align-items-center mb-3 mb-md-4">
+			<div
+				class="d-flex align-items-center justify-content-end justify-content-md-between flex-row-reverse flex-md-row w-100">
+				<div class="d-flex align-items-center gap-3">
+					<div class="h3 mb-0">Задать вопрос</div>
+				</div>
 
-			<div class="h3 mb-0">Задать вопрос</div>
-
-			<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24" tabindex="-1">
-					<path d="M20 20L4 4m16 0L4 20"></path>
-				</svg>
+				<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24" tabindex="-1">
+						<path d="M20 20L4 4m16 0L4 20"></path>
+					</svg>
+				</button>
+			</div>
+			<button class="button rounded-100 d-md-none px-2">
+				<span class="text--yellow">Отменить</span>
 			</button>
 		</div>
 
@@ -1531,11 +1835,11 @@
 
 		<div class="d-flex justify-content-end align-items-center">
 
-			<div class="d-flex gap-4">
-				<button class="button button--dark2 rounded-100" data-fancybox-close>
+			<div class="d-flex gap-4 w-100 justify-content-end">
+				<button class="button button--dark2 rounded-100 d-none d-md-flex" data-fancybox-close>
 					<span class="text--yellow">Отменить</span>
 				</button>
-				<button class="button button--yellow rounded-100 min-w-320">
+				<button class="button button--yellow rounded-100 min-w-320 button--md-w-100">
 					Отправить
 				</button>
 			</div>
@@ -1549,12 +1853,21 @@
 
 	<div class="modalContent">
 
-		<div class="d-flex align-items-center justify-content-between mb-4">
-			<div class="h3 mb-0">Сменить email</div>
-			<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24" tabindex="-1">
-					<path d="M20 20L4 4m16 0L4 20"></path>
-				</svg>
+		<div class="d-flex justify-content-between gap-2 align-items-center mb-3 mb-md-4">
+			<div
+				class="d-flex align-items-center justify-content-end justify-content-md-between flex-row-reverse flex-md-row w-100">
+				<div class="d-flex align-items-center gap-3">
+					<div class="h3 mb-0">Сменить email</div>
+				</div>
+
+				<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24" tabindex="-1">
+						<path d="M20 20L4 4m16 0L4 20"></path>
+					</svg>
+				</button>
+			</div>
+			<button class="button rounded-100 d-md-none px-2">
+				<span class="text--yellow">Отменить</span>
 			</button>
 		</div>
 
@@ -1574,15 +1887,14 @@
 			</div>
 		</div>
 
-		<div class="d-flex gap-4">
-			<button class="button button--dark2 text--yellow rounded-100 w-50" data-fancybox-close>
+		<div class="d-flex gap-4 w-100 justify-content-end">
+			<button class="button button--dark2 text--yellow rounded-100 w-50 d-none d-md-flex" data-fancybox-close>
 				Отменить
 			</button>
-			<button class="button button--yellow rounded-100 w-50">
+			<button class="button button--yellow rounded-100 w-50 button--md-w-100">
 				Отправить
 			</button>
 		</div>
-
 
 	</div>
 </div>
@@ -1592,13 +1904,19 @@
 
 	<div class="modalContent">
 
-		<div class="d-flex align-items-center justify-content-between mb-4">
-			<div class="h3 mb-0">Сменить email</div>
-			<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24" tabindex="-1">
-					<path d="M20 20L4 4m16 0L4 20"></path>
-				</svg>
-			</button>
+		<div class="d-flex justify-content-between gap-2 align-items-center mb-3 mb-md-4">
+			<div
+				class="d-flex align-items-center justify-content-end justify-content-md-between flex-row-reverse flex-md-row w-100">
+				<div class="d-flex align-items-center gap-3">
+					<div class="h3 mb-0">Сменить email</div>
+				</div>
+
+				<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24" tabindex="-1">
+						<path d="M20 20L4 4m16 0L4 20"></path>
+					</svg>
+				</button>
+			</div>
 		</div>
 
 		<div class="mb-4">
@@ -1618,12 +1936,21 @@
 
 	<div class="modalContent">
 
-		<div class="d-flex align-items-center justify-content-between mb-4">
-			<div class="h3 mb-0">Сменить пароль</div>
-			<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24" tabindex="-1">
-					<path d="M20 20L4 4m16 0L4 20"></path>
-				</svg>
+		<div class="d-flex justify-content-between gap-2 align-items-center mb-3 mb-md-4">
+			<div
+				class="d-flex align-items-center justify-content-end justify-content-md-between flex-row-reverse flex-md-row w-100">
+				<div class="d-flex align-items-center gap-3">
+					<div class="h3 mb-0">Сменить пароль</div>
+				</div>
+
+				<button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24" tabindex="-1">
+						<path d="M20 20L4 4m16 0L4 20"></path>
+					</svg>
+				</button>
+			</div>
+			<button class="button rounded-100 d-md-none px-2">
+				<span class="text--yellow">Отменить</span>
 			</button>
 		</div>
 
@@ -1633,10 +1960,10 @@
 		</div>
 
 		<div class="d-flex gap-4">
-			<button class="button button--dark2 text--yellow rounded-100 w-50" data-fancybox-close>
+			<button class="button button--dark2 text--yellow rounded-100 w-50 d-none d-md-flex" data-fancybox-close>
 				Отменить
 			</button>
-			<button class="button button--yellow rounded-100 w-50">
+			<button class="button button--yellow rounded-100 w-50 button--md-w-100">
 				Сбросить пароль
 			</button>
 		</div>

@@ -14333,6 +14333,12 @@ section {
   padding-top: 0;
 }
 
+@media (max-width: 575px) {
+  .text-sm-12 {
+    font-size: 12px;
+  }
+}
+
 .formText {
   padding-top: 24px;
   padding-left: 27px;
@@ -14371,6 +14377,9 @@ section {
 .formText.bg--dark {
   background-color: var(--dark);
 }
+.formText.bg--gray {
+  background-color: var(--gray);
+}
 .formText.text--white {
   color: #fff;
 }
@@ -14387,13 +14396,18 @@ section {
   color: #fff;
   background-color: var(--dark);
   width: 240px;
-  background: url("../img/icons/calendar.svg") no-repeat right 24px center/24px;
+  background: var(--dark) url("../img/icons/calendar.svg") no-repeat right 24px center/24px;
+}
+@media (max-width: 767px) {
+  .formCalendar.w-md-100 {
+    width: 100%;
+  }
 }
 @media (max-width: 991px) {
   .formCalendar {
     height: 48px;
     padding-left: 16px;
-    background: url("../img/icons/calendar.svg") no-repeat right 16px center/24px;
+    background: var(--dark) url("../img/icons/calendar.svg") no-repeat right 16px center/24px;
   }
 }
 .formCalendar.border-gray {
@@ -14432,6 +14446,9 @@ section {
 }
 .formInput--transparent {
   background-color: transparent;
+}
+.formInput--gray {
+  background-color: var(--gray);
 }
 .formInput.border-gray {
   border: 1px solid var(--gray);
@@ -14521,6 +14538,9 @@ section {
   .formSelect select.bordered-40 {
     border-radius: 24px;
   }
+}
+.formSelect select.bg--gray {
+  background-color: var(--gray);
 }
 @media (max-width: 575px) {
   .formSelect select.w-sm-100 {
@@ -14791,6 +14811,12 @@ h5,
     letter-spacing: 0.14px;
   }
 }
+@media (max-width: 991px) {
+  h5--mobile-14,
+.h5--mobile-14 {
+    font-size: 14px;
+  }
+}
 
 .underline {
   text-decoration: underline;
@@ -15034,6 +15060,14 @@ h5,
   font-size: 18px;
   line-height: normal;
 }
+@media (max-width: 991px) {
+  .available.text--normal {
+    font-size: 12px;
+  }
+}
+.available.text--gray::before {
+  background-color: var(--gray);
+}
 
 .sliderArrow {
   width: 64px;
@@ -15092,6 +15126,10 @@ h5,
 
 .bg--dark2 {
   background-color: var(--dark-2);
+}
+
+.rounded-20 {
+  border-radius: 20px;
 }
 
 .rounded-24 {
@@ -15308,6 +15346,11 @@ h5,
 .date-min {
   min-width: 100px;
 }
+@media (max-width: 991px) {
+  .date-min {
+    min-width: 80px;
+  }
+}
 
 .date-min-dual {
   min-width: 195px;
@@ -15418,6 +15461,12 @@ a.hover--white:hover .text--yellow {
   }
 }
 
+@media (max-width: 767px) {
+  .w-md-100 {
+    width: 100%;
+  }
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -15432,6 +15481,12 @@ a.hover--white:hover .text--yellow {
   font-family: var(--font-family-second);
   font-weight: 500;
   flex-shrink: 0;
+}
+.button:hover .btn-icon--gray svg {
+  stroke: #fff;
+}
+.button:hover .btn-icon--light-gray svg {
+  stroke: #fff;
 }
 .button:disabled {
   opacity: 0.3;
@@ -15484,6 +15539,12 @@ a.hover--white:hover .text--yellow {
 }
 .button--dark .btn-icon svg {
   stroke: var(--yellow);
+}
+.button--dark-sm-transparent {
+  background-color: transparent;
+}
+.button--black {
+  background-color: var(--black);
 }
 .button--dark2 {
   background-color: var(--dark-2);
@@ -15576,7 +15637,12 @@ a.hover--white:hover .text--yellow {
 }
 @media (max-width: 575px) {
   .button--sm-w-100 {
-    width: 100%;
+    width: 100% !important;
+  }
+}
+@media (max-width: 767px) {
+  .button--md-w-100 {
+    width: 100% !important;
   }
 }
 
@@ -15618,6 +15684,8 @@ a.hover--white:hover .text--yellow {
   right: 0;
   height: 64px;
   width: 50px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 @media (max-width: 991px) {
   .searchItem .searchBtn {
@@ -15711,6 +15779,7 @@ a.hover--white:hover .text--yellow {
 .productsFilterChangedItem--bg-gray:hover {
   background-color: #fff;
 }
+
 .link-prev svg {
   width: 24px;
   height: 24px;
@@ -15864,6 +15933,12 @@ a.hover--white:hover .text--yellow {
   fill: transparent;
   stroke: #000;
   stroke-width: 2px;
+}
+.btn-icon--gray svg {
+  stroke: var(--gray);
+}
+.btn-icon--light-gray svg {
+  stroke: var(--light-gray);
 }
 
 .cartWidgBtn {
@@ -16044,6 +16119,23 @@ a.hover--white:hover .text--yellow {
   }
 }
 
+.f-button.is-close-btn svg {
+  transition: stroke 0.2s linear;
+}
+.f-button.is-close-btn:hover svg {
+  stroke: #fff;
+}
+
+.reset-list .btn-icon svg {
+  stroke: var(--gray);
+}
+.reset-list:hover .text--gray {
+  color: var(--dark);
+}
+.reset-list:hover .btn-icon svg {
+  stroke: var(--dark);
+}
+
 /* Hamburger Menu */
 .hamburger {
   align-self: center;
@@ -16088,6 +16180,11 @@ a.hover--white:hover .text--yellow {
   padding: 40px 60px;
   color: #fff;
 }
+@media (max-width: 767px) {
+  .modal {
+    padding: 20px;
+  }
+}
 .modal--640 {
   width: 640px;
 }
@@ -16108,6 +16205,12 @@ a.hover--white:hover .text--yellow {
   height: 64px;
   position: unset;
 }
+@media (max-width: 767px) {
+  .f-button.is-close-btn {
+    width: 48px;
+    height: 48px;
+  }
+}
 .f-button.is-close-btn svg {
   stroke: #B9B9B9;
   width: 24px;
@@ -16122,6 +16225,12 @@ a.hover--white:hover .text--yellow {
   height: 480px;
   object-fit: cover;
   border-radius: 60px;
+}
+@media (max-width: 767px) {
+  .modalStockImg img {
+    height: 55vw;
+    border-radius: 24px;
+  }
 }
 
 .modalActsCalendar {
@@ -16142,9 +16251,10 @@ a.hover--white:hover .text--yellow {
 
 .actsItem {
   transition: border-color 0.2s linear;
+  border: 1px solid transparent;
 }
 .actsItem:hover {
-  border-color: var(--gray);
+  border-color: var(--White50);
 }
 
 .breadcrumbs {
