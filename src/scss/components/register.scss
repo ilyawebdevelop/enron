@@ -27,13 +27,22 @@
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	@media(max-width: 991px){
+		position: unset;
+	}
 	img {
 		width: 200px;
+		@media(max-width: 575px){
+			width: 130px;
+		}
 	}
 }
 .authorizeWater {
 	img {
 		width: 360px;
+		@media(max-width: 991px){
+			width: 250px;
+		}
 	}
 }
 .show-pass {

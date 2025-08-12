@@ -18002,12 +18002,27 @@ a.hover--white:hover .text--yellow {
   bottom: 0;
   right: 0;
 }
+@media (max-width: 991px) {
+  .register-order-water {
+    position: unset;
+  }
+}
 .register-order-water img {
   width: 200px;
+}
+@media (max-width: 575px) {
+  .register-order-water img {
+    width: 130px;
+  }
 }
 
 .authorizeWater img {
   width: 360px;
+}
+@media (max-width: 991px) {
+  .authorizeWater img {
+    width: 250px;
+  }
 }
 
 .show-pass {
