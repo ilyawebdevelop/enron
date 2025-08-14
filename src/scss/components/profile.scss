@@ -3,9 +3,35 @@
 		border-radius: 24px;
 		background: var(--Dark2, #1C1C1C);
 		padding: 16px 12px;
+		@media(max-width: 991px){
+			width: fit-content;
+		}
+		@media(max-width: 575px){
+			background-color: var(--white-04);
+			margin-left: -15px;
+			border-radius: 0;
+			width: calc(100% + 30px);
+			overflow-x: scroll;
+		}
+		ul {
+			@media(max-width: 991px){
+				display: flex;
+			}
+		}
 
 		ul {
 			li {
+				&:not(:last-child){
+					margin-bottom: 12px;
+					@media(max-width: 991px){
+						margin-bottom: 0;
+					}
+				}
+				&:last-child{
+					@media(max-width: 575px){
+						padding-right: 20px;
+					}
+				}
 				&.active {
 					a {
 						background-color: var(--yellow);
@@ -20,6 +46,17 @@
 					font-weight: 500;
 					letter-spacing: 0.36px;
 					border-radius: 12px;
+					transition: background-color .2s linear, color .2s linear;
+					&:hover {
+						background-color: var(--yellow);
+						color: #1C1C1C;
+					}
+					@media(max-width: 991px){
+						padding: 8px 16px;
+					}
+					@media(max-width: 575px){
+						white-space: nowrap;
+					}
 				}
 			}
 		}
@@ -27,15 +64,30 @@
 }
 .manager-content {
 	padding-left: 80px;
+	@media(max-width: 1599px){
+		padding-left: 20px;
+	}
 }
 .history-item {
 	padding: 20px 60px;
 	border-radius: 20px;
+	@media(max-width: 1400px){
+		padding: 20px 25px;
+	}
+	@media(max-width: 575px){
+		padding: 20px;
+	}
 	&-total {
 		min-width: 160px;
+		@media(max-width: 440px){
+			min-width: 120px;
+		}
 	}
 	&-num {
 		min-width: 160px;
+		@media(max-width: 440px){
+			min-width: 120px;
+		}
 	}
 	.sku {
 		height: fit-content;
@@ -43,4 +95,7 @@
 }
 .profileItem {
 	padding: 40px 60px;
+	@media(max-width: 991px){
+		padding: 30px 24px;
+	}
 }

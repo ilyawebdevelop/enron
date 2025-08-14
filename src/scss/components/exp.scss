@@ -2,5 +2,12 @@
 	&Content {
 		padding-right: 80px;
 		padding-top: 40px;
+		@media(max-width: 1839px){
+			padding-right: 40px;
+		}
+		@media(max-width: 991px){
+			padding-top: 20px;
+			padding-right: 0;
+		}
 	}
 }

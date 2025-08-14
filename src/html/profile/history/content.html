@@ -1,119 +1,134 @@
 <section class="sect pt-0 pb-0">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3">
+			<div class="col-xl-4 col-xxl-3">
 				@@include('../sidebar/sidebar-1.html',{})
 			</div>
-			<div class="col-lg-9">
+			<div class="col-xl-8 col-xxl-9 mt-5 mt-xl-0">
 				<div class="history-content">
-					<h2 class="h2 mb-4 font-family fw-semibold mx-5">
+					<h2 class="h2 mb-4 font-family fw-semibold mx-0 mx-xxl-5">
 						Заказы
 					</h2>
-					<div class="d-flex gap-4 px-5 mb-4">
-						<div class="d-flex align-items-center gap-2">
-							<div class="text--white50">
+					<div class="d-flex gap-2 px-0 px-xxl-5 mb-4 flex-wrap">
+						<div class="d-flex align-items-center gap-2 w-sm-100">
+							<div class="text--white50 text-nowrap">
 								Дата заказа:
 							</div>
-							<input class="formCalendar border-gray" type="text" placeholder="ДД.ММ.ГГГГ">
+							<input class="formCalendar w-sm-100 border-gray" type="text" placeholder="ДД.ММ.ГГГГ">
 						</div>
-						<div class="d-flex gap-2">
-							<div class="formSelect">
-								<select name="status" id="status">
+						<div class="d-flex gap-2 flex-wrap">
+							<div class="formSelect w-sm-100">
+								<select class="w-100" name="status" id="status">
 									<option value="1">Статус заказа</option>
 									<option value="2">Принят</option>
 									<option value="3">Одобрен</option>
 									<option value="4">Отправлен</option>
 								</select>
 							</div>
-							<div class="searchItem">
-								<input type="search" class="searchInput border-gray bordered-12" placeholder="Поиск по товару в заказе">
+							<div class="searchItem w-sm-100">
+								<input type="search" class="searchInput w-sm-100 border-gray bordered-12 min-w-340"
+									placeholder="Поиск по товару в заказе">
 								<button class="searchBtn"><img src="@img/icons/search-gray.svg" alt="icon"></button>
 							</div>
-
 						</div>
 					</div>
 
 					<div class="d-flex bg--white-04 history-item mb-2">
-						<div class="d-flex justify-content-between w-100">
+						<div class="d-flex justify-content-between w-100 flex-row-reverse flex-xxl-row">
 
-							<div class="d-flex flex-column">
-								<div class="h4 mb-1">
+							<div class="d-flex flex-column justify-content-end justify-content-xxl-start gap-3 gap-xxl-0">
+								<div class="h4 mb-1 d-none d-xxl-block">
 									Заказ от 21.05.2025
 								</div>
-								<div class="available text--green">
+								<div class="available justify-content-end justify-content-xxl-start text--green">
 									В обработке
 								</div>
+								<div class="text--md history-item-total text-end d-block d-xxl-none">2 471 000 ₽</div>
 							</div>
 
-							<div class="d-flex align-items-center gap-4">
+							<div class="d-flex align-items-start align-items-xxl-center gap-3 gap-xxl-4 flex-column flex-xxl-row">
 								<div class="sku">
 									<div class="d-flex align-items-center gap-2">
 										№123456789
 										<div class="sku-copy"><img src="@img/icons/copy.svg" alt="copy"></div>
 									</div>
 								</div>
-								<div class="text--16 text--light-gray history-item-num text-end">
+								<div class="h4 mb-1 d-block d-xxl-none">
+									Заказ от 21.05.2025
+								</div>
+								<div class="text--16 text--light-gray history-item-num text-start text-xxl-end">
 									3 товара
 								</div>
-								<div class="text--md history-item-total text-end">2 471 000 ₽</div>
+								<div class="text--md history-item-total text-end d-none d-xxl-block">2 471 000 ₽</div>
 							</div>
 
 						</div>
 					</div>
 
 					<div class="d-flex bg--white-04 history-item mb-2">
-						<div class="d-flex justify-content-between w-100">
+						<div class="d-flex justify-content-between w-100 flex-row-reverse flex-xxl-row">
 
-							<div class="d-flex flex-column">
-								<div class="h4 mb-1">
+							<div class="d-flex flex-column justify-content-end justify-content-xxl-start gap-3 gap-xxl-0">
+								<div class="h4 mb-1 d-none d-xxl-block">
 									Заказ от 25.12.2024
 								</div>
-								<div class="available text--red">
+								<div class="available text--red justify-content-end justify-content-xxl-start">
 									Не оплачен
 								</div>
-								<span class="text--white50 text--16 mt-1">Дата отгрузки: 21.06.2025 (план)</span>
+								<span class="text--white50 text--16 mt-1 d-none d-xxl-block">Дата отгрузки: 21.06.2025 (план)</span>
+								<div class="text--md history-item-total text-end d-block d-xxl-none">2 471 000 ₽</div>
 							</div>
 
-							<div class="d-flex align-items-center gap-4">
+							<div class="d-flex align-items-start align-items-xxl-center gap-3 gap-xxl-4 flex-column flex-xxl-row">
 								<div class="sku">
 									<div class="d-flex align-items-center gap-2">
 										№123456789
 										<div class="sku-copy"><img src="@img/icons/copy.svg" alt="copy"></div>
 									</div>
 								</div>
-								<div class="text--16 text--light-gray history-item-num text-end">
+								<div class="h4 mb-1 d-block d-xxl-none">
+									Заказ от 25.12.2024
+								</div>
+								<span class="text--white50 text--16 mt-1 d-block d-xxl-none">Дата отгрузки: 21.06.2025 (план)</span>
+								<div class="text--16 text--light-gray history-item-num text-start text-xxl-end">
 									23 товара
 								</div>
-								<div class="text--md history-item-total text-end">112 471 000 ₽</div>
+								<div class="text--md history-item-total text-end d-none d-xxl-block">112 471 000 ₽</div>
+								
 							</div>
 
 						</div>
 					</div>
 
 					<div class="d-flex bg--white-04 history-item mb-2">
-						<div class="d-flex justify-content-between w-100">
+						<div class="d-flex justify-content-between w-100 flex-row-reverse flex-xxl-row">
 
-							<div class="d-flex flex-column">
-								<div class="h4 mb-1">
+							<div class="d-flex flex-column justify-content-end justify-content-xxl-start gap-3 gap-xxl-0">
+								<div class="h4 mb-1 d-none d-xxl-block">
 									Заказ от 25.12.2024
 								</div>
-								<div class="available text--light-gray">
-								Оплачен
+								<div class="available text--light-gray justify-content-end justify-content-xxl-start">
+									Оплачен
 								</div>
-								<span class="text--white50 text--16 mt-1">Дата отгрузки: 21.06.2025 (план)</span>
+								<span class="text--white50 text--16 mt-1 d-none d-xxl-block">Дата отгрузки: 21.06.2025 (план)</span>
+								<div class="text--md history-item-total text-end d-block d-xxl-none">2 471 000 ₽</div>
 							</div>
 
-							<div class="d-flex align-items-center gap-4">
+							<div class="d-flex align-items-start align-items-xxl-center gap-3 gap-xxl-4 flex-column flex-xxl-row">
 								<div class="sku">
 									<div class="d-flex align-items-center gap-2">
 										№123456789
 										<div class="sku-copy"><img src="@img/icons/copy.svg" alt="copy"></div>
 									</div>
 								</div>
-								<div class="text--16 text--light-gray history-item-num text-end">
+								<div class="h4 mb-1 d-block d-xxl-none">
+									Заказ от 25.12.2024
+								</div>
+								<span class="text--white50 text--16 mt-1 d-block d-xxl-none">Дата отгрузки: 21.06.2025 (план)</span>
+								<div class="text--16 text--light-gray history-item-num text-start text-xxl-end">
 									23 товара
 								</div>
-								<div class="text--md history-item-total text-end">112 471 000 ₽</div>
+								<div class="text--md history-item-total text-end d-none d-xxl-block">112 471 000 ₽</div>
 							</div>
 
 						</div>

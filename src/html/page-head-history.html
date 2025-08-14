@@ -2,13 +2,16 @@
 	<div class="container">
 
 		<div class="d-flex justify-content-between align-items-center gap-2 mb-3">
-			<div class="d-flex align-items-center gap-3">
-				<a class="link-back" href="#">
-					<img src="@img/icons/back.svg" alt="icon">
-				</a>
-				<h1 class="h1 mb-0">
-					@@title
-				</h1>
+			<div class="d-flex align-items-center gap-3 flex-wrap justify-content-between">
+				<div class="d-flex align-items-center gap-1 gap-sm-2 gap-lg-3">
+					<a class="link-back" href="#">
+						<img src="@img/icons/back.svg" alt="icon">
+					</a>
+					<h1 class="h1 mb-0" style="margin-right: auto;">
+						@@title
+					</h1>
+				</div>
+
 				<div class="available text--green">
 					В обработке
 				</div>
@@ -19,7 +22,7 @@
 					</div>
 				</div>
 			</div>
-			<a href="#" class="button button--transparent pr-32 rounded-100">
+			<a href="#" class="button button--transparent pr-32 rounded-100 d-none d-xl-flex">
 				<svg>
 					<use xlink:href="img/icons/icons.svg#message"></use>
 				</svg>

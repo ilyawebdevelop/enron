@@ -5,9 +5,17 @@
   background-position: center;
   background-size: cover;
 	background-color: rgba(47, 45, 47, 0.80);
+  @media(max-width: 767px){
+    min-height: 440px;
+    background-position: right -422px center;
+    padding-top: 70px;
+  }
 
   .h2 {
     margin-bottom: 60px;
+    @media(max-width: 991px){
+      margin-bottom: 40px;
+    }
   }
 
   &::before {
@@ -28,6 +36,9 @@
   .h2 {
     font-size: 40px;
     line-height: 120%;
+    @media(max-width: 991px){
+      font-size: 24px;
+    }
   }
 
   .container {
@@ -38,6 +49,9 @@
 
 .progres-year-slider {
   width: 100%;
+  @media(max-width: 767px){
+    overflow: visible;
+  }
 
   .swiper-slide {
     border-radius: 100px;
@@ -49,6 +63,9 @@
     color: var(--yellow);
     cursor: pointer;
     transition: background-color .2s linear, color .2s linear;
+    @media(max-width: 575px){
+      padding: 8px 16px;
+    }
     &:hover {
       background-color: var(--yellow);
       color: var(--black);
@@ -74,4 +91,7 @@
 
 .progres-slider {
   margin-top: 80px;
+  @media(max-width: 767px){
+    margin-top: 60px;
+  }
 }

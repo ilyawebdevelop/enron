@@ -5,6 +5,9 @@
 		flex-direction: column;
 		overflow: hidden;
 		margin-bottom: 24px;
+		@media(max-width: 575px){
+			margin-bottom: 20px;
+		}
 
 		&:hover {
 			&::before {
@@ -32,6 +35,10 @@
 			width: 100%;
 			z-index: 1;
 			padding: 40px;
+
+			@media(max-width: 1400px) {
+				padding: 24px;
+			}
 		}
 
 		&Date {
@@ -46,44 +53,117 @@
 			line-height: 150%;
 			letter-spacing: 0.84px;
 
+			@media(max-width: 1599px) {
+				font-size: 17px;
+			}
+			@media(max-width: 767px){
+				font-size: 21px;
+			}
+
 			&--lg {
 				font-size: 40px;
 				font-weight: 600;
 				line-height: 120%;
 				letter-spacing: 0.4px;
+
+				@media(max-width: 1599px) {
+					font-size: 36px;
+				}
+
+				@media(max-width: 767px) {
+					font-size: 24px;
+				}
 			}
 		}
-
-
 
 		img {
 			width: 100%;
 			height: 420px;
 			object-fit: cover;
 			border-radius: 24px;
+
+			@media(max-width: 1599px) {
+				height: 361px;
+			}
+
+			@media(max-width: 1400px) {
+				height: 314px;
+			}
+
+			@media(max-width: 991px) {
+				height: 370px;
+			}
+			@media(max-width: 767px){
+				height: 600px;
+			}
+			@media(max-width: 575px){
+				height: 110vw;
+			}
 		}
 
 		&--lg {
 			img {
 				height: 866px;
+
+				@media(max-width: 1599px) {
+					height: 746px;
+				}
+
+				@media(max-width: 1400px) {
+					height: 652px;
+				}
+
+				@media(max-width: 991px) {
+					height: 750px;
+				}
+				@media(max-width: 575px){
+					height: 130vw;
+				}
 			}
 
 			.newsCardDate {
 				font-size: 16px;
+				@media(max-width: 767px){
+					font-size: 13px;
+				}
 			}
 
 			.newsCardContent {
 				padding: 60px;
+
+				@media(max-width: 1400px) {
+					padding: 40px;
+				}
+				@media(max-width: 767px){
+					padding: 30px 24px 30px;
+				}
 			}
 		}
 	}
 }
+
 .article-person {
 	background-color: var(--yellow);
 	width: 64px;
 	height: 64px;
 	border-radius: 50%;
 	display: flex;
-	align-items: center;	
+	align-items: center;
 	justify-content: center;
+}
+.newsSlider {
+	@media(max-width: 575px){
+		padding-right: 60px;
+		overflow: visible;
+	}
+	.newsCardTitle {
+		@media(max-width: 575px){
+			font-size: 17px;
+		}
+	}
+	.newsCard img{
+		@media(max-width: 575px){
+			height: 85vw;
+		}
+	}
 }

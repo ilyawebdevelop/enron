@@ -1,11 +1,17 @@
 .partners {
 	&Slider {
 		overflow: visible;
+
 		.swiper-slide {
-			
 			width: auto;
 			width: 188px;
 			height: 188px;
+
+			@media(max-width: 991px) {
+				width: 128px;
+				height: 128px;
+			}
+
 			img {
 				width: 100%;
 				height: 100%;
@@ -15,7 +21,106 @@
 			}
 		}
 	}
+
 	.sectHead {
 		margin-bottom: 60px;
+
+		@media(max-width: 991px) {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.brands {
+	&Head {
+		&L {
+			width: 64px;
+			flex-shrink: 0;
+
+			a {
+				width: 100%;
+			}
+		}
+
+		&R {
+			width: 64px;
+			flex-shrink: 0;
+
+			a {
+				width: 100%;
+			}
+		}
+	}
+
+	&Items {
+		@media(max-width: 1199px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&Item {
+		width: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 500;
+
+		@media(max-width: 1839px) {
+			width: 50px;
+		}
+
+		@media(max-width: 1599px) {
+			width: 42px;
+		}
+
+		@media(max-width: 1400px) {
+			width: 33px;
+		}
+
+		&:hover {
+			color: var(--yellow);
+		}
+	}
+	&Row {
+		display: flex;
+		margin-top: 40px;
+		column-gap: 20px;
+		&Name {
+			min-width: 80px;
+			flex-shrink: 0;
+		}
+		@media(max-width: 575px){
+			flex-direction: column;
+			row-gap: 20px;
+		}
+	}
+	&Grid {
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		width: 100%;
+		column-gap: 20px;
+		row-gap: 12px;
+		@media(max-width: 1199px){
+			grid-template-columns: repeat(12, 1fr);
+		}
+	}
+
+	&Name {
+		grid-column: 2 span;
+		color: var(--White, #FFF);
+		font-family: var(--font-family-second);
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 28px;
+		letter-spacing: 0.36px;
+		@media(max-width: 1199px){
+			grid-column: 3 span;
+		}
+		@media(max-width: 991px){
+			grid-column: 4 span;
+		}
+		@media(max-width: 767px){
+			grid-column: 6 span;
+		}
 	}
 }

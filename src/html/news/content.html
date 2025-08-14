@@ -1,6 +1,6 @@
-<section class="sect pb-0 pt-0">
+<section class="sect pb-0 pt-0 overflow-hidden">
 	<div class="container container-1530">
-		<div class="d-flex justify-content-between align-items-center gap-4 mb-5">
+		<div class="d-flex justify-content-between align-items-center gap-4 mb-5 flex-wrap">
 
 			<nav class="nav-links">
 				<ul>
@@ -11,8 +11,8 @@
 					<li><a href="#">Полезная информация</a></li>
 				</ul>
 			</nav>
-			<div class="formSelect">
-				<select name="news-sort" id="news-sort">
+			<div class="formSelect w-sm-100">
+				<select class="w-sm-100" name="news-sort" id="news-sort">
 					<option value="1">Сначала новые</option>
 					<option value="2">Сначала старые</option>
 				</select>
@@ -22,47 +22,47 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6">
+			<div class="col-md-12 col-lg-6 col-xl-6">
 				@@include('../news/card-lg.html', {})
 			</div>
-			<div class="col-lg-6">
+			<div class="col-md-12 col-lg-6 col-xl-6">
 				<div class="row">
-					<div class="col-lg-6">
+					<div class="col-md-6 col-lg-4 col-lg-6">
 						@@include('../news/card-1.html', {})
 					</div>
-					<div class="col-lg-6">
+					<div class="col-md-6 col-lg-6">
 						@@include('../news/card-2.html', {})
 					</div>
-					<div class="col-lg-6">
+					<div class="col-md-6 col-lg-6">
 						@@include('../news/card-1.html', {})
 					</div>
-					<div class="col-lg-6">
+					<div class="col-md-6 col-lg-6">
 						@@include('../news/card-2.html', {})
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-md-6 col-lg-4 col-xl-3">
 				@@include('../news/card-1.html', {})
 			</div>
-			<div class="col-lg-3">
+			<div class="col-md-6 col-lg-4 col-xl-3">
 				@@include('../news/card-2.html', {})
 			</div>
-			<div class="col-lg-3">
+			<div class="col-md-6 col-lg-4 col-xl-3">
 				@@include('../news/card-1.html', {})
 			</div>
-			<div class="col-lg-3">
+			<div class="col-md-6 col-lg-4 col-xl-3">
 				@@include('../news/card-2.html', {})
 			</div>
-					<div class="col-lg-3">
+			<div class="col-md-6 col-lg-4 col-xl-3">
 				@@include('../news/card-1.html', {})
 			</div>
-			<div class="col-lg-3">
+			<div class="col-md-6 col-lg-4 col-xl-3">
 				@@include('../news/card-2.html', {})
 			</div>
-			<div class="col-lg-3">
+			<div class="col-md-6 col-lg-4 col-xl-3">
 				@@include('../news/card-1.html', {})
 			</div>
-			<div class="col-lg-3">
+			<div class="col-md-6 col-lg-4 col-xl-3">
 				@@include('../news/card-2.html', {})
 			</div>
 		</div>
