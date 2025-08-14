@@ -18010,7 +18010,6 @@ a.hover--white:hover .text--yellow {
 .brandsItem:hover {
   color: var(--yellow);
 }
-<<<<<<< HEAD
 .brandsRow {
   display: flex;
   margin-top: 40px;
@@ -18062,8 +18061,6 @@ a.hover--white:hover .text--yellow {
     grid-column: 6 span;
   }
 }
-=======
->>>>>>> refs/remotes/origin/master
 
 .vacancyPrice {
   color: var(--yellow);
