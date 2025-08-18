@@ -17562,7 +17562,9 @@ a.hover--white:hover .text--yellow {
 }
 .filterList {
   max-height: 300px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  scrollbar-color: var(--gray) var(--dark);
+  scrollbar-width: thin;
 }
 .filterList li:not(:last-child) {
   margin-bottom: 12px;

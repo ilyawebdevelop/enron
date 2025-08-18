@@ -1,5 +1,5 @@
 .filter {
-	@media(max-width: 991px){
+	@media(max-width: 991px) {
 		display: none;
 		position: fixed;
 		top: 0;
@@ -14,11 +14,13 @@
 		padding-top: 15px;
 		padding-bottom: 25px;
 	}
+
 	&.active {
 		display: block;
 		-webkit-animation: shows 0.5s;
 		animation: shows 0.5s;
 	}
+
 	&Block {
 		padding: 16px 12px;
 		background: var(--dark-2);
@@ -41,7 +43,9 @@
 
 	&List {
 		max-height: 300px;
-		overflow-y: scroll;
+		overflow-y: auto;
+		scrollbar-color: var(--gray) var(--dark);
+		scrollbar-width: thin;
 
 		li {
 			&:not(:last-child) {
@@ -77,6 +81,7 @@
 				&:checked {
 					&+label {
 						color: #fff;
+
 						&::before {
 							background-color: var(--yellow);
 							border-color: var(--yellow);
@@ -102,7 +107,7 @@
 					transition: color .2s linear;
 
 					&:hover {
-						
+
 						color: var(--white);
 					}
 
@@ -126,21 +131,25 @@
 	.searchInput {
 		padding-left: 24px;
 	}
+
 	&Price {
 		&W {
 			column-gap: 12px;
 		}
 	}
 }
+
 .filterItem {
 	.sub-list {
 		margin-top: 12px;
+
 		li {
 			a {
 				padding-left: 24px;
 			}
 		}
 	}
+
 	ul {
 		li {
 			&.active {
