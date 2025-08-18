@@ -1,6 +1,8 @@
 import * as flsFunctions from "./modules/functions.js";
 import "./modules/jquery-3.7.1.min.js";
 
+import AirDatepicker from 'air-datepicker';
+
 import { Fancybox } from "./modules/fancybox.esm.js";
 import "./modules/bootstrap.bundle.min.js";
 import './components.js';
@@ -11,6 +13,46 @@ Fancybox.bind("[data-fancybox]", {
 });
 
 flsFunctions.isWebp();
+
+
+let formCalendarArray = document.querySelectorAll('.formCalendar--bottom-left');
+formCalendarArray.forEach(el => {
+	new AirDatepicker(el, {
+		// position: "top left",
+	})
+});
+
+let formCalendarArrayTopLeft = document.querySelectorAll('.formCalendar--top-left');
+formCalendarArrayTopLeft.forEach(el => {
+	new AirDatepicker(el, {
+		position: "top left",
+	})
+});
+
+function inputFileToggle() {
+	const inputs = document.querySelectorAll('input[type="file"]');
+
+	if (inputs.length) {
+		inputs.forEach(input => {
+
+			input.addEventListener("change", (e) => {
+				const label = document.querySelector(`label[for="${input.id}"]`);
+
+				if (label && e.target.files[0]) {
+					const labelTitle = label.querySelector("span");
+
+					if (labelTitle) {
+						labelTitle.textContent = "Файл выбран";
+					} else {
+						label.textContent = "Файл выбран";
+					}
+				}
+			})
+		})
+	}
+}
+
+inputFileToggle();
 
 // Import swiper
 import Swiper, { Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumbs, Scrollbar } from 'swiper';

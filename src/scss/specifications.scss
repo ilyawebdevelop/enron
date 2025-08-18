@@ -163,10 +163,16 @@ section {
 
 	&.border-gray {
 		border: 1px solid var(--gray);
+		&:focus {
+			border-color: var(--yellow);
+		}
 	}
 
 	&.border-white50 {
 		border: 1px solid var(--White50);
+		&:focus {
+			border-color: var(--yellow);
+		}
 	}
 
 	&.bordered-12 {
@@ -278,6 +284,9 @@ section {
 		background-repeat: no-repeat;
 		cursor: pointer;
 		min-width: 300px;
+		&:focus {
+			border-color: var(--yellow);
+		}
 
 		@media(max-width: 991px) {
 			height: 48px;
@@ -361,6 +370,9 @@ section {
 
 	&.border-gray {
 		border: 1px solid var(--gray);
+		&:focus {
+			border-color: var(--yellow);
+		}
 	}
 
 	&.border-white50 {
@@ -1353,4 +1365,8 @@ a.hover--white {
 	@media(max-width: 767px){
 		width: 100%;
 	}
+}
+
+.air-datepicker-global-container {
+	z-index: 1060!important;
 }
