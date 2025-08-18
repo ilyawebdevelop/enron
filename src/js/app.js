@@ -383,3 +383,29 @@ cartBtnInner?.addEventListener('click', () => {
 cartWidgetClose?.addEventListener('click', () => {
 	cartBtnW.classList.remove('active');
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+	// const hero = document.querySelector('main .sect');
+	const header = document.querySelector('#header');
+	const mainEl = document.querySelector('.main');
+
+	const headerFixed = () => {
+		let scrollTop = window.scrollY;
+		let heroCenter = 600;
+
+		if (scrollTop >= heroCenter) {
+			header.classList.add('active')
+			mainEl.style.marginTop = `${header.offsetHeight}px`;
+		} else {
+			header.classList.remove('active')
+			mainEl.style.marginTop = `0px`;
+		}
+	};
+
+	headerFixed();
+
+	window.addEventListener('scroll', () => {
+		headerFixed();   
+	});
+});

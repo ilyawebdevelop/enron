@@ -14349,6 +14349,7 @@ section {
 @media (max-width: 991px) {
   .formText {
     padding-top: 15px;
+    padding-left: 16px;
   }
 }
 .formText--h-145 {
@@ -14360,8 +14361,14 @@ section {
 .formText.border-white50 {
   border: 1px solid var(--White50);
 }
+.formText.border-white50:focus {
+  border-color: var(--yellow);
+}
 .formText.border-gray {
   border: 1px solid var(--gray);
+}
+.formText.border-gray:focus {
+  border-color: var(--yellow);
 }
 .formText.bordered-40 {
   border-radius: 40px;
@@ -14439,10 +14446,14 @@ section {
   .formInput {
     height: 48px;
     font-size: 16px;
+    padding-left: 16px;
   }
 }
 .formInput::placeholder {
   color: var(--White50);
+}
+.formInput:focus {
+  border-color: var(--yellow);
 }
 .formInput--transparent {
   background-color: transparent;
@@ -14453,8 +14464,14 @@ section {
 .formInput.border-gray {
   border: 1px solid var(--gray);
 }
+.formInput.border-gray:focus {
+  border-color: var(--yellow);
+}
 .formInput.border-white50 {
   border: 1px solid var(--White50);
+}
+.formInput.border-white50:focus {
+  border-color: var(--yellow);
 }
 .formInput.bordered-12 {
   border-radius: 12px;
@@ -14525,11 +14542,17 @@ section {
 .formSelect select.border-gray {
   border: 1px solid var(--gray);
 }
+.formSelect select.border-gray:focus {
+  border-color: var(--yellow);
+}
 .formSelect select.bordered-12 {
   border-radius: 12px;
 }
 .formSelect select.border-white50 {
   border: 1px solid var(--White50);
+}
+.formSelect select.border-white50:focus {
+  border-color: var(--yellow);
 }
 .formSelect select.bordered-40 {
   border-radius: 40px;
@@ -14917,6 +14940,24 @@ h5,
     opacity: 1;
   }
 }
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInCenter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .content > p {
   margin-bottom: 15px;
 }
@@ -15006,12 +15047,26 @@ h5,
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background 0.2s linear;
+}
+.quantity-icon:hover {
+  background-color: var(--yellow);
+}
+.quantity-icon:hover svg {
+  stroke: var(--dark-2);
 }
 @media (max-width: 991px) {
   .quantity-icon {
     width: 36px;
     height: 36px;
   }
+}
+.quantity-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: transparent;
+  stroke: var(--yellow);
+  stroke-width: 2px;
 }
 
 .quantity-input {
@@ -15852,6 +15907,7 @@ a.hover--white:hover .text--yellow {
   opacity: 1;
   display: block;
   width: auto;
+  animation: 200ms ease-in-out 0s normal none 1 running fadeInCenter;
 }
 .cartBtnW.active {
   border-color: transparent;
@@ -16407,6 +16463,20 @@ a.hover--white:hover .text--yellow {
   color: #fff;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+.header.active {
+  left: 0;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  z-index: 9999;
+  -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+  animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+  -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  transition: all 0.5s ease;
 }
 @media (max-width: 991px) {
   .header {
@@ -18009,6 +18079,57 @@ a.hover--white:hover .text--yellow {
 }
 .brandsItem:hover {
   color: var(--yellow);
+}
+.brandsRow {
+  display: flex;
+  margin-top: 40px;
+  column-gap: 20px;
+}
+.brandsRowName {
+  min-width: 80px;
+  flex-shrink: 0;
+}
+@media (max-width: 575px) {
+  .brandsRow {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+.brandsGrid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100%;
+  column-gap: 20px;
+  row-gap: 12px;
+}
+@media (max-width: 1199px) {
+  .brandsGrid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+.brandsName {
+  grid-column: 2 span;
+  color: var(--White, #FFF);
+  font-family: var(--font-family-second);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.36px;
+}
+@media (max-width: 1199px) {
+  .brandsName {
+    grid-column: 3 span;
+  }
+}
+@media (max-width: 991px) {
+  .brandsName {
+    grid-column: 4 span;
+  }
+}
+@media (max-width: 767px) {
+  .brandsName {
+    grid-column: 6 span;
+  }
 }
 
 .vacancyPrice {

@@ -81,4 +81,46 @@
 			color: var(--yellow);
 		}
 	}
+	&Row {
+		display: flex;
+		margin-top: 40px;
+		column-gap: 20px;
+		&Name {
+			min-width: 80px;
+			flex-shrink: 0;
+		}
+		@media(max-width: 575px){
+			flex-direction: column;
+			row-gap: 20px;
+		}
+	}
+	&Grid {
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		width: 100%;
+		column-gap: 20px;
+		row-gap: 12px;
+		@media(max-width: 1199px){
+			grid-template-columns: repeat(12, 1fr);
+		}
+	}
+
+	&Name {
+		grid-column: 2 span;
+		color: var(--White, #FFF);
+		font-family: var(--font-family-second);
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 28px;
+		letter-spacing: 0.36px;
+		@media(max-width: 1199px){
+			grid-column: 3 span;
+		}
+		@media(max-width: 991px){
+			grid-column: 4 span;
+		}
+		@media(max-width: 767px){
+			grid-column: 6 span;
+		}
+	}
 }
