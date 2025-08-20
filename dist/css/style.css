@@ -18137,6 +18137,16 @@ a.hover--white:hover .text--yellow {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--dark);
+  border-radius: 50%;
+  transition: background-color 0.2s linear;
+}
+.product-slider .navArrow:hover {
+  background-color: var(--dark-2);
+}
+.product-slider .navArrow.swiper-button-disabled {
+  opacity: 0.4;
+  pointer-events: none;
 }
 @media (max-width: 991px) {
   .product-slider .navArrow {
@@ -18144,10 +18154,10 @@ a.hover--white:hover .text--yellow {
   }
 }
 .product-slider .navArrowPrev {
-  left: 0;
+  left: 10px;
 }
 .product-slider .navArrowNext {
-  right: 0;
+  right: 10px;
 }
 
 .productMainTitle {
