@@ -424,7 +424,7 @@
 
 	&W {
 		position: fixed;
-		z-index: 10000;
+		z-index: 2;
 		top: 160px;
 		right: 0;
 		padding: 8px 0 8px 8px;
@@ -478,6 +478,7 @@
 				border-bottom-right-radius: 0;
 				bottom: 0;
 				border-top-right-radius: 32px;
+				z-index: 11111111;
 			}
 
 			.cartBtn {
