@@ -336,8 +336,8 @@ togglePasswordArray.forEach(el => {
 	});
 });
 
-let contextBtnArray = document.querySelectorAll('.button-more');
 
+let contextBtnArray = document.querySelectorAll('.button-more');
 contextBtnArray.forEach(el => {
 	parent = el.closest('.context-wrap');
 	let contentItem = parent.querySelector('.context-menu');
@@ -345,6 +345,19 @@ contextBtnArray.forEach(el => {
 		contentItem.classList.toggle('active');
 		el.classList.toggle('active');
 	});
+
+	document.addEventListener('click', e => {
+		let target = e.target;
+		let its_content = target == contentItem || contentItem.contains(target);
+		let its_btn_content = target == el || el.contains(target);
+
+		if (!its_content && !its_btn_content) {
+			contentItem.classList.remove('active');
+		}	
+
+	});
+
+
 });
 
 // Burger
@@ -381,6 +394,12 @@ if (mediaQueryMax991.matches) {
 		menuClose();
 	});
 }
+
+
+
+
+
+
 
 let filterMobileClose = document.querySelector('.filterMobileClose');
 let filterBody = document.querySelector('#filter');
@@ -447,7 +466,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const headerFixed = () => {
 		let scrollTop = window.scrollY;
-		let heroCenter = 600;
+		let heroCenter = 400;
 
 		if (scrollTop >= heroCenter) {
 			header.classList.add('active')
@@ -485,10 +504,10 @@ function showLetter() {
 		el.addEventListener('click', () => {
 			hideAllLetter();
 			brandsRowArray.forEach(row => {
-				if(el.dataset.letter == row.dataset.letter){				
+				if (el.dataset.letter == row.dataset.letter) {
 					row.style.display = 'block';
 				}
-			});			
+			});
 		});
 	});
 }

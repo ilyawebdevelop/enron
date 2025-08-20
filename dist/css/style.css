@@ -16761,7 +16761,7 @@ a.hover--white:hover .text--yellow {
 }
 .cartBtnW {
   position: fixed;
-  z-index: 1;
+  z-index: 10000;
   top: 160px;
   right: 0;
   padding: 8px 0 8px 8px;
@@ -16780,6 +16780,13 @@ a.hover--white:hover .text--yellow {
     border-radius: 100px 100px 100px 100px;
     padding-right: 8px;
     border-right: 1px solid var(--gray);
+    max-height: 100%;
+    overflow-y: scroll;
+  }
+}
+@media (max-width: 767px) {
+  .cartBtnW {
+    right: 0;
   }
 }
 .cartBtnW:hover .cartBtnText {
@@ -16788,12 +16795,27 @@ a.hover--white:hover .text--yellow {
   display: block;
   width: auto;
 }
+@media (max-width: 991px) {
+  .cartBtnW:hover .cartBtnText {
+    display: none;
+  }
+}
 .cartBtnW.active {
   border-color: transparent;
   padding: 0 24px 0 24px;
   background-color: var(--black);
   border-radius: 32px 0 0 32px;
   min-width: 640px;
+}
+@media (max-width: 767px) {
+  .cartBtnW.active {
+    min-width: 100%;
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    bottom: 0;
+    border-top-right-radius: 32px;
+  }
 }
 .cartBtnW.active .cartBtn {
   border-color: transparent;
@@ -16807,6 +16829,11 @@ a.hover--white:hover .text--yellow {
   opacity: 1;
   visibility: visible;
   width: auto;
+}
+@media (max-width: 991px) {
+  .cartBtnW.active .cartBtnText {
+    display: none;
+  }
 }
 .cartBtnW.active .cartWidgetClose {
   display: block;
@@ -17538,7 +17565,7 @@ a.hover--white:hover .text--yellow {
 @media (max-width: 991px) {
   .menuMobile {
     position: fixed;
-    z-index: 3;
+    z-index: 111111;
     width: 100%;
     height: 100%;
     top: 0;
@@ -18297,11 +18324,29 @@ a.hover--white:hover .text--yellow {
   padding-bottom: 10px;
   display: none;
 }
+@media (max-width: 575px) {
+  .cartWidgTotal {
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 .cartWidgItem {
   padding: 20px;
 }
+@media (max-width: 767px) {
+  .cartWidgItem {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+}
 .cartWidgItem:not(:last-child) {
   margin-bottom: 10px;
+}
+.cartWidgItemImg {
+  flex-shrink: 0;
 }
 .cartWidgItemImg img {
   width: 56px;

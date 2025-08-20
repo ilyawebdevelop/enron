@@ -91,6 +91,7 @@
 				stroke: var(--yellow);
 			}
 		}
+
 		&-sm-transparent {
 			background-color: transparent;
 		}
@@ -211,7 +212,7 @@
 
 	&--md-w-100 {
 		@media(max-width: 767px) {
-			width: 100%!important;
+			width: 100% !important;
 		}
 	}
 }
@@ -306,6 +307,7 @@
 	justify-content: center;
 	flex-shrink: 0;
 	transition: background-color .2s linear;
+
 	&:hover {
 		background-color: var(--dark-2);
 	}
@@ -318,6 +320,7 @@
 	&--yellow {
 
 		background-color: var(--yellow);
+
 		&:hover {
 			background-color: var(--yellow);
 		}
@@ -421,7 +424,7 @@
 
 	&W {
 		position: fixed;
-		z-index: 1;
+		z-index: 10000;
 		top: 160px;
 		right: 0;
 		padding: 8px 0 8px 8px;
@@ -439,6 +442,13 @@
 			border-radius: 100px 100px 100px 100px;
 			padding-right: 8px;
 			border-right: 1px solid var(--gray);
+			max-height: 100%;
+			overflow-y: scroll;
+		}
+
+		@media(max-width: 767px) {
+			right: 0;
+
 		}
 
 		&:hover {
@@ -447,6 +457,10 @@
 				opacity: 1;
 				display: block;
 				width: auto;
+
+				@media(max-width: 991px) {
+					display: none;
+				}
 			}
 		}
 
@@ -456,6 +470,15 @@
 			background-color: var(--black);
 			border-radius: 32px 0 0 32px;
 			min-width: 640px;
+
+			@media(max-width: 767px) {
+				min-width: 100%;
+				width: 100%;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+				bottom: 0;
+				border-top-right-radius: 32px;
+			}
 
 			.cartBtn {
 				border-color: transparent;
@@ -469,6 +492,10 @@
 					opacity: 1;
 					visibility: visible;
 					width: auto;
+
+					@media(max-width: 991px) {
+						display: none;
+					}
 				}
 			}
 
@@ -552,6 +579,7 @@
 			stroke: var(--gray);
 		}
 	}
+
 	&--light-gray {
 		svg {
 			stroke: var(--light-gray);
