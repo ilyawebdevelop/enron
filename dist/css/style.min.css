@@ -16377,6 +16377,7 @@ a.hover--white:hover .text--yellow {
 
 .air-datepicker-global-container {
   z-index: 1060 !important;
+  width: 100px !important;
 }
 
 @media (max-width: 1839px) {
