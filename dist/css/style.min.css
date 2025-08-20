@@ -18037,6 +18037,21 @@ a.hover--white:hover .text--yellow {
   font-size: 14px;
   line-height: 180%;
   letter-spacing: 0.7px;
+  position: relative;
+  cursor: pointer;
+}
+
+.copyText {
+  position: absolute;
+  left: 0;
+  top: -20px;
+  right: 0;
+  margin: auto;
+  display: none;
+  color: #fff;
+}
+.copyText.active {
+  display: block;
 }
 
 .product-slider {
@@ -19592,12 +19607,14 @@ a.hover--white:hover .text--yellow {
   text-decoration-skip-ink: none;
   text-decoration-thickness: auto;
   text-underline-offset: 3px;
+  text-decoration-color: transparent;
   text-underline-position: from-font;
   transition: text-decoration-color 0.2s linear;
 }
 .footerPolitic:hover {
   text-decoration: underline;
   text-decoration-color: transparent;
+  text-decoration-color: #FFCC01;
 }
 .footer .copyright {
   font-size: 14px;

@@ -5,6 +5,7 @@ import AirDatepicker from 'air-datepicker';
 
 import { Fancybox } from "./modules/fancybox.esm.js";
 import "./modules/bootstrap.bundle.min.js";
+
 import './components.js';
 
 Fancybox.bind("[data-fancybox]", {
@@ -13,6 +14,21 @@ Fancybox.bind("[data-fancybox]", {
 });
 
 flsFunctions.isWebp();
+
+let skuArray = document.querySelectorAll('.sku');
+skuArray.forEach(el => {
+	var clipboard = new ClipboardJS(el);
+
+	clipboard.on('success', function (e) {	
+		let copyText = el.querySelector('.copyText');
+		copyText.classList.add('active');
+		setTimeout(function () {
+			copyText.classList.remove('active');
+		}, 2000);
+		e.clearSelection();
+	});
+
+});
 
 
 let formCalendarArray = document.querySelectorAll('.formCalendar--bottom-left-range');
@@ -353,11 +369,9 @@ contextBtnArray.forEach(el => {
 
 		if (!its_content && !its_btn_content) {
 			contentItem.classList.remove('active');
-		}	
+		}
 
 	});
-
-
 });
 
 // Burger
@@ -394,11 +408,6 @@ if (mediaQueryMax991.matches) {
 		menuClose();
 	});
 }
-
-
-
-
-
 
 
 let filterMobileClose = document.querySelector('.filterMobileClose');

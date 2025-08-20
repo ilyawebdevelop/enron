@@ -289,8 +289,23 @@
 	font-size: 14px;
 	line-height: 180%;
 	letter-spacing: 0.7px;
+	position: relative;
+	cursor: pointer;
+	
 }
 
+.copyText {
+	position: absolute;
+	left: 0;
+	top: -20px;
+	right: 0;
+	margin: auto;
+	display: none;
+	color: #fff;
+	&.active {
+		display: block;
+	}
+}
 .product-slider {
 	width: 600px;
 	margin-left: unset;
