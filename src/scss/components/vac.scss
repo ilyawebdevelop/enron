@@ -44,6 +44,9 @@
 	@media(max-width: 389px){
 		padding-right: 40px;
 	}
+	.swiper-slide {
+		height: auto;
+	}
 }
 .vac-related {
 	.swiper-pagination {

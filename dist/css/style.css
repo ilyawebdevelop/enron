@@ -19144,6 +19144,9 @@ a.hover--white:hover .text--yellow {
     padding-right: 40px;
   }
 }
+.vac-related-slider .swiper-slide {
+  height: auto;
+}
 
 .vac-related .swiper-pagination {
   position: relative;
