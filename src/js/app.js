@@ -15,17 +15,30 @@ Fancybox.bind("[data-fancybox]", {
 flsFunctions.isWebp();
 
 
-let formCalendarArray = document.querySelectorAll('.formCalendar--bottom-left');
+let formCalendarArray = document.querySelectorAll('.formCalendar--bottom-left-range');
 formCalendarArray.forEach(el => {
 	new AirDatepicker(el, {
+		range: true,
+		autoClose: true,
 		// position: "top left",
 	})
 });
 
-let formCalendarArrayTopLeft = document.querySelectorAll('.formCalendar--top-left');
+let formCalendarArrayRange = document.querySelectorAll('.formCalendar--no-range');
+formCalendarArrayRange.forEach(el => {
+	new AirDatepicker(el, {
+		range: false,
+		autoClose: true,
+		// position: "top left",
+	})
+});
+
+let formCalendarArrayTopLeft = document.querySelectorAll('.formCalendar--top-left--range');
 formCalendarArrayTopLeft.forEach(el => {
 	new AirDatepicker(el, {
+		range: true,
 		position: "top left",
+		autoClose: true,
 	})
 });
 
@@ -448,6 +461,36 @@ document.addEventListener('DOMContentLoaded', () => {
 	headerFixed();
 
 	window.addEventListener('scroll', () => {
-		headerFixed();   
+		headerFixed();
 	});
 });
+
+let addAddressDelivery = document.querySelector('.add-address-delivery');
+
+addAddressDelivery?.addEventListener('click', () => {
+	document.querySelector(".add-address-clone-wrapper").appendChild(document.querySelector(".add-address-block").cloneNode(true));
+});
+
+function hideAllLetter() {
+	let brandsRowArray = document.querySelectorAll('.brandsRow');
+	brandsRowArray.forEach(el => {
+		el.style.display = 'none';
+	});
+}
+
+function showLetter() {
+	let brandsItemArray = document.querySelectorAll('.brandsItem');
+	let brandsRowArray = document.querySelectorAll('.brandsRow');
+	brandsItemArray.forEach(el => {
+		el.addEventListener('click', () => {
+			hideAllLetter();
+			brandsRowArray.forEach(row => {
+				if(el.dataset.letter == row.dataset.letter){				
+					row.style.display = 'block';
+				}
+			});			
+		});
+	});
+}
+
+showLetter();
