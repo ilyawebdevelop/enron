@@ -18046,9 +18046,9 @@ a.hover--white:hover .text--yellow {
 
 .copyText {
   position: absolute;
-  left: 0;
-  top: -20px;
-  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(100% + 5px);
   margin: auto;
   display: none;
   color: #fff;
@@ -19424,8 +19424,20 @@ a.hover--white:hover .text--yellow {
   position: relative;
   right: -60px;
 }
+@media (max-width: 575px) {
+  .registerWater {
+    margin-left: auto;
+    margin-right: auto;
+    right: unset;
+  }
+}
 .registerWater img {
   width: 200px;
+}
+@media (max-width: 575px) {
+  .registerWater img {
+    width: 150px;
+  }
 }
 
 .register-order-water {
@@ -19436,6 +19448,13 @@ a.hover--white:hover .text--yellow {
 @media (max-width: 991px) {
   .register-order-water {
     position: unset;
+  }
+}
+@media (max-width: 575px) {
+  .register-order-water {
+    margin-left: auto;
+    margin-right: auto;
+    right: unset;
   }
 }
 .register-order-water img {
