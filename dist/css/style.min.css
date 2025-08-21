@@ -12768,6 +12768,7 @@ textarea.form-control-lg {
   }
 }
 /*# sourceMappingURL=bootstrap.min.css.map */
+<<<<<<< HEAD
 .select2-container {
   box-sizing: border-box;
   display: inline-block;
@@ -13454,6 +13455,8 @@ textarea.form-control-lg {
   border-color: #5897fb;
 }
 
+=======
+>>>>>>> refs/remotes/origin/master
 .air-datepicker-cell.-year-.-other-decade-, .air-datepicker-cell.-day-.-other-month- {
   color: var(--adp-color-other-month);
 }
