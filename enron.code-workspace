@@ -1,10 +1,12 @@
 {
 	"folders": [
 		{
-			"path": ".."
+			"name": "pumpy",
+			"path": "../../../Documents/Html/pumpy"
 		},
 		{
-			"path": "../../../Documents/Html/pumpy"
+			"name": "enron",
+			"path": ".."
 		}
 	]
 }

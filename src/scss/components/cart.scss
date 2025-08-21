@@ -18,16 +18,28 @@
 			padding-top: 10px;
 			padding-bottom: 10px;
 			display: none;
+			@media(max-width: 575px){
+				font-size: 14px;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
 		}
 
 		&Item {
 			padding: 20px;
+			@media(max-width: 767px){
+				flex-direction: column;
+				padding-left: 0;
+				padding-right: 0;
+				padding-bottom: 0;
+			}
 
 			&:not(:last-child) {
 				margin-bottom: 10px;
 			}
 
 			&Img {
+				flex-shrink: 0;
 				img {
 					width: 56px;
 					height: 56px;

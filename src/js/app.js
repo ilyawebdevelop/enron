@@ -1,8 +1,12 @@
 import * as flsFunctions from "./modules/functions.js";
 import "./modules/jquery-3.7.1.min.js";
 
+import AirDatepicker from 'air-datepicker';
+
 import { Fancybox } from "./modules/fancybox.esm.js";
 import "./modules/bootstrap.bundle.min.js";
+import "./modules/select2.min.js";
+
 import './components.js';
 
 Fancybox.bind("[data-fancybox]", {
@@ -10,7 +14,92 @@ Fancybox.bind("[data-fancybox]", {
 	showClass: "f-scaleOut",
 });
 
+
+$( "li" ).each(function() {
+  $( this ).addClass( "foo" );
+});
+ 
+$(".formSelect select").each(function () {
+	$(this).select2(
+
+	);
+});
+
+// $(document).ready(function () {
+// 	$('.formSelect select').select2(
+
+// 	);
+// });
+
 flsFunctions.isWebp();
+
+let skuArray = document.querySelectorAll('.sku');
+skuArray.forEach(el => {
+	var clipboard = new ClipboardJS(el);
+
+	clipboard.on('success', function (e) {
+		let copyText = el.querySelector('.copyText');
+		copyText.classList.add('active');
+		setTimeout(function () {
+			copyText.classList.remove('active');
+		}, 2000);
+		e.clearSelection();
+	});
+
+});
+
+
+let formCalendarArray = document.querySelectorAll('.formCalendar--bottom-left-range');
+formCalendarArray.forEach(el => {
+	new AirDatepicker(el, {
+		range: true,
+		autoClose: true,
+		// position: "top left",
+	})
+});
+
+let formCalendarArrayRange = document.querySelectorAll('.formCalendar--no-range');
+formCalendarArrayRange.forEach(el => {
+	new AirDatepicker(el, {
+		range: false,
+		autoClose: true,
+		// position: "top left",
+	})
+});
+
+let formCalendarArrayTopLeft = document.querySelectorAll('.formCalendar--top-left--range');
+formCalendarArrayTopLeft.forEach(el => {
+	new AirDatepicker(el, {
+		range: true,
+		position: "top left",
+		autoClose: true,
+	})
+});
+
+function inputFileToggle() {
+	const inputs = document.querySelectorAll('input[type="file"]');
+
+	if (inputs.length) {
+		inputs.forEach(input => {
+
+			input.addEventListener("change", (e) => {
+				const label = document.querySelector(`label[for="${input.id}"]`);
+
+				if (label && e.target.files[0]) {
+					const labelTitle = label.querySelector("span");
+
+					if (labelTitle) {
+						labelTitle.textContent = "Файл выбран";
+					} else {
+						label.textContent = "Файл выбран";
+					}
+				}
+			})
+		})
+	}
+}
+
+inputFileToggle();
 
 // Import swiper
 import Swiper, { Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumbs, Scrollbar } from 'swiper';
@@ -281,14 +370,25 @@ togglePasswordArray.forEach(el => {
 	});
 });
 
-let contextBtnArray = document.querySelectorAll('.button-more');
 
+let contextBtnArray = document.querySelectorAll('.button-more');
 contextBtnArray.forEach(el => {
 	parent = el.closest('.context-wrap');
 	let contentItem = parent.querySelector('.context-menu');
 	el.addEventListener('click', () => {
 		contentItem.classList.toggle('active');
 		el.classList.toggle('active');
+	});
+
+	document.addEventListener('click', e => {
+		let target = e.target;
+		let its_content = target == contentItem || contentItem.contains(target);
+		let its_btn_content = target == el || el.contains(target);
+
+		if (!its_content && !its_btn_content) {
+			contentItem.classList.remove('active');
+		}
+
 	});
 });
 
@@ -326,6 +426,7 @@ if (mediaQueryMax991.matches) {
 		menuClose();
 	});
 }
+
 
 let filterMobileClose = document.querySelector('.filterMobileClose');
 let filterBody = document.querySelector('#filter');
@@ -383,3 +484,59 @@ cartBtnInner?.addEventListener('click', () => {
 cartWidgetClose?.addEventListener('click', () => {
 	cartBtnW.classList.remove('active');
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+	// const hero = document.querySelector('main .sect');
+	const header = document.querySelector('#header');
+	const mainEl = document.querySelector('.main');
+
+	const headerFixed = () => {
+		let scrollTop = window.scrollY;
+		let heroCenter = 400;
+
+		if (scrollTop >= heroCenter) {
+			header.classList.add('active')
+			mainEl.style.marginTop = `${header.offsetHeight}px`;
+		} else {
+			header.classList.remove('active')
+			mainEl.style.marginTop = `0px`;
+		}
+	};
+
+	headerFixed();
+
+	window.addEventListener('scroll', () => {
+		headerFixed();
+	});
+});
+
+let addAddressDelivery = document.querySelector('.add-address-delivery');
+
+addAddressDelivery?.addEventListener('click', () => {
+	document.querySelector(".add-address-clone-wrapper").appendChild(document.querySelector(".add-address-block").cloneNode(true));
+});
+
+function hideAllLetter() {
+	let brandsRowArray = document.querySelectorAll('.brandsRow');
+	brandsRowArray.forEach(el => {
+		el.style.display = 'none';
+	});
+}
+
+function showLetter() {
+	let brandsItemArray = document.querySelectorAll('.brandsItem');
+	let brandsRowArray = document.querySelectorAll('.brandsRow');
+	brandsItemArray.forEach(el => {
+		el.addEventListener('click', () => {
+			hideAllLetter();
+			brandsRowArray.forEach(row => {
+				if (el.dataset.letter == row.dataset.letter) {
+					row.style.display = 'block';
+				}
+			});
+		});
+	});
+}
+
+showLetter();

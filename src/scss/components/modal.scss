@@ -68,6 +68,10 @@
 .actsItem{
 	transition: border-color .2s linear;
 	border: 1px solid transparent;
+	display: flex;
+	@media(max-width: 767px){
+		flex-direction: column;
+	}
 	&:hover {
 		border-color: var(--White50);
 	}

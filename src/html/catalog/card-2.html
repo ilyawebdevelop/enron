@@ -22,11 +22,15 @@
 		<div class="productCardContentB">
 			<div class="quantity d-flex">
 				<button class="quantity-minus quantity-icon" onclick="this.nextElementSibling.stepDown();">
-					<img src="@img/icons/minus.svg" alt="icon">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#minus"></use>
+					</svg>
 				</button>
 				<input class="quantity-input" type="number" value="1" min="1">
 				<button class="quantity-plus quantity-icon" onclick="this.previousElementSibling.stepUp();">
-					<img src="@img/icons/plus.svg" alt="icon">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#plus"></use>
+					</svg>
 				</button>
 			</div>
 		</div>

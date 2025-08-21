@@ -64,6 +64,9 @@
 		align-items: center;
 		justify-content: center;
 		font-weight: 500;
+		cursor: pointer;
+		transition: color .2s linear;
+		white-space: nowrap;
 
 		@media(max-width: 1839px) {
 			width: 50px;

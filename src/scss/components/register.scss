@@ -17,8 +17,17 @@
 		margin-left: auto;
 		position: relative;
 		right: -60px;
+		@media(max-width: 575px){
+			margin-left: auto;
+			margin-right: auto;
+			right: unset;
+		}
 		img {
 			width: 200px;
+			@media(max-width: 575px){	
+				width: 150px;
+	
+			}
 		}
 	}
 }
@@ -29,6 +38,11 @@
 	right: 0;
 	@media(max-width: 991px){
 		position: unset;
+	}
+	@media(max-width: 575px){
+		margin-left: auto;
+		margin-right: auto;
+		right: unset;
 	}
 	img {
 		width: 200px;

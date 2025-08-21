@@ -36,10 +36,11 @@
 						</div>
 					</div>
 					<div class="productMainContent mb-4 mb-sm-5 mb-lg-0">
-						<div class="sku">
+						<div class="sku" data-clipboard-action="copy" data-clipboard-text="Just because you can doesn't mean you should — clipboard.js">
 							<div class="d-flex align-items-center gap-2">
 								Артикул: 123456789
 								<div class="sku-copy"><img src="@img/icons/copy.svg" alt="copy"></div>
+								<div class="copyText">Скопировано</div>
 							</div>
 						</div>
 						<h1 class="productMainTitle h3 text--white">
@@ -97,11 +98,15 @@
 					</div>
 					<div class="quantity d-none d-sm-flex mb-4">
 						<button class="quantity-minus quantity-icon" onclick="this.nextElementSibling.stepDown();">
-							<img src="@img/icons/minus.svg" alt="icon">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#minus"></use>
+							</svg>
 						</button>
 						<input class="quantity-input" type="number" value="1" min="1">
 						<button class="quantity-plus quantity-icon" onclick="this.previousElementSibling.stepUp();">
-							<img src="@img/icons/plus.svg" alt="icon">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#plus"></use>
+							</svg>
 						</button>
 					</div>
 					<button class="button button--yellow rounded-100 w-100">

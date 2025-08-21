@@ -23,6 +23,11 @@
 		@media(max-width: 991px){
 			padding: 24px;
 		}
+		@media(max-width: 575px){
+			padding: 10px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
 		.formText {
 			height: 190px;
 			@media(max-width: 991px){
@@ -38,6 +43,9 @@
 	}
 	@media(max-width: 389px){
 		padding-right: 40px;
+	}
+	.swiper-slide {
+		height: auto;
 	}
 }
 .vac-related {
