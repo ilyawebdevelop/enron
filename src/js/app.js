@@ -5,10 +5,7 @@ import AirDatepicker from 'air-datepicker';
 
 import { Fancybox } from "./modules/fancybox.esm.js";
 import "./modules/bootstrap.bundle.min.js";
-<<<<<<< HEAD
 import "./modules/select2.min.js";
-=======
->>>>>>> refs/remotes/origin/master
 
 import './components.js';
 
@@ -40,11 +37,7 @@ let skuArray = document.querySelectorAll('.sku');
 skuArray.forEach(el => {
 	var clipboard = new ClipboardJS(el);
 
-<<<<<<< HEAD
 	clipboard.on('success', function (e) {
-=======
-	clipboard.on('success', function (e) {	
->>>>>>> refs/remotes/origin/master
 		let copyText = el.querySelector('.copyText');
 		copyText.classList.add('active');
 		setTimeout(function () {
