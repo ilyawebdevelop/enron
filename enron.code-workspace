@@ -8,5 +8,8 @@
 			"name": "enron",
 			"path": ".."
 		}
-	]
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "enron"
+	}
 }

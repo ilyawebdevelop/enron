@@ -12768,7 +12768,6 @@ textarea.form-control-lg {
   }
 }
 /*# sourceMappingURL=bootstrap.min.css.map */
-<<<<<<< HEAD
 .select2-container {
   box-sizing: border-box;
   display: inline-block;
@@ -13455,8 +13454,6 @@ textarea.form-control-lg {
   border-color: #5897fb;
 }
 
-=======
->>>>>>> refs/remotes/origin/master
 .air-datepicker-cell.-year-.-other-decade-, .air-datepicker-cell.-day-.-other-month- {
   color: var(--adp-color-other-month);
 }
@@ -16066,6 +16063,15 @@ section {
 .formSelect.bg--gray .select2-container--default .select2-selection--single {
   background-color: var(--gray);
   border-color: transparent;
+}
+
+.formSelect.bordered-12 .select2-container--default .select2-selection--single {
+  border-radius: 12px;
+}
+.formSelect.bordered-12 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
+.formSelect.bordered-12 .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 @media (max-width: 575px) {
