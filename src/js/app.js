@@ -485,97 +485,24 @@ cartWidgetClose?.addEventListener('click', () => {
 	cartBtnW.classList.remove('active');
 });
 
-
-// document.addEventListener('DOMContentLoaded', () => {
-// 	// const hero = document.querySelector('main .sect');
-// 	const header = document.querySelector('#header');
-// 	const mainEl = document.querySelector('.main');
-
-// 	const headerFixed = () => {
-// 		let scrollTop = window.scrollY;
-// 		let heroCenter = 400;
-
-// 		if (scrollTop >= heroCenter) {
-// 			header.classList.add('active')
-// 			mainEl.style.marginTop = `${header.offsetHeight}px`;
-// 		} else {
-// 			header.classList.remove('active')
-// 			mainEl.style.marginTop = `0px`;
-// 		}
-// 	};
-
-// 	headerFixed();
-
-// 	window.addEventListener('scroll', () => {
-// 		headerFixed();
-// 	});
-// });
-
-// const headerContainer = document.querySelector(".wrapper");
-
-// if (headerContainer) {
-// 	const headerSticky = document.querySelector(".header");
-// 	const offsetTop = headerContainer.clientHeight;
-
-// 	let lastScrollTop = 0;
-
-// 	window.addEventListener("scroll", () => {
-
-// 		let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-// 		if (window.matchMedia("(min-width: 992px)").matches) {
-// 			if (scrollTop > offsetTop && scrollTop > lastScrollTop) {
-// 				headerSticky.classList.add("_scroll");
-// 				console.log('231');
-// 			} else {
-// 				headerSticky.classList.remove("_scroll");
-// 			}
-// 		} else {
-// 			if (scrollTop > offsetTop && scrollTop > lastScrollTop) {
-// 				headerContainer.classList.add("_scroll");
-// 			} else {
-// 				headerContainer.classList.remove("_scroll");
-// 			}
-// 		}
-
-// 		lastScrollTop = scrollTop;
-// 	});
-// }
-
-// Sticky header
-const header = document.querySelector('.header');
-const first = document.querySelector('.wrapper');
-
-const bodyHeight = first.scrollHeight;
-
-const headerHeight = header.offsetHeight;
-const firstHeight = first.offsetHeight;
+const header = document.getElementById('header');
 let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
-	let scrollDistance = window.scrollY;
+	const currentScrollTop = window.scrollY;
 
-	if (scrollDistance > lastScrollTop) {
-		header.classList.remove('active');		
-		first.style.marginTop = null;	
-
+	if (currentScrollTop > lastScrollTop) {
+		// Прокрутка вниз
+		header.classList.remove('active');
+		header.classList.add('header-fixed-hide');
 	} else {
-		header.classList.add('active');	
-		first.style.marginTop = `${headerHeight}px`;
+		// Прокрутка вверх
+		header.classList.add('active');
+		header.classList.remove('header-fixed-hide');
 	}
-
-	if (scrollDistance === 0) {
-		header.classList.remove('active');		
-		first.style.marginTop = null;
-	}	
-	
-	let sum = bodyHeight - scrollDistance;
-
-
-
-	lastScrollTop = scrollDistance;
-
+	lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Сохраняем предыдущее значение
 });
+
 
 let addAddressDelivery = document.querySelector('.add-address-delivery');
 

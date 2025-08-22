@@ -574,6 +574,10 @@ section {
 	min-height: 100%;
 	position: relative;
 	background-color: var(--dark);
+	padding-top: 128px;
+	@media(max-width: 991px){
+		padding-top: 80px;
+	}
 }
 
 .main {
