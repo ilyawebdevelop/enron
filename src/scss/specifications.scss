@@ -502,6 +502,9 @@ section {
 
 	&.border-white50 {
 		border: 1px solid var(--White50);
+			&:focus {
+			border-color: var(--yellow);
+		}
 	}
 
 	&.bordered-12 {

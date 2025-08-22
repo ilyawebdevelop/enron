@@ -1,24 +1,23 @@
-
 // Header
 .header {
 	background-color: #1C1C1C;
 	color: #fff;
 	padding-top: 32px;
 	padding-bottom: 32px;
-	
+
 	&.active {
-    left: 0;
-    margin: auto;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
-    box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
-    z-index: 333;
-    -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
-    animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
-    -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);   
-    transition: all 0.5s ease;
+		left: 0;
+		margin: auto;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		-webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+		box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+		z-index: 333;
+		-webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+		animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+		-webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+		transition: all 0.5s ease;
 	}
 
 	@media(max-width: 991px) {
@@ -111,9 +110,10 @@
 	}
 
 	&Nav {
-		@media(max-width: 1849px){
+		@media(max-width: 1849px) {
 			display: none;
 		}
+
 		ul {
 			display: flex;
 			column-gap: 40px;
@@ -122,6 +122,7 @@
 				a {
 					font-weight: 400;
 					font-family: var(--font-family-second);
+
 					&:hover {
 						color: var(--yellow);
 					}
@@ -189,7 +190,7 @@
 				display: flex;
 				align-items: center;
 				transition: background-color .2s linear, color .2s linear;
-	
+
 
 				svg {
 					width: 32px;
@@ -284,11 +285,21 @@
 		}
 	}
 }
+
 .headerMenuNoAuth {
 	display: none;
 }
-@media(max-width: 1830px){
+
+@media(max-width: 1830px) {
 	.headerMenuNoAuth {
 		display: block;
 	}
+}
+
+
+.header--bg {
+	transition: background-color 0.3s ease-out;
+	background: #1A1B1D;
+	position: fixed;
+	padding-bottom: 20px;
 }

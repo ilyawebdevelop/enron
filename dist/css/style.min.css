@@ -16184,6 +16184,9 @@ section {
 .searchInput.border-white50 {
   border: 1px solid var(--White50);
 }
+.searchInput.border-white50:focus {
+  border-color: var(--yellow);
+}
 .searchInput.bordered-12 {
   border-radius: 12px;
 }
@@ -18419,6 +18422,13 @@ a.hover--white:hover .text--yellow {
     display: block;
   }
 }
+.header--bg {
+  transition: background-color 0.3s ease-out;
+  background: #1A1B1D;
+  position: fixed;
+  padding-bottom: 20px;
+}
+
 @media (max-width: 991px) {
   .filter {
     display: none;
